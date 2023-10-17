@@ -133,8 +133,8 @@ const config = {
       },
       algolia: {
         appId: 'DSWU223Y1Q',
-        apiKey: '1d0f8473fb595c42e92e748ab3fa7b1c',
-        indexName: 'rnmapbox.io',
+        apiKey: '23c8b4e45fe8708ecd43e32bdd8ed258',
+        indexName: 'rnmapboxio',
         contextualSearch: true,
       }
     }),
