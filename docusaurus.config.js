@@ -131,6 +131,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'DSWU223Y1Q',
+        apiKey: '1d0f8473fb595c42e92e748ab3fa7b1c',
+        indexName: 'rnmapbox.io',
+        contextualSearch: true,
+      }
     }),
 };
 
