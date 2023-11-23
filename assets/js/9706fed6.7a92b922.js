@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmap_docs=self.webpackChunkmap_docs||[]).push([[4785],{2296:a=>{a.exports=JSON.parse('{"label":"HeatmapLayer","permalink":"/docs/tags/heatmap-layer","allTagsPath":"/docs/tags","count":1,"items":[{"id":"examples/Annotations/Heatmap","title":"Heatmap","description":"Shows heatmap layer","permalink":"/docs/examples/Annotations/Heatmap"}]}')}}]);

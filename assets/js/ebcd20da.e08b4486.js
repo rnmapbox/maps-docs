@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmap_docs=self.webpackChunkmap_docs||[]).push([[8319],{6688:a=>{a.exports=JSON.parse('{"label":"Camera","permalink":"/docs/tags/camera","allTagsPath":"/docs/tags","count":1,"items":[{"id":"examples/V10/CameraAnimation","title":"Camera Animation","description":"Camera animation modes","permalink":"/docs/examples/V10/CameraAnimation"}]}')}}]);
