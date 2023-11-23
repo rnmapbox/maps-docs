@@ -34,7 +34,7 @@ boolean
 ```
 The id refers to en existing layer in the style. Does not create a new layer.
 
-
+[Change Layer Color](../examples/Map/ChangeLayerColor), [Show and hide layer](../examples/Map/ShowAndHideLayer)
   
 ### sourceID
 
@@ -45,7 +45,7 @@ The source from which to obtain the data to style.
 If the source has not yet been added to the current style, the behavior is undefined.
 Inferred from parent source only if the layer is a direct child to it.
 
-  _defaults to:_ `MapboxGL.StyleSource.DefaultSourceID`
+  _defaults to:_ `Mapbox.StyleSource.DefaultSourceID`
 
   
 ### sourceLayerID
@@ -108,6 +108,17 @@ The minimum zoom level at which the layer gets parsed and appears.
 number
 ```
 The maximum zoom level at which the layer gets parsed and appears.
+
+
+  
+### slot
+
+```tsx
+'bottom' | 'middle' | 'top'
+```
+The slot this layer is assigned to. If specified, and a slot with that name exists, it will be placed at that position in the layer order.
+
+v11 only
 
 
   

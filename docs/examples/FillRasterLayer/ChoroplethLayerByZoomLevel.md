@@ -1,0 +1,115 @@
+---
+title: Choropleth Layer By Zoom Level
+tags: []
+custom_props:
+  example_rel_path: FillRasterLayer/ChoroplethLayerByZoomLevel.js
+custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/ChoroplethLayerByZoomLevel.js
+---
+
+
+```jsx
+import React from 'react';
+import Mapbox from '@rnmapbox/maps';
+
+import sheet from '../../styles/sheet';
+
+const styles = {
+  statePopulation: {
+    fillColor: [
+      'interpolate',
+      ['linear'],
+      ['get', 'population'],
+      0,
+      '#F2F12D',
+      500000,
+      '#EED322',
+      750000,
+      '#E6B71E',
+      1000000,
+      '#DA9C20',
+      2500000,
+      '#CA8323',
+      5000000,
+      '#B86B25',
+      7500000,
+      '#A25626',
+      10000000,
+      '#8B4225',
+      25000000,
+      '#723122',
+    ],
+
+    fillOpacity: 0.75,
+  },
+
+  countyPopulation: {
+    fillColor: [
+      'interpolate',
+      ['linear'],
+      ['get', 'population'],
+      0,
+      '#F2F12D',
+      100,
+      '#EED322',
+      1000,
+      '#E6B71E',
+      5000,
+      '#DA9C20',
+      10000,
+      '#CA8323',
+      50000,
+      '#B86B25',
+      100000,
+      '#A25626',
+      500000,
+      '#8B4225',
+      1000000,
+      '#723122',
+    ],
+
+    fillOpacity: 0.75,
+  },
+};
+
+class ChoroplethLayerByZoomLevel extends React.PureComponent {
+  render() {
+    return (
+      <Mapbox.MapView
+        styleURL={Mapbox.StyleURL.Light}
+        style={sheet.matchParent}
+      >
+        <Mapbox.Camera
+          centerCoordinate={[-98, 38.88]}
+          zoomLevel={3}
+          minZoomLevel={3}
+        />
+
+        <Mapbox.VectorSource id="population" url={'mapbox://mapbox.660ui7x6'}>
+          <Mapbox.FillLayer
+            id="state-population"
+            sourceLayerID="state_county_population_2014_cen"
+            maxZoomLevel={4}
+            filter={['==', 'isState', true]}
+            style={styles.statePopulation}
+          />
+
+          <Mapbox.FillLayer
+            id="county-population"
+            sourceLayerID="state_county_population_2014_cen"
+            minZoomLevel={4}
+            filter={['==', 'isCounty', true]}
+            style={styles.countyPopulation}
+          />
+        </Mapbox.VectorSource>
+      </Mapbox.MapView>
+    );
+  }
+}
+
+export default ChoroplethLayerByZoomLevel;
+
+
+```
+
+![ChoroplethLayerByZoomLevel.png](./ChoroplethLayerByZoomLevel.png)}
+

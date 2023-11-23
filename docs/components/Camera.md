@@ -44,7 +44,7 @@ Allows static check of the data type. For internal use only.
 ### centerCoordinate
 
 ```tsx
-number[] | [number, number]
+Position
 ```
 The location on which the map should center.
 
@@ -121,7 +121,7 @@ The duration the map takes to animate to a new configuration.
 ```
 The easing or path the camera uses to animate to a new configuration.
 
-
+[Camera Animation](../examples/V10/CameraAnimation)
   
 ### followUserLocation
 
@@ -148,7 +148,7 @@ number
 ```
 The zoom level used when following the user location.
 
-
+[Show Map](../examples/Map/ShowMap)
   
 ### followPitch
 
@@ -199,8 +199,8 @@ The highest allowed zoom level.
 
 ```tsx
 type MaxBounds = {
-  ne: union; /* FIX ME NO DESCRIPTION */
-  sw: union; /* FIX ME NO DESCRIPTION */
+  ne: Position; /* FIX ME NO DESCRIPTION */
+  sw: Position; /* FIX ME NO DESCRIPTION */
 }
 ```
 The corners of a box defining the limits of where the camera can pan or zoom.
@@ -212,7 +212,7 @@ The corners of a box defining the limits of where the camera can pan or zoom.
 ```tsx
 type DefaultSettings = {
   type: literal; /* Allows static check of the data type. For internal use only. */
-  centerCoordinate: union; /* The location on which the map should center. */
+  centerCoordinate: Position; /* The location on which the map should center. */
   bounds: intersection; /* The corners of a box around which the map should bound. Contains padding props for backwards
 compatibility; the root `padding` prop should be used instead. */
   heading: number; /* The heading (orientation) of the map. */

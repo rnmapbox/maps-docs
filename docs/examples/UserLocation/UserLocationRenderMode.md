@@ -11,7 +11,7 @@ Demonstates UserLocation render modes, follow modes
 
 ```jsx
 import React, { ReactNode, useState } from 'react';
-import MapboxGL, {
+import {
   MapView,
   CircleLayer,
   UserLocation,
@@ -22,9 +22,6 @@ import MapboxGL, {
 import { Button, Platform, SafeAreaView, View } from 'react-native';
 import { ButtonGroup, Text } from '@rneui/base';
 
-import sheet from '../../styles/sheet';
-import TabBarPage from '../common/TabBarPage';
-import { BaseExampleProps } from '../common/BaseExamplePropTypes';
 import { DEFAULT_CENTER_COORDINATE } from '../../utils';
 import { ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-doc
 
@@ -62,7 +59,7 @@ const ANDROID_RENDER_MODES: ('normal' | 'compass' | 'gps')[] = [
   'gps',
 ];
 
-const UserLocationRenderMode = (props: BaseExampleProps) => {
+const UserLocationRenderMode = () => {
   const [renderMode, setRenderMode] = useState<ExampleRenderMode>(
     ExampleRenderMode.Normal,
   );

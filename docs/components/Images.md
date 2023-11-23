@@ -51,15 +51,6 @@ any of the `Images` component of the Map.
 
 [Shape Source Icons](../examples/SymbolCircleLayer/ShapeSourceIcon)
   
-### id
-
-```tsx
-string
-```
-FIX ME NO DESCRIPTION
-
-
-  
 ### children
 
 ```tsx

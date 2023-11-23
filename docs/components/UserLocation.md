@@ -68,7 +68,7 @@ func
 Callback that is triggered on location icon press
 *signature:*`() =&gt; void`
 
-
+[Show Map](../examples/Map/ShowMap)
   
 ### onUpdate
 
@@ -85,6 +85,7 @@ Callback that is triggered on location update
 ```tsx
 UserLocationRenderMode
 ```
+@deprecated use NativeUserLocation component instead of UserLocationRenderMode.Native
 Which render mode to use.
 
   _defaults to:_ `UserLocationRenderMode.Normal`

@@ -33,8 +33,7 @@ The distance from the edges of the map view’s frame to the edges of the map vi
 ```
 The projection used when rendering the map
 
-  _defaults to:_ `'mercator'`
-
+[Globe Projection](../examples/V10/GlobeProjection)
   
 ### styleURL
 
@@ -124,7 +123,7 @@ Enable/Disable attribution on map. For iOS you need to add MGLMapboxMetricsEnabl
 to your Info.plist
 
   _defaults to:_ `true`
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### attributionPosition
 
@@ -133,7 +132,7 @@ OrnamentPositonProp
 ```
 Adds attribution offset, e.g. `{top: 8, left: 8}` will put attribution button in top-left corner of the map. By default on Android, the attribution with information icon (i) will be on the bottom left, while on iOS the mapbox logo will be on bottom left with information icon (i) on bottom right. Read more about mapbox attribution [here](https://docs.mapbox.com/help/getting-started/attribution/)
 
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### tintColor
 
@@ -152,7 +151,7 @@ boolean
 Enable/Disable the logo on the map.
 
   _defaults to:_ `true`
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### logoPosition
 
@@ -161,7 +160,7 @@ OrnamentPositonProp
 ```
 Adds logo offset, e.g. `{top: 8, left: 8}` will put the logo in top-left corner of the map
 
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### compassEnabled
 
@@ -171,7 +170,7 @@ boolean
 Enable/Disable the compass from appearing on the map
 
   _defaults to:_ `false`
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### compassFadeWhenNorth
 
@@ -181,7 +180,7 @@ boolean
 [`mapbox` (v10) implementation only] Enable/Disable if the compass should fade out when the map is pointing north
 
   _defaults to:_ `false`
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### compassPosition
 
@@ -190,7 +189,7 @@ OrnamentPositonProp
 ```
 [`mapbox` (v10) implementation only] Adds compass offset, e.g. `{top: 8, left: 8}` will put the compass in top-left corner of the map
 
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### compassViewPosition
 
@@ -220,7 +219,7 @@ string
 ```
 [iOS, `mapbox` (v10) implementation only] A string referencing an image key. Requires an `Images` component.
 
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### scaleBarEnabled
 
@@ -230,7 +229,7 @@ boolean
 [`mapbox` (v10) implementation only] Enable/Disable the scale bar from appearing on the map
 
   _defaults to:_ `true`
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### scaleBarPosition
 
@@ -239,7 +238,7 @@ OrnamentPositonProp
 ```
 [`mapbox` (v10) implementation only] Adds scale bar offset, e.g. `{top: 8, left: 8}` will put the scale bar in top-left corner of the map
 
-
+[Ornaments](../examples/Map/Ornaments)
   
 ### surfaceView
 
@@ -276,6 +275,35 @@ when embedded into a scroll view
 [`mapbox` (v10) implementation only]
 Set map's label locale, e.g. { "locale": "es" } will localize labels to Spanish, { "locale": "current" } will localize labels to system locale.
 
+[Localize Labels](../examples/Map/LocalizeLabels)
+  
+### gestureSettings
+
+```tsx
+type GestureSettings = {
+  doubleTapToZoomInEnabled: boolean; /* Whether double tapping the map with one touch results in a zoom-in animation. */
+  doubleTouchToZoomOutEnabled: boolean; /* Whether single tapping the map with two touches results in a zoom-out animation. */
+  pinchPanEnabled: boolean; /* Whether pan/scroll is enabled for the pinch gesture. */
+  pinchZoomEnabled: boolean; /* Whether zoom is enabled for the pinch gesture. */
+  pinchZoomDecelerationEnabled: boolean; /* Whether a deceleration animation following a pinch-zoom gesture is enabled. True by default.
+(Android only) */
+  pitchEnabled: boolean; /* Whether the pitch gesture is enabled. */
+  quickZoomEnabled: boolean; /* Whether the quick zoom gesture is enabled. */
+  rotateEnabled: boolean; /* Whether the rotate gesture is enabled. */
+  rotateDecelerationEnabled: boolean; /* Whether a deceleration animation following a rotate gesture is enabled. True by default.
+(Android only) */
+  panEnabled: boolean; /* Whether the single-touch pan/scroll gesture is enabled. */
+  panDecelerationFactor: number; /* A constant factor that determines how quickly pan deceleration animations happen. Multiplied with the velocity vector once per millisecond during deceleration animations.
+
+On iOS Defaults to UIScrollView.DecelerationRate.normal.rawValue
+On android set to 0 to disable deceleration, and non zero to enabled it. */
+  simultaneousRotateAndPinchZoomEnabled: boolean; /* Whether rotation is enabled for the pinch zoom gesture. */
+  zoomAnimationAmount: number; /* The amount by which the zoom level increases or decreases during a double-tap-to-zoom-in or double-touch-to-zoom-out gesture. 1.0 by default. Must be positive.
+(Android only) */
+}
+```
+Gesture configuration allows to control the user touch interaction.
+
 
   
 ### onPress
@@ -286,7 +314,7 @@ func
 Map press listener, gets called when a user presses the map
 *signature:*`(feature:GeoJSON.Feature) =&gt; void`
 
-
+[Show Click](../examples/Map/ShowClick)
   
 ### onLongPress
 
@@ -310,7 +338,7 @@ This event is triggered whenever the currently displayed map region is about to 
 @param {PointFeature} feature - The geojson point feature at the camera center, properties contains zoomLevel, visibleBounds
 *signature:*`(feature:GeoJSON.Feature) =&gt; void`
 
-
+[Show Region Did Change](../examples/Map/ShowRegionDidChange)
   
 ### onRegionIsChanging
 
@@ -322,7 +350,7 @@ This event is triggered whenever the currently displayed map region is changing.
 @param {PointFeature} feature - The geojson point feature at the camera center, properties contains zoomLevel, visibleBounds
 *signature:*`(feature:GeoJSON.Feature) =&gt; void`
 
-
+[Show Region Did Change](../examples/Map/ShowRegionDidChange)
   
 ### onRegionDidChange
 
@@ -334,7 +362,7 @@ This event is triggered whenever the currently displayed map region finished cha
 @param {PointFeature} feature - The geojson point feature at the camera center, properties contains zoomLevel, visibleBounds
 *signature:*`(feature:GeoJSON.Feature) =&gt; void`
 
-
+[Show Region Did Change](../examples/Map/ShowRegionDidChange)
   
 ### onCameraChanged
 
@@ -354,7 +382,7 @@ func
 v10 only, replaces onRegionDidChange
 *signature:*`(state:{properties: {center: GeoJSON.Position, bounds: {ne: GeoJSON.Position, sw: GeoJSON.Position}, zoom: number, heading: number, pitch: number}, gestures: {isGestureActive: boolean}, timestamp: number}) =&gt; void`
 
-
+[Map Handlers](../examples/V10/MapHandlers)
   
 ### onWillStartLoadingMap
 
@@ -677,7 +705,7 @@ Queries the currently loaded data for elevation at a geographical location.<br/>
 | `coordinate` | `Position` | `Yes` | the coordinates to query elevation at |
 
 
-### setSourceVisibility(visible, sourceId[, sourceLayerId])
+[Query Terrain Elevation](../examples/V10/QueryTerrainElevation)### setSourceVisibility(visible, sourceId[, sourceLayerId])
 
 Sets the visibility of all the layers referencing the specified `sourceLayerId` and/or `sourceId`
 
@@ -693,16 +721,6 @@ Sets the visibility of all the layers referencing the specified `sourceLayerId` 
 ```javascript
 await this._map.setSourceVisibility(false, 'composite', 'building')
 ```
-
-
-### showAttribution()
-
-Show the attribution and telemetry action sheet.<br/>If you implement a custom attribution button, you should add this action to the button.
-
-#### arguments
-| Name | Type | Required | Description  |
-| ---- | :--: | :------: | :----------: |
-
 
 
 
