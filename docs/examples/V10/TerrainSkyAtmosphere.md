@@ -10,7 +10,7 @@ Demostrates use of Terran, Atmosphere and SkyLayer.
 
 
 ```jsx
-import React, { memo, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Button } from 'react-native';
 import {
   MapView,

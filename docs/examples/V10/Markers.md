@@ -13,7 +13,7 @@ Test view for MarkerViews
 import { Button, Divider, Text } from '@rneui/base';
 import { Camera, Logger, MapView, MarkerView } from '@rnmapbox/maps';
 import { Position } from 'geojson';
-import React, { memo, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
 import { ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-doc

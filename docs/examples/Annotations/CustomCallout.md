@@ -56,15 +56,15 @@ const CustomCalloutView = ({ message }: CustomCalloutViewProps) => {
 
 const CustomCallout = () => {
   const [selectedFeature, setSelectedFeature] =
-    useState<Feature<{ type: string; coordinates: number[] }, any>>();
+    useState<GeoJSON.Feature<GeoJSON.Point>>();
 
-  const onPinPress = (e: unknown): void => {
+  const onPinPress = (e: { features: Array<GeoJSON.Feature> }): void => {
     if (selectedFeature) {
       setSelectedFeature(undefined);
       return;
     }
 
-    const feature = e?.features[0];
+    const feature = e?.features[0] as Feature<GeoJSON.Point>;
     setSelectedFeature(feature);
   };
 
