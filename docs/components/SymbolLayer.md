@@ -286,7 +286,7 @@ Name: `symbolSortKey`
 Mapbox spec: [symbol-sort-key](https://docs.mapbox.com/style-spec/reference/layers/#layout-symbol-symbol-sort-key)
 
 #### Description
-Sorts features in ascending order based on this value. Features with lower sort keys are drawn and placed first.  When `iconAllowOverlap` or `textAllowOverlap` is `false`, features with a lower sort key will have priority during placement. When `iconAllowOverlap` or `textAllowOverlap` is set to `true`, features with a higher sort key will overlap over features with a lower sort key.
+Sorts features in ascending order based on this value. Features with lower sort keys are drawn and placed first. When `iconAllowOverlap` or `textAllowOverlap` is `false`, features with a lower sort key will have priority during placement. When `iconAllowOverlap` or `textAllowOverlap` is set to `true`, features with a higher sort key will overlap over features with a lower sort key.
 
 #### Type
 `number`
@@ -474,7 +474,7 @@ Scales the icon to fit around the associated text.
 
 #### Expression
 
-Parameters: `zoom`
+Parameters: `zoom, feature`
 
 ___
 
@@ -500,7 +500,7 @@ Size of the additional area added to dimensions determined by `iconTextFit`, in 
 
 #### Expression
 
-Parameters: `zoom`
+Parameters: `zoom, feature`
 
 ___
 
@@ -1286,6 +1286,9 @@ Whether this layer is displayed.
 **none** - The layer is not shown.<br />
 
 
+#### Expression
+
+Parameters: ``
 
 ___
 
@@ -1314,7 +1317,7 @@ The opacity at which the icon will be drawn.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### iconOpacityTransition
@@ -1356,7 +1359,7 @@ The color of the icon. This can only be used with [SDF icons](https://docs.mapbo
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### iconColorTransition
@@ -1398,7 +1401,7 @@ The color of the icon's halo. Icon halos can only be used with [SDF icons](https
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### iconHaloColorTransition
@@ -1446,7 +1449,7 @@ Distance of halo to the icon outline.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### iconHaloWidthTransition
@@ -1494,7 +1497,7 @@ Fade out the halo towards the outside.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### iconHaloBlurTransition
@@ -1614,7 +1617,7 @@ The opacity at which the text will be drawn.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### textOpacityTransition
@@ -1656,7 +1659,7 @@ The color with which the text will be drawn.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### textColorTransition
@@ -1698,7 +1701,7 @@ The color of the text's halo, which helps it stand out from backgrounds.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### textHaloColorTransition
@@ -1746,7 +1749,7 @@ Distance of halo to the font outline. Max text halo width is 1/4 of the fontSize
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### textHaloWidthTransition
@@ -1794,7 +1797,7 @@ The halo's fadeout distance towards the outside.
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### textHaloBlurTransition

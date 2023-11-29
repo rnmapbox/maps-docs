@@ -166,6 +166,9 @@ Whether this layer is displayed.
 **none** - The layer is not shown.<br />
 
 
+#### Expression
+
+Parameters: ``
 
 ___
 
@@ -191,7 +194,7 @@ Radius of influence of one heatmap point in pixels. Increasing the value makes t
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### heatmapRadiusTransition
@@ -233,7 +236,7 @@ A measure of how much an individual point contributes to the heatmap. A value of
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 
 ___
 
@@ -285,7 +288,7 @@ Name: `heatmapColor`
 Mapbox spec: [heatmap-color](https://docs.mapbox.com/style-spec/reference/layers/#paint-heatmap-heatmap-color)
 
 #### Description
-Defines the color of each pixel based on its density value in a heatmap.  Should be an expression that uses `["heatmapDensity"]` as input.
+Defines the color of each pixel based on its density value in a heatmap. Should be an expression that uses `["heatmapDensity"]` as input.
 
 #### Type
 `color`

@@ -139,6 +139,7 @@ Customizable style attributes
 * <a href="#fillextrusionheight">fillExtrusionHeight</a><br/>
 * <a href="#fillextrusionbase">fillExtrusionBase</a><br/>
 * <a href="#fillextrusionverticalgradient">fillExtrusionVerticalGradient</a><br/>
+* <a href="#fillextrusionroundedroof">fillExtrusionRoundedRoof</a><br/>
 
 ___
 
@@ -160,6 +161,9 @@ Whether this layer is displayed.
 **none** - The layer is not shown.<br />
 
 
+#### Expression
+
+Parameters: ``
 
 ___
 
@@ -227,7 +231,7 @@ The base color of the extruded fill. The extrusion's surfaces will be shaded dif
 
 #### Expression
 
-Parameters: `zoom, feature, feature-state`
+Parameters: `zoom, feature, feature-state, measure-light`
 ___
 
 ### fillExtrusionColorTransition
@@ -443,6 +447,29 @@ Whether to apply a vertical gradient to the sides of a fillExtrusion layer. If t
 #### Default Value
 `true`
 
+
+#### Expression
+
+Parameters: `zoom`
+
+___
+
+### fillExtrusionRoundedRoof
+Name: `fillExtrusionRoundedRoof`
+
+Mapbox spec: [fill-extrusion-rounded-roof](https://docs.mapbox.com/style-spec/reference/layers/#paint-fill-extrusion-fill-extrusion-rounded-roof)
+
+#### Description
+Indicates whether top edges should be rounded when fillExtrusionEdgeRadius has a value greater than 0. If false, rounded edges are only applied to the sides. Default is true.
+
+#### Type
+`boolean`
+#### Default Value
+`true`
+
+
+#### Requires
+`fillExtrusionEdgeRadius`
 
 #### Expression
 

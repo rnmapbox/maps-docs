@@ -1,6 +1,6 @@
 ---
 title: Query Source Features
-tags: []
+tags: [VectorSource, querySourceFeatures]
 custom_props:
   example_rel_path: FillRasterLayer/QuerySourceFeatures.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QuerySourceFeatures.tsx
@@ -10,11 +10,14 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 ```jsx
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Text } from 'react-native';
-import MapboxGL, { FillLayer, VectorSource } from '@rnmapbox/maps';
+import {
+  StyleURL,
+  MapView,
+  FillLayer,
+  VectorSource,
+  Camera,
+} from '@rnmapbox/maps';
 
-import { BaseExampleProps } from '../common/BaseExamplePropTypes';
-import sheet from '../../styles/sheet';
-import Page from '../common/Page';
 import Bubble from '../common/Bubble';
 
 const vectorSourceUnderTest = {
@@ -28,10 +31,14 @@ const countiesOfInterest = [
   'Hudson County', // Outside of viewport
 ];
 
-const QuerySourceFeatures = (props: BaseExampleProps) => {
+const styles = {
+  matchParent: { flex: 1 },
+};
+
+const QuerySourceFeatures = () => {
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState('');
-  const map = useRef<MapboxGL.MapView>(null);
+  const map = useRef<MapView>(null);
 
   const runTest = useCallback(async () => {
     if (!map || !ready) return;
@@ -72,10 +79,10 @@ const QuerySourceFeatures = (props: BaseExampleProps) => {
   }, [runTest]);
 
   return (
-    <Page {...props}>
-      <MapboxGL.MapView
-        style={sheet.matchParent}
-        styleURL={MapboxGL.StyleURL.Light}
+    <>
+      <MapView
+        style={styles.matchParent}
+        styleURL={StyleURL.Light}
         ref={map}
         onCameraChanged={runTest}
         onMapIdle={() => setReady(true)}
@@ -88,18 +95,18 @@ const QuerySourceFeatures = (props: BaseExampleProps) => {
             belowLayerID="building"
           />
         </VectorSource>
-        <MapboxGL.Camera
+        <Camera
           zoomLevel={zoomUnderTest}
           centerCoordinate={coordinatesUnderTest}
           animationMode="none"
           animationDuration={0}
         />
-      </MapboxGL.MapView>
+      </MapView>
 
       <Bubble>
         <Text>{message}</Text>
       </Bubble>
-    </Page>
+    </>
   );
 };
 
