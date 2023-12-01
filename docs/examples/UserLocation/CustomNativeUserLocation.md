@@ -1,12 +1,12 @@
 ---
 title: Custom Native UserLocation
-tags: [NativeUserLocation, NativeUserLocation#topImage, NativeUserLocation#scale]
+tags: [LocationPuck, LocationPuck#topImage, LocationPuck#scale]
 custom_props:
   example_rel_path: UserLocation/CustomNativeUserLocation.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/CustomNativeUserLocation.tsx
 ---
 
-  Demonstrates use of images to customize NativeUserLocation
+  Demonstrates use of images to customize LocationPuck
   
 
 ```jsx
@@ -16,7 +16,7 @@ import {
   MapView,
   Camera,
   UserTrackingMode,
-  NativeUserLocation,
+  LocationPuck,
   Images,
   Image,
 } from '@rnmapbox/maps';
@@ -52,7 +52,7 @@ const UserLocationNativeAnimated = () => {
           followUserMode={UserTrackingMode.Follow}
           followZoomLevel={14}
         />
-        <NativeUserLocation
+        <LocationPuck
           topImage="topImage"
           visible={true}
           scale={['interpolate', ['linear'], ['zoom'], 10, 1.0, 20, 4.0]}
@@ -71,13 +71,9 @@ export default UserLocationNativeAnimated;
 
 const metadata: ExampleWithMetadata['metadata'] = {
   title: 'Custom Native UserLocation',
-  tags: [
-    'NativeUserLocation',
-    'NativeUserLocation#topImage',
-    'NativeUserLocation#scale',
-  ],
+  tags: ['LocationPuck', 'LocationPuck#topImage', 'LocationPuck#scale'],
   docs: `
-  Demonstrates use of images to customize NativeUserLocation
+  Demonstrates use of images to customize LocationPuck
   `,
 };
 UserLocationNativeAnimated.metadata = metadata;
