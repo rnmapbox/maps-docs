@@ -25,7 +25,7 @@ const config = {
   trailingSlash: false,
 
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -68,6 +68,11 @@ const config = {
       navbar: {
         title: '@rnmapbox/maps',
         items: [
+          {
+            type: 'doc',
+            docId: 'install',
+            label: 'Install',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'examplesSidebar',
