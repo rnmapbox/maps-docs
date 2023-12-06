@@ -24,21 +24,21 @@ See [Configure Credential](https://docs.mapbox.com/ios/navigation/guides/get-sta
   ]}>
 <TabItem value="npm">
 
-```shell
+```bash
 npm install @rnmapbox/maps
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
-```shell
+```bash
 yarn add @rnmapbox/maps
 ```
 
 </TabItem>
 <TabItem value="expo">
 
-```shell
+```bash
 expo install @rnmapbox/maps
 ```
 
@@ -59,13 +59,16 @@ expo install @rnmapbox/maps
 Add the following to your `ios/Podfile`
 
 ```ruby
+// highlight-start
 pre_install do |installer|
   $RNMapboxMaps.pre_install(installer)
-  # ... other pre install hooks
 end
+// highlight-end
 
 post_install do |installer|
+// highlight-start
   $RNMapboxMaps.post_install(installer)
+// highlight-end
   # ... other post install hooks
 end
 ```
@@ -73,12 +76,12 @@ end
 ### Verify .netrc
 Make sure your `.netrc` is configured with your secret access token, as described by the [mapbox docs](https://docs.mapbox.com/ios/maps/guides/install/#configure-credentials). To verify execute:
 
-```sh
+```bash
 grep -A 4 api.mapbox.com ~/.netrc
 ```
 
 This should output something like:
-```sh
+```bash
 machine api.mapbox.com
   login mapbox
   password sk.ey...
@@ -97,6 +100,7 @@ Add the following to your android/build.gradle, into the section `allprojects/re
 allprojects {
     repositories {
         // ...other repos
+// highlight-start
         maven {
             url 'https://api.mapbox.com/downloads/v2/releases/maven'
             authentication {
@@ -110,6 +114,7 @@ allprojects {
                 password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: ""
             }
         }
+// highlight-end
         // ...even more repos?
     }
 }
@@ -119,12 +124,12 @@ allprojects {
 
 Make sure your global `.gradle-properties` is configured with your secret access token, as described by the [mapbox docs](https://docs.mapbox.com/android/maps/guides/install/#configure-credentials). To verify execute:
 
-```sh
+```bash
 grep -R MAPBOX_DOWNLOADS_TOKEN ~/.gradle/gradle.properties
 ```
 
 This should output something like:
-```sh
+```bash
 /Users/foo/.gradle/gradle.properties:MAPBOX_DOWNLOADS_TOKEN=sk.ey...
 ```
 
@@ -143,10 +148,12 @@ Add `RNMapboxMapsDownloadToken` to the @rnmapbox/maps [config plugin](https://do
   "expo": {
     "plugins": [
       [
+// highlight-start
         "@rnmapbox/maps",
         {
           "RNMapboxMapsDownloadToken": "sk.ey.."
         }
+// highlight-end
       ]
     ]
   }
@@ -181,7 +188,9 @@ Set `RNMapboxMapsVersion` in `android/build.gradle` > `buildscript` > `ext` sect
 ```gradle
 buildscript {
     ext {
+// highlight-start
         RNMapboxMapsVersion = '11.0.0'
+// highlight-end
     }
 }
 ```
@@ -199,7 +208,9 @@ Add `RNMapboxMapsVersion` to the @rnmapbox/maps [config plugin](https://docs.exp
         "@rnmapbox/maps",
         {
           ...
+// highlight-start
           "RNMapboxMapsVersion": "11.0.0"
+// highlight-end
         }
       ]
     ]
