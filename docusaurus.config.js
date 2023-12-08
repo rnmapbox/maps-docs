@@ -44,12 +44,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: (url) => {
-            console.log('url', url);
             if (url.docPath.startsWith('examples/')) {
               return `https://github.com/rnmapbox/maps/tree/main/example/src/examples/${url.docPath.replace('examples/', '').replace('.md', '.tsx')}`
+            } else if (url.docPath.startsWith('components/')) {
+              // should be handled by `custom_edit_url`
+              return url.docPath;
             } else {
-              console.log('url', url);
-              return url.docPath.replace('components/','').replace('.md', '.tsx');
+              let result = `https://github.com/rnmapbox/maps-docs/tree/main/docs/${url.docPath}`;
+              return result;
             }
           }
         },
@@ -134,8 +136,8 @@ const config = {
         /* copyright: `Copyright © ${new Date().getFullYear()}. All trademarks and copyrights belong to their respective owners.`, */
       },
       prism: {
-        theme: lightTheme,
-        darkTheme: darkTheme,
+        defaultLanguage: 'jsx',
+        theme: require('./src/core/PrismTheme'),
         additionalLanguages: ['ruby', 'gradle', 'bash', 'json'],
       },
       algolia: {

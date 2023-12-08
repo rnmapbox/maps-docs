@@ -12,6 +12,8 @@
   --mbx-deep-blue:#0062ca;
   --mbx-blue-faint: #e6f2ff;
 
+  --rn-note-background: rgba(255, 229, 100, 0.25);
+
   --mbx-black: #23262d;
 
   --ifm-font-family-base: 'Open Sans', sans-serif;
@@ -36,6 +38,14 @@ html {
   font-weight: var(--ifm-font-weight-normal)
 }
 
+html[data-theme="light"] {
+  --ifm-code-background: rgba(0, 0, 0, 0.06);
+}
+
+html[data-theme="dark"] {
+  --ifm-code-background: rgba(255, 255, 255, 0.06);
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
@@ -57,3 +67,26 @@ html {
   border-radius: 1rem;
   font-weight: bold;
 }*/
+
+.markdown {
+  code {
+    border-color: transparent;
+    vertical-align: initial;
+    font-size: var(--ifm-code-font-size) !important;
+  }
+
+  blockquote {
+    background-color: var(--rn-note-background);
+    border-left: 8px solid var(--ifm-color-warning);
+    padding: 15px 30px 15px 15px;
+
+    code {
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    a code {
+      background-color: transparent;
+      white-space: pre;
+    }
+  }
+}
