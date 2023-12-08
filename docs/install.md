@@ -6,6 +6,8 @@ title: Install
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+> Note that those instructions applies to the 10.1 version (currently rc phase in @next channel). Please visit the installation guide for the released 10.0.15 which can be found on the [github v10.0 branch of the project](https://github.com/rnmapbox/maps/tree/v10.0#prerequisite
+)
 # Configure credentials
 
 Before installing @rnmapbox/maps you'll need to get the proper credentials.
@@ -25,21 +27,21 @@ See [Configure Credential](https://docs.mapbox.com/ios/navigation/guides/get-sta
 <TabItem value="npm">
 
 ```bash
-npm install @rnmapbox/maps
+npm install @rnmapbox/maps@next
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add @rnmapbox/maps
+yarn add @rnmapbox/maps@next
 ```
 
 </TabItem>
 <TabItem value="expo">
 
 ```bash
-expo install @rnmapbox/maps
+expo install @rnmapbox/maps@next
 ```
 
 </TabItem>
