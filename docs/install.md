@@ -99,10 +99,9 @@ Add the following to your android/build.gradle, into the section `allprojects/re
 ```gradle
 // android/build.gradle
 
+// highlight-start
 allprojects {
     repositories {
-        // ...other repos
-// highlight-start
         maven {
             url 'https://api.mapbox.com/downloads/v2/releases/maven'
             authentication {
@@ -116,10 +115,9 @@ allprojects {
                 password = project.properties['MAPBOX_DOWNLOADS_TOKEN'] ?: ""
             }
         }
-// highlight-end
-        // ...even more repos?
     }
 }
+// highlight-end
 ```
 
 ### Verify MAPBOX_DOWNLOADS_TOKEN in gradle.properties
