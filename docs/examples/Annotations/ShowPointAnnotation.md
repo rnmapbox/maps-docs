@@ -1,6 +1,6 @@
 ---
 title: Show Point Annotations
-tags: [PointAnnotation]
+tags: [PointAnnotation, MapView#deselectAnnotationOnTap, PointAnnotation#refresh, getAnnotationsLayerID]
 custom_props:
   example_rel_path: Annotations/ShowPointAnnotation.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/ShowPointAnnotation.tsx
@@ -150,6 +150,7 @@ const ShowPointAnnotation = () => {
           ]);
         }}
         style={styles.matchParent}
+        deselectAnnotationOnTap={true}
       >
         <Camera
           defaultSettings={{ centerCoordinate: coordinates[0], zoomLevel: 16 }}

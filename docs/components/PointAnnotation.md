@@ -181,4 +181,4 @@ On v10 and pre v10 android point annotation is rendered offscreen with a canvas 
 
 
 
-
+[Show Point Annotations](../examples/Annotations/ShowPointAnnotation)
