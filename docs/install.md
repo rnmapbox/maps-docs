@@ -228,3 +228,60 @@ It's possible to overwrite the native SDK version with `RNMapboxMapsVersion`. Bu
 
 Follow the instructions above [on using v11](#using-v11), just use 10.* version you'd like.
 
+## Configure permissions for location access
+
+<Tabs groupId="location" queryString defaultValue="expo" values={[
+    {label:'iOS', value:'ios'},
+    {label:'Android', value:'android'},
+    {label:'Expo', value: 'expo'}
+  ]}>
+<TabItem value="ios">
+
+
+If you want to show the location puck on the map with the [LocationPuck](components/LocationPuck) component, you'll need to add the following property to your `Info.plist` (see [Mapbox iOS docs](https://docs.mapbox.com/ios/maps/guides/user-location/#request-temporary-access-to-full-accuracy-location) for more info):
+
+```xml
+ <key>NSLocationWhenInUseUsageDescription</key>
+ <string>Show current location on map.</string>
+ ```
+</TabItem>
+<TabItem value="android">
+If you plan to display the user's location on the map or get the user's location information you will need to add the ACCESS_COARSE_LOCATION permission in your application's AndroidManifest.xml. You also need to add ACCESS_FINE_LOCATION permissions if you need access to precise location. You can check whether the user has granted location permission and request permissions if the user hasn't granted them yet using the PermissionsManager. See Mapbox android install [guides](https://docs.mapbox.com/android/maps/guides/install/) for more information.
+
+`android/app/src/main/AndroidManifest.xml`
+
+```xml
+<manifest ... >
+// highlight-start
+  <!-- Always include this permission -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  <!-- Include only if your app benefits from precise location access. -->
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+// highlight-end
+</manifest>
+```
+
+</TabItem>
+<TabItem value="expo">
+
+If you want to show the location puck on the map with the [LocationPuck](components/LocationPuck) component, you can use the [expo-location](https://docs.expo.dev/versions/latest/sdk/location/) plugin to configure the required `NSLocationWhenInUseUsageDescription` property. Install the plugin with `npx expo install expo-location` and add its config plugin to the plugins array of your `app.{json,config.js,config.ts}`:
+
+ ```json
+ {
+   "expo": {
+     "plugins": [
+// highlight-start
+       [
+         "expo-location",
+         {
+           "locationWhenInUsePermission": "Show current location on map."
+         }
+       ]
+// highlight-end
+     ]
+   }
+ }
+ ```
+</TabItem>
+</Tabs>
