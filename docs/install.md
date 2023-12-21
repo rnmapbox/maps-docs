@@ -163,6 +163,39 @@ Add `RNMapboxMapsDownloadToken` to the @rnmapbox/maps [config plugin](https://do
 </TabItem>
 </Tabs>
 
+## Rebuild
+
+<Tabs groupId="rebuild" queryString defaultValue="expo" values={[
+    {label:'iOS', value: 'ios'},
+    {label:'Android', value: 'android'},
+    {label:'Expo', value: 'expo'}
+  ]}>
+<TabItem value="ios">
+
+```sh
+npm run ios
+```
+
+</TabItem>
+<TabItem value="android">
+
+```sh
+npm run android
+```
+
+</TabItem>
+<TabItem value="expo">
+React Native Mapbox Maps cannot be used in the "Expo Go" app, because it requires [custom native code](https://docs.expo.dev/workflow/customizing/).
+
+Next, if you are not using EAS Build then you must rebuild your app as described in the ["Adding custom native code"](https://docs.expo.dev/workflow/customizing/) guide to include the config plugin changes. If this command isn't run, you'll not be able use `@rnmapbox/maps`.
+
+```sh
+expo prebuild --clean
+```
+
+</TabItem>
+</Tabs>
+
 ## Using V11
 
 @rnmapbox 10.1 supports both `10.16.*` and `11.0.*` versions, but defaults to `10.16.*`. To use `11.0.*` please configure according to your platform:
