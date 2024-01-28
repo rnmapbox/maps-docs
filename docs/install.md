@@ -89,6 +89,38 @@ machine api.mapbox.com
   password sk.ey...
 ```
 
+### Install dependencies
+Run a `pod install` to install required dependencies.
+
+**IMPORTANT: If you are using a new MAC with the M1 or M2 chip, you may run into this issue:**
+
+```bash
+[!] CocoaPods could not find compatible versions for pod "MapboxMaps":
+  In Podfile:
+    rnmapbox-maps (from `../node_modules/@rnmapbox/maps`) was resolved to 10.1.8, which depends on
+      MapboxMaps (~> 10.16.4)
+
+None of your spec sources contain a spec satisfying the dependency: `MapboxMaps (~> 10.16.4)`.
+
+You have either:
+ * out-of-date source repos which you can update with `pod repo update` or with `pod install --repo-update`.
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+```
+If this happens, run:
+
+```bash
+sudo arch -x86_64 gem install ffi
+```
+After this is complete, run:
+```bash
+arch -x86_64 pod repo update
+```
+Followed by:
+```bash
+arch -x86_64 pod install
+```
+
 </TabItem>
 <TabItem value="android">
 
