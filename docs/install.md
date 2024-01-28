@@ -90,9 +90,13 @@ machine api.mapbox.com
 ```
 
 ### Install dependencies
-Run a `pod install` to install required dependencies.
+- Navigate to the `ios` directory for your project with `cd ios`
+- Run `pod install` in the `ios` directory.
 
-**IMPORTANT: If you are using a new MAC with the M1 or M2 chip, you may run into this issue:**
+### Troubleshooting iOS issues
+
+
+If you are using a machine with MacOS 14 or newer (typically with the M1 or M2 chip), you may run into this issue:
 
 ```bash
 [!] CocoaPods could not find compatible versions for pod "MapboxMaps":
@@ -107,19 +111,29 @@ You have either:
  * mistyped the name or version.
  * not added the source repo that hosts the Podspec to your Podfile.
 ```
-If this happens, run:
+If this happens, follow the instructions and run `pod repo update` or `pod install --repo-update`.
+
+If this issue still occurs, you may need to update your command-line tools. This can be done using the following commands:
 
 ```bash
-sudo arch -x86_64 gem install ffi
+sudo rm -rf /Library/Developer/CommandLineTools
 ```
-After this is complete, run:
+
 ```bash
-arch -x86_64 pod repo update
+xcode-select --install
 ```
-Followed by:
+**You may need to restart your machine after running the above.**
+
+If the above does not fix it, you may need to update homebrew using the following steps:
+
 ```bash
-arch -x86_64 pod install
+brew update
 ```
+
+```bash
+brew upgrade
+```
+**You may need to restart your machine after running the above.**
 
 </TabItem>
 <TabItem value="android">
