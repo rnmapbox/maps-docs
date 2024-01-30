@@ -173,6 +173,7 @@ Add `RNMapboxMapsDownloadToken` to the @rnmapbox/maps [config plugin](https://do
 <TabItem value="ios">
 
 ```sh
+(cd ios && pod install)
 npm run ios
 ```
 
