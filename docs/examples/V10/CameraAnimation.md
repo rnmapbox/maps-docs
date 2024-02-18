@@ -62,6 +62,7 @@ const CameraAnimation = () => {
   const [paddingRight, setPaddingRight] = useState(0);
   const [paddingTop, setPaddingTop] = useState(0);
   const [paddingBottom, setPaddingBottom] = useState(0);
+  const [zoom, setZoom] = useState(10);
   const [minZoom, setMinZoom] = useState<number | undefined>(undefined);
   const [maxZoom, setMaxZoom] = useState<number | undefined>(undefined);
 
@@ -165,6 +166,34 @@ const CameraAnimation = () => {
     [easing],
   );
 
+  const zoomCounter = useMemo(() => {
+    const disabled = coordinates.length > 1;
+
+    return (
+      <View style={{ flex: 1, paddingHorizontal: 10 }}>
+        <View style={{ flex: 0, alignItems: 'center' }}>
+          <Text style={{ fontWeight: 'bold', opacity: disabled ? 0.4 : 1 }}>
+            {zoom}
+          </Text>
+        </View>
+        <Slider
+          thumbStyle={[
+            styles.thumb,
+            { backgroundColor: disabled ? 'lightgray' : 'black' },
+          ]}
+          trackStyle={{ opacity: disabled ? 0.1 : 1 }}
+          value={zoom}
+          disabled={disabled}
+          minimumValue={1}
+          maximumValue={20}
+          onSlidingComplete={(_value) => {
+            setZoom(Math.round(_value));
+          }}
+        />
+      </View>
+    );
+  }, [coordinates.length, zoom]);
+
   const paddingCounter = useCallback(
     (value: number, setValue: (value: number) => void, label: string) => {
       return (
@@ -174,11 +203,7 @@ const CameraAnimation = () => {
             <Text style={{ fontWeight: 'bold' }}>{`${Math.round(value)}`}</Text>
           </View>
           <Slider
-            thumbStyle={{
-              backgroundColor: 'black',
-              width: 15,
-              height: 15,
-            }}
+            thumbStyle={styles.thumb}
             value={value}
             minimumValue={0}
             maximumValue={500}
@@ -200,16 +225,12 @@ const CameraAnimation = () => {
         <View style={{ flex: 1, paddingHorizontal: 10 }}>
           <View style={{ flex: 0, alignItems: 'center' }}>
             <Text>{label}</Text>
-            <Text style={{ fontWeight: 'bold' }}>{`${
-              value ?? 'Not set'
-            }`}</Text>
+            <Text style={{ fontWeight: 'bold' }}>
+              {`${value ?? 'Not set'}`}
+            </Text>
           </View>
           <Slider
-            thumbStyle={{
-              backgroundColor: 'black',
-              width: 15,
-              height: 15,
-            }}
+            thumbStyle={styles.thumb}
             value={value}
             minimumValue={-1}
             maximumValue={20}
@@ -232,7 +253,7 @@ const CameraAnimation = () => {
       <MapView style={styles.map}>
         <Camera
           {...centerOrBounds}
-          zoomLevel={12}
+          zoomLevel={zoom}
           minZoomLevel={minZoom}
           maxZoomLevel={maxZoom}
           padding={{
@@ -272,6 +293,13 @@ const CameraAnimation = () => {
               {easingCheckBox('linearTo', 'Linear')}
               {easingCheckBox('flyTo', 'Fly')}
               {easingCheckBox('moveTo', 'Move')}
+            </View>
+
+            <Divider style={styles.divider} />
+
+            <Text style={styles.sectionText}>Zoom</Text>
+            <View style={[styles.buttonRow, { marginBottom: -6 }]}>
+              {zoomCounter}
             </View>
 
             <Divider style={styles.divider} />
@@ -320,6 +348,11 @@ const styles = StyleSheet.create({
   },
   divider: {
     marginVertical: 8,
+  },
+  thumb: {
+    backgroundColor: 'black',
+    width: 15,
+    height: 15,
   },
 });
 
