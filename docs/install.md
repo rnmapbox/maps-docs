@@ -11,9 +11,9 @@ import TabItem from '@theme/TabItem';
 # Configure credentials
 
 Before installing @rnmapbox/maps you'll need to get the proper credentials.
-You'll need:
-  - secret access token with (Downloads:Read) scope to download iOS and Android SDK from mapbox.
-  - public token to use as accessToken when running the app
+You'll need two tokens:
+  - Secret access token with (Downloads:Read) scope to download iOS and Android SDK from mapbox. The secret token starts with `sk.ey`
+  - Public token to use as accessToken when running the app. The public token starts with `pk.ey`
 
 See [Configure Credential](https://docs.mapbox.com/ios/navigation/guides/get-started/install/#configure-credentials) on mapbox.com for details.
 
