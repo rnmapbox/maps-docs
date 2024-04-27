@@ -214,6 +214,12 @@ Add the following to your `ios/Podfile`
 $RNMapboxMapsVersion = '= 11.0.0'
 ```
 
+Since Mapbox Maps 11 requires ios 12.4 or later, you might need to update deployment target line in your `ios/Podfile`:
+
+```ruby
+platform :ios, '12.4' # change to minimum 12.4
+```
+
 </TabItem>
 <TabItem value="android">
 
