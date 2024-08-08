@@ -122,7 +122,7 @@ allprojects {
 
 ### Verify MAPBOX_DOWNLOADS_TOKEN in gradle.properties
 
-Make sure your global `.gradle-properties` is configured with your secret access token, as described by the [mapbox docs](https://docs.mapbox.com/android/maps/guides/install/#configure-credentials). To verify execute:
+Make sure your global `gradle.properties` is configured with your secret access token, as described by the [mapbox docs](https://docs.mapbox.com/android/maps/guides/install/#configure-credentials). To verify execute:
 
 ```bash
 grep -R MAPBOX_DOWNLOADS_TOKEN ~/.gradle/gradle.properties
