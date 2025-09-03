@@ -13,7 +13,7 @@ Change the tint color of the map. This will change the color of the user locatio
 import React from 'react';
 import { MapView, Camera, UserLocation } from '@rnmapbox/maps';
 import { ButtonGroup } from '@rneui/base';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const COLOR = ['red', 'yellow', 'green'];
 const OPTIONS = [{ label: 'red' }, { label: 'yellow' }, { label: 'green' }];

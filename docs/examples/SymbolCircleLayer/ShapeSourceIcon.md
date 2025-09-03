@@ -2,8 +2,8 @@
 title: Shape Source Icons
 tags: [ShapeSource, SymbolLayer, Images, Images#nativeAssetImages, Images#onImageMissing]
 custom_props:
-  example_rel_path: SymbolCircleLayer/ShapeSourceIcon.js
-custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/ShapeSourceIcon.js
+  example_rel_path: SymbolCircleLayer/ShapeSourceIcon.tsx
+custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/ShapeSourceIcon.tsx
 ---
 
 Render icons with various methods.
@@ -25,12 +25,18 @@ import {
   SymbolLayer,
   ShapeSource,
 } from '@rnmapbox/maps';
-import { Text, View } from 'react-native';
+import { StyleProp, Text, ViewStyle } from 'react-native';
+import { FeatureCollection } from 'geojson';
 
 import exampleIcon from '../../assets/example.png';
 import pinIcon from '../../assets/pin.png';
+import { SymbolLayerStyleProps } from '../../../../src/utils/MapboxStyles';
+import { ExampleWithMetadata } from '../common/ExampleMetadata';
 
-const styles = {
+const styles: {
+  icon: SymbolLayerStyleProps;
+  matchParent: StyleProp<ViewStyle>;
+} = {
   icon: {
     iconImage: ['get', 'icon'],
 
@@ -48,7 +54,7 @@ const styles = {
   matchParent: { flex: 1 },
 };
 
-const featureCollection = {
+const featureCollection: FeatureCollection = {
   type: 'FeatureCollection',
   features: [
     {
@@ -131,7 +137,7 @@ class ShapeSourceIcon extends React.Component {
           nativeAssetImages={['pin']}
           images={images}
           onImageMissing={(imageKey) => {
-            if (imageKey != 'pin-rn') {
+            if (imageKey !== 'pin-rn') {
               this.setState({
                 images: { ...this.state.images, [imageKey]: pinIcon },
               });
@@ -139,23 +145,22 @@ class ShapeSourceIcon extends React.Component {
           }}
         >
           <Image name="pin-rn">
-            <View>
-              <View
-                style={{
-                  borderRadius: 10,
-                  backgroundColor: 'gray',
-                  padding: 8,
-                  margin: 16,
-                  width: 100,
-                  shadowOffset: { width: 0, height: 8 },
-                  shadowOpacity: 0.2,
-                }}
-              >
-                <Text style={{ fontWeight: 'bold', color: 'white' }}>
-                  RN Pin 3
-                </Text>
-              </View>
-            </View>
+            <Text
+              style={{
+                fontWeight: 'bold',
+                textAlign: 'center',
+                color: 'white',
+                borderRadius: 10,
+                backgroundColor: 'gray',
+                padding: 8,
+                margin: 16,
+                width: 100,
+                shadowOffset: { width: 0, height: 8 },
+                shadowOpacity: 0.2,
+              }}
+            >
+              RN Pin 3
+            </Text>
           </Image>
         </Images>
         <ShapeSource id="exampleShapeSource" shape={featureCollection}>
