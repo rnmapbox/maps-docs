@@ -44,7 +44,7 @@ await Mapbox.offlineManager.createPack({
 ```
 
 
-[Offline Example](../examples/Map/OfflineExample)### invalidatePack(name)
+[Offline Example](../examples/CacheOffline/OfflineExample)### invalidatePack(name)
 
 Invalidates the specified offline pack. This method checks that the tiles in the specified offline pack match those from the server. Local tiles that do not match the latest version on the server are updated.This is more efficient than deleting the offline pack and downloading it again. If the data stored locally matches that on the server, new data will not be downloaded.
 
@@ -172,7 +172,7 @@ const offlinePacks = await Mapbox.offlineManager.getPacks();
 ```
 
 
-[Offline Example](../examples/Map/OfflineExample)### getPack(name)
+[Offline Example](../examples/CacheOffline/OfflineExample)### getPack(name)
 
 Retrieves an offline pack that is stored in the database by name.
 
@@ -188,7 +188,7 @@ const offlinePack = await Mapbox.offlineManager.getPack();
 ```
 
 
-[Offline Example](../examples/Map/OfflineExample)### mergeOfflineRegions(path)
+[Offline Example](../examples/CacheOffline/OfflineExample)### mergeOfflineRegions(path)
 
 Sideloads offline db
 
