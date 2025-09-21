@@ -121,5 +121,5 @@ export default ImageOverlay;
 
 ```
 
-![ImageOverlay.png](./ImageOverlay.png)}
+}
 

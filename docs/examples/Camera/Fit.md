@@ -309,5 +309,5 @@ export default Fit;
 
 ```
 
-}
+![Fit.png](./Fit.png)}
 

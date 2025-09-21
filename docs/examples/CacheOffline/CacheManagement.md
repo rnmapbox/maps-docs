@@ -160,5 +160,5 @@ export default CacheManagement;
 
 ```
 
-}
+![CacheManagement.png](./CacheManagement.png)}
 

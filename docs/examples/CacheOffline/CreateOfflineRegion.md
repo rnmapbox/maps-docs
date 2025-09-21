@@ -227,5 +227,5 @@ export default CreateOfflineRegion;
 
 ```
 
-}
+![CreateOfflineRegion.png](./CreateOfflineRegion.png)}
 
