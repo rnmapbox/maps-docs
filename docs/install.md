@@ -143,6 +143,10 @@ Set `RNMapboxMapsDownloadToken` to your secret token. See the [credentials instr
 Add `RNMapboxMapsDownloadToken` to the @rnmapbox/maps [config plugin](https://docs.expo.io/guides/config-plugins/) in the [`plugins`](https://docs.expo.io/versions/latest/config/app/#plugins) array of your `app.{json,config.js,config.ts}`:
 
 
+:::warning
+RNMapboxMapsDownloadToken is only intended for eas, and [it can cause your RNMapboxMapsDownloadToken to leak](RNMapboxMapsDownloadTokenDetails). 
+:::
+
 ```json
 {
   "expo": {
