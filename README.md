@@ -54,3 +54,8 @@ yarn detox test --configuration ios.debug --debug-synchronization 500 --loglevel
 
 
 ```
+
+### Docosaurus update:
+
+1. See https://docusaurus.io/changelog/3.5.0
+2. Update the version
