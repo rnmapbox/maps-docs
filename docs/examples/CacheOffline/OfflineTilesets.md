@@ -200,5 +200,5 @@ export default function OfflineTilesets() {
 
 ```
 
-}
+![OfflineTilesets.png](./OfflineTilesets.png)}
 

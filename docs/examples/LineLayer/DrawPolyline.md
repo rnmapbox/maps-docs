@@ -206,5 +206,5 @@ export default DrawPolyline;
 
 ```
 
-}
+![DrawPolyline.png](./DrawPolyline.png)}
 

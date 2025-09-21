@@ -63,5 +63,5 @@ export default GetZoom;
 
 ```
 
-}
+![GetZoom.png](./GetZoom.png)}
 

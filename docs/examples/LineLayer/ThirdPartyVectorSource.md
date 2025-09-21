@@ -57,5 +57,5 @@ export default ThirdPartyVectorSource;
 
 ```
 
-}
+![ThirdPartyVectorSource.png](./ThirdPartyVectorSource.png)}
 

@@ -146,5 +146,5 @@ export default OfflineExample;
 
 ```
 
-}
+![OfflineExample.png](./OfflineExample.png)}
 

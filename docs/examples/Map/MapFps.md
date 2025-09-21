@@ -51,5 +51,5 @@ export default MapFps;
 
 ```
 
-}
+![MapFps.png](./MapFps.png)}
 

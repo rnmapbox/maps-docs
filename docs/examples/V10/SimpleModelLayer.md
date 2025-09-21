@@ -112,5 +112,5 @@ export default SimpleModelLayer;
 
 ```
 
-}
+![SimpleModelLayer.png](./SimpleModelLayer.png)}
 

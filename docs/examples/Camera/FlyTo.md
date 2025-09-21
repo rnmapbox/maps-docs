@@ -120,5 +120,5 @@ export default FlyTo;
 
 ```
 
-}
+![FlyTo.png](./FlyTo.png)}
 

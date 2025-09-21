@@ -160,5 +160,5 @@ FeatureState.metadata = metadata;
 
 ```
 
-}
+![FeatureState.png](./FeatureState.png)}
 

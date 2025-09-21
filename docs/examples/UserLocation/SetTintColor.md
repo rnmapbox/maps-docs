@@ -53,5 +53,5 @@ export default SetTintColor;
 
 ```
 
-![SetTintColor.png](./SetTintColor.png)}
+}
 
