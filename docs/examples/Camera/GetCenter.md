@@ -58,10 +58,8 @@ class GetCenter extends React.Component {
           style={styles.mapView}
         >
           <Mapbox.Camera
-            defaultSettings={{
-              centerCoordinate: [-73.970895, 40.723279],
-              zoomLevel: 9,
-            }}
+            zoomLevel={9}
+            centerCoordinate={[-73.970895, 40.723279]}
           />
         </Mapbox.MapView>
 
