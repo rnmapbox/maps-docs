@@ -10,9 +10,10 @@ Use MarkerView to create a custom callout.
 
 
 ```jsx
+import { useState } from 'react';
 import Mapbox, { type SymbolLayerStyle } from '@rnmapbox/maps';
+// @ts-ignore - @turf packages have type resolution issues with package.json exports
 import { Feature } from '@turf/helpers';
-import React, { useState } from 'react';
 import { StyleProp, Text, TextStyle, View, ViewStyle } from 'react-native';
 
 import exampleIcon from '../../assets/pin.png';

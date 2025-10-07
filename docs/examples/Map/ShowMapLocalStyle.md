@@ -10,14 +10,13 @@ Customize ornaments of the map(logo, compass, scalebar, attribution)
 
 
 ```jsx
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Alert } from 'react-native';
 import Mapbox from '@rnmapbox/maps';
 
 import sheet from '../../styles/sheet';
 import { ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-doc
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const style = JSON.stringify(require('../../assets/map-styleURL-style.json'));
 
 const ShowMap = () => {

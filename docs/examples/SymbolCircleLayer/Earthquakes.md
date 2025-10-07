@@ -12,7 +12,7 @@ Click a cluster to show list of contents in the cluster `getClusterLeaves`.
 
 
 ```jsx
-import MapboxGL, {
+import {
   Camera,
   CircleLayer,
   CircleLayerStyle,
@@ -20,6 +20,7 @@ import MapboxGL, {
   ShapeSource,
   SymbolLayer,
   SymbolLayerStyle,
+  StyleURL,
 } from '@rnmapbox/maps';
 import { FeatureCollection } from 'geojson';
 import React, { useRef, useState } from 'react';
@@ -161,7 +162,7 @@ const Earthquakes: React.FC<Partial<BaseExampleProps>> = () => {
 
   return (
     <>
-      <MapView style={styles.matchParent} styleURL={MapboxGL.StyleURL.Dark}>
+      <MapView style={styles.matchParent} styleURL={StyleURL.Dark}>
         <Camera
           defaultSettings={{
             centerCoordinate: SF_OFFICE_COORDINATE,
@@ -170,23 +171,23 @@ const Earthquakes: React.FC<Partial<BaseExampleProps>> = () => {
         />
         <ShapeSource
           id="earthquakes"
-          onPress={async pressedShape => {
+          onPress={async (pressedShape) => {
             if (shapeSource.current) {
               try {
                 const [cluster] = pressedShape.features;
 
                 const collection = await shapeSource.current.getClusterLeaves(
-                  cluster,
+                  cluster!,
                   999,
                   0,
                 );
 
                 setSelectedCluster(collection);
               } catch {
-                if (!pressedShape.features[0].properties?.cluster) {
+                if (!pressedShape.features[0]!.properties?.cluster) {
                   setSelectedCluster({
                     type: 'FeatureCollection',
-                    features: [pressedShape.features[0]],
+                    features: [pressedShape.features[0]!],
                   });
                 }
               }

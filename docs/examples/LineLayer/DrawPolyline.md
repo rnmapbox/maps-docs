@@ -5,22 +5,23 @@ custom_props:
   example_rel_path: LineLayer/DrawPolyline.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/LineLayer/DrawPolyline.tsx
 ---
-This example shows a simple polyline editor. It uses `onCameraChanged` to get the center of the map and `getCoordinateFromView` 
+This example shows a simple polyline editor. It uses `onCameraChanged` to get the center of the map and `getCoordinateFromView`
   to get the coordinates of the crosshair.
-  
+
   The crosshair is an overlay that is positioned using `onLayout` and `getCoordinateFromView`.
-  
+
   The `ShapeSource` is updated with the new coordinates and the `LineLayer` is updated with the new coordinates.
 
 ```jsx
 import { Camera, LineLayer, MapView, ShapeSource } from '@rnmapbox/maps';
 import { Button, View } from 'react-native';
-import React, {
+import {
   useState,
   useRef,
   ComponentProps,
   useMemo,
   forwardRef,
+  type ElementRef,
 } from 'react';
 
 type Position = [number, number];
@@ -30,7 +31,7 @@ type CrosshairProps = {
   w: number;
   onLayout: ComponentProps<typeof View>['onLayout'];
 };
-const Crosshair = forwardRef<View, CrosshairProps>(
+const Crosshair = forwardRef<ElementRef<typeof View>, CrosshairProps>(
   ({ size, w, onLayout }: CrosshairProps, ref) => (
     <View
       onLayout={onLayout}
@@ -69,7 +70,7 @@ const CrosshairOverlay = ({
 }: {
   onCenter: (x: [number, number]) => void;
 }) => {
-  const ref = useRef<View>(null);
+  const ref = useRef<ElementRef<typeof View>>(null);
 
   return (
     <View
@@ -172,9 +173,8 @@ const DrawPolyline = () => {
           ref={map}
           style={{ flex: 1 }}
           onCameraChanged={async (e) => {
-            const crosshairCoords = await map.current?.getCoordinateFromView(
-              crosshairPos,
-            );
+            const crosshairCoords =
+              await map.current?.getCoordinateFromView(crosshairPos);
             console.log(
               'Crosshair coords: ',
               crosshairCoords,

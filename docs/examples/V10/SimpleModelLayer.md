@@ -28,6 +28,7 @@ const styles = {
   },
 };
 
+// @ts-ignore - GeoJSON type literal issues
 const features = {
   type: 'FeatureCollection',
   features: [
@@ -73,6 +74,7 @@ const modelLayerStyle = {
   modelScale: [50, 50, 50],
 };
 
+// @ts-ignore - Missing asset type declaration
 const models = {
   car: require('../../assets/sportcar.glb'),
 };

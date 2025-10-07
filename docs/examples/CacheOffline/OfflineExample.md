@@ -10,6 +10,7 @@ Demonstates basic use of offlineManager api.
 
 
 ```jsx
+import { useState } from 'react';
 import geoViewport from '@mapbox/geo-viewport';
 import Mapbox, {
   Camera,
@@ -17,7 +18,6 @@ import Mapbox, {
   offlineManager,
   StyleURL,
 } from '@rnmapbox/maps';
-import React, { useState } from 'react';
 import { Button, Dimensions, TextInput } from 'react-native';
 
 import { ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-doc
@@ -129,7 +129,7 @@ const OfflineExample = () => {
               whatIsThat: 'foo',
             },
           };
-          offlineManager.createPack(options, (region, status) =>
+          offlineManager.createPack(options, (_region, status) =>
             console.log('=> progress callback region:', 'status: ', status),
           );
         }}

@@ -10,7 +10,6 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
   
 
 ```jsx
-import React from 'react';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {

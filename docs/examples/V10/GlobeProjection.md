@@ -10,7 +10,7 @@ Shows map with globe projection
 
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from 'react-native';
 import {
   MapView,

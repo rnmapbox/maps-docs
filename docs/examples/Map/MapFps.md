@@ -8,7 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 Toggles preferredFramesPerSecond between 10 fps and 60 fps, move the map around to feel the difference.
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Mapbox from '@rnmapbox/maps';
 import { Button } from '@rneui/base';
 
@@ -29,19 +29,19 @@ const MapFps = () => {
   return (
     <>
       <Button
-        onPress={() => setFrameRate((fps) => fps === 60 ? 10 : 60)}
+        onPress={() => setFrameRate((fps) => (fps === 60 ? 10 : 60))}
         title={frameRate === 60 ? '10 fps' : '60 fps'}
       />
-        <Mapbox.MapView
-          styleURL={Mapbox.StyleURL.Dark}
-          style={sheet.matchParent}
-          testID={'toggle-map-fps'}
-          preferredFramesPerSecond={frameRate}
-        >
-          <Mapbox.Camera followZoomLevel={12} followUserLocation />
+      <Mapbox.MapView
+        styleURL={Mapbox.StyleURL.Dark}
+        style={sheet.matchParent}
+        testID={'toggle-map-fps'}
+        preferredFramesPerSecond={frameRate}
+      >
+        <Mapbox.Camera followZoomLevel={12} followUserLocation />
 
-          <Mapbox.UserLocation />
-        </Mapbox.MapView>
+        <Mapbox.UserLocation />
+      </Mapbox.MapView>
     </>
   );
 };

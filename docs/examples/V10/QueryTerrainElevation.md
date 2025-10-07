@@ -40,6 +40,7 @@ const styles = {
     width: 0,
     height: 0,
     backgroundColor: 'transparent',
+    // @ts-ignore - borderStyle type issue
     borderStyle: 'solid',
     borderLeftWidth: size,
     borderRightWidth: size,
@@ -64,13 +65,13 @@ const QueryTerrainElevation = () => {
     };
   }, []);
 
-  function startAnimation(animatedRoute) {
-    const ts = lineString(animatedRoute.__getValue());
+  function startAnimation(routeToAnimate) {
+    const ts = lineString(routeToAnimate.__getValue());
     const total = length(ts, { units: 'meters' });
-    const points = animatedRoute.__getValue();
+    const points = routeToAnimate.__getValue();
     const endPoint = points[points.length - 1];
 
-    animatedRoute
+    routeToAnimate
       .timing({
         toValue: { end: { point: endPoint, from: total } },
         duration: 20000,
@@ -105,13 +106,13 @@ const QueryTerrainElevation = () => {
 
       let pinRoute = featureCollection.features[0].geometry.coordinates;
 
-      let animatedRoute = new AnimatedRouteCoordinatesArray(pinRoute, {
+      let animatedPinRoute = new AnimatedRouteCoordinatesArray(pinRoute, {
         end: {
           from: length(lineString(pinRoute)),
         },
       });
-      setAnimatedRoute(animatedRoute);
-      setActPoint(new AnimatedExtractCoordinateFromArray(animatedRoute, -1));
+      setAnimatedRoute(animatedPinRoute);
+      setActPoint(new AnimatedExtractCoordinateFromArray(animatedPinRoute, -1));
     })();
   }, []);
   return (
@@ -213,6 +214,7 @@ const QueryTerrainElevation = () => {
                 <Text>Altitude: {altitude} m</Text>
               </View>
               <View
+                // @ts-ignore - borderStyle type issue in dynamic styles
                 style={[styles.triangleStyle(12, 'white'), { marginTop: -1 }]}
               />
             </View>

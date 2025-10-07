@@ -75,7 +75,7 @@ const ShowMarkerView = () => {
           }}
         />
 
-        <Mapbox.PointAnnotation coordinate={pointList[1]} id="pt-ann">
+        <Mapbox.PointAnnotation coordinate={pointList[1]!} id="pt-ann">
           <AnnotationContent title={'this is a point annotation'} />
         </Mapbox.PointAnnotation>
 

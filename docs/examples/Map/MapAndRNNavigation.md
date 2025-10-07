@@ -11,7 +11,7 @@ Demonstrates various ways to embedd map via (Navigation, Page, modal, etc)
 
 ```jsx
 import React, { useState } from 'react';
-import { Button, Modal} from 'react-native';
+import { Button, Modal } from 'react-native';
 import { MapView, UserLocation, Camera } from '@rnmapbox/maps';
 
 import MapInModal from './MapInModal';
@@ -26,7 +26,10 @@ export default function MapAndNavigation({ navigation }) {
   return (
     <>
       <Button title="Modal" onPress={() => setModalVisible(true)} />
-      <Button title="Modal (with React Navigation)" onPress={() => navigation.navigate('MapInModal')} />
+      <Button
+        title="Modal (with React Navigation)"
+        onPress={() => navigation.navigate('MapInModal')}
+      />
       <Button
         title="Toggle map"
         onPress={() => setShowMap((wasShowingMap) => !wasShowingMap)}
@@ -56,7 +59,7 @@ export default function MapAndNavigation({ navigation }) {
         presentationStyle="formSheet"
         onRequestClose={() => setModalVisible(false)}
       >
-        <MapInModal dismiss={() => setModalVisible(false)}/>
+        <MapInModal dismiss={() => setModalVisible(false)} />
       </Modal>
     </>
   );

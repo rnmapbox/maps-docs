@@ -9,13 +9,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 ```jsx
 import React from 'react';
-import {
-  Images,
-  MapView,
-  RasterLayer,
-  RasterSource,
-  Camera,
-} from '@rnmapbox/maps';
+import { MapView, RasterLayer, RasterSource, Camera } from '@rnmapbox/maps';
 
 const styles = {
   matchParent: { flex: 1 },

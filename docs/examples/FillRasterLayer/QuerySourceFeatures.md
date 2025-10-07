@@ -8,7 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 
 ```jsx
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Text } from 'react-native';
 import {
   StyleURL,

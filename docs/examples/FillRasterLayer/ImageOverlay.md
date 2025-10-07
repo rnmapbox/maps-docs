@@ -86,7 +86,9 @@ class ImageOverlay extends React.Component {
     return (
       <>
         <Mapbox.MapView
-          ref={(ref) => (this.map = ref)}
+          ref={(ref) => {
+            this.map = ref;
+          }}
           style={sheet.matchParent}
           styleURL={Mapbox.StyleURL.Satellite}
         >
