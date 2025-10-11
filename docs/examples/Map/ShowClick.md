@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/ShowClick.js
 ---
 
-Demonstates onPress event and how to get the screen point of the click.
+Demonstrates onPress event and how to get the screen point of the click.
 
 
 ```jsx

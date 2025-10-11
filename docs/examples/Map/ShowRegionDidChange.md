@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/ShowRegionDidChange.js
 ---
 
-Demonstates MapView region change events.
+Demonstrates MapView region change events.
 
 
 ```jsx

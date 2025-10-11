@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/CacheOffline/OfflineExample.tsx
 ---
 
-Demonstates basic use of offlineManager api.
+Demonstrates basic use of offlineManager api.
 
 
 ```jsx

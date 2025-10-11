@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/TerrainSkyAtmosphere.tsx
 ---
 
-Demostrates use of Terran, Atmosphere and SkyLayer.
+Demostrates use of Terrain, Atmosphere and SkyLayer.
 
 
 ```jsx

@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/UserLocationUpdates.tsx
 ---
 
-Retrieves and shows location updates from UserLocation componen via the `onUpdate` callback
+Retrieves and shows location updates from UserLocation component via the `onUpdate` callback
 
 
 ```jsx

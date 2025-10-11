@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/QueryTerrainElevation.js
 ---
 
-This is a fairly complex example demonstraing the use of AnimatedShape, Camera animation, queryTerrainElevation and AnimatedMarkerView
+This is a fairly complex example demonstrating the use of AnimatedShape, Camera animation, queryTerrainElevation and AnimatedMarkerView
 
 
 ```jsx

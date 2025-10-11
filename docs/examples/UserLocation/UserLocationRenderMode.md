@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/UserLocationRenderMode.tsx
 ---
 
-Demonstates UserLocation render modes, follow modes
+Demonstrates UserLocation render modes, follow modes
 
 
 ```jsx

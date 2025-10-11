@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/SimpleModelLayer.js
 ---
 
-Deomnstrate the use of ModelLayer to render, and Models to associate 3D models with names.
+Demonstrate the use of ModelLayer to render, and Models to associate 3D models with names.
 
 
 ```jsx

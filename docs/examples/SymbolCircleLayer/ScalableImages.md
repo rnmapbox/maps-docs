@@ -6,9 +6,9 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/ScalableImages.tsx
 ---
 
-Demonstates Scalable images.
+Demonstrates Scalable images.
 
-You can use strachX, stretchY and content to scale a bitmap image - keep parts of it fixed while only scale specific parts.
+You can use stretchX, stretchY and content to scale a bitmap image - keep parts of it fixed while only scale specific parts.
 
 
 ```jsx

@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/CustomIcon.tsx
 ---
 
-Renders a symbol layer with custom icon defined using the Images component. Clicking a location on a map add a new icon.
+Renders a symbol layer with custom icon defined using the Images component. Clicking a location on a map adds a new icon.
 
 
 ```jsx

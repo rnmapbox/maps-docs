@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/MapAndRNNavigation.js
 ---
 
-Demonstrates various ways to embedd map via (Navigation, Page, modal, etc)
+Demonstrates various ways to embed map via (Navigation, Page, modal, etc)
 
 
 ```jsx
