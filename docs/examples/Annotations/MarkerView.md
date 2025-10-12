@@ -6,7 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/MarkerView.tsx
 ---
 
-Shows marker view and poitn annotations
+Shows marker view and point annotations
 
 
 ```jsx
