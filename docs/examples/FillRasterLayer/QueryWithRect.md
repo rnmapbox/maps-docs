@@ -1,6 +1,6 @@
 ---
 title: Query Features Bounding Box
-tags: []
+tags: [queryRenderedFeaturesInRect]
 custom_props:
   example_rel_path: FillRasterLayer/QueryWithRect.js
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QueryWithRect.js
@@ -9,7 +9,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 ```jsx
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, Button } from 'react-native';
 import {
   MapView,
   Camera,
@@ -120,6 +120,23 @@ class QueryWithRect extends React.Component {
             </ShapeSource>
           ) : null}
         </MapView>
+        <Button
+          onPress={async () => {
+            console.log('::pressed');
+            const featureCollection =
+              await this._map.queryRenderedFeaturesInRect([], null, [
+                'nycFill',
+              ]);
+
+            this.setState({
+              screenCoords: [],
+              selectedGeoJSON: featureCollection.features.length
+                ? featureCollection
+                : null,
+            });
+          }}
+          title="Query screen features"
+        />
 
         <Bubble>
           <Text style={styles.bubbleText}>{this.message}</Text>
