@@ -13,7 +13,7 @@ Before installing @rnmapbox/maps you'll need to get your Mapbox access token.
 
 To grab your token, open up a browser and go to your account's tokens page: https://console.mapbox.com/account/access-tokens/
 
-On the top of your token list, copy your **Default Public Token**.
+On the top of your token list, copy your **Default Public Token**. The public token starts with `pk.ey`.
 
 For more details, see [Configure Credentials](https://docs.mapbox.com/ios/maps/guides/install/#part-1-create-and-configure-your-credentials) on mapbox.com.
 
