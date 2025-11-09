@@ -162,7 +162,7 @@ expo prebuild --clean
 
 If you need to use the deprecated `10.16.*` version, you can configure it according to your platform:
 
-<Tabs groupId="v11-insructions" queryString defaultValue="expo" values={[
+<Tabs groupId="v10-instructions" queryString defaultValue="expo" values={[
     {label:'iOS', value:'ios'},
     {label:'Android', value:'android'},
     {label:'Expo', value: 'expo'}
