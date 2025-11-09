@@ -152,9 +152,15 @@ expo prebuild --clean
 </TabItem>
 </Tabs>
 
-## Using V11
+## Customizing Mapbox Version
 
-@rnmapbox 10.1 supports both `10.16.*` and `11.0.*` versions, but defaults to `10.16.*`. To use `11.0.*` please configure according to your platform:
+@rnmapbox/maps 10.2 defaults to Mapbox Maps SDK `11.0.*`.
+
+> **Note:** Mapbox Maps SDK v10 is now deprecated. We recommend using v11 for new projects and upgrading existing projects to v11.
+
+### Using V10 (Deprecated)
+
+If you need to use the deprecated `10.16.*` version, you can configure it according to your platform:
 
 <Tabs groupId="v11-insructions" queryString defaultValue="expo" values={[
     {label:'iOS', value:'ios'},
@@ -166,13 +172,7 @@ expo prebuild --clean
 Add the following to your `ios/Podfile`
 
 ```ruby
-$RNMapboxMapsVersion = '= 11.0.0'
-```
-
-Since Mapbox Maps 11 requires ios 12.4 or later, you might need to update deployment target line in your `ios/Podfile`:
-
-```ruby
-platform :ios, '12.4' # change to minimum 12.4
+$RNMapboxMapsVersion = '~> 10.16.0'
 ```
 
 </TabItem>
@@ -184,7 +184,7 @@ Set `RNMapboxMapsVersion` in `android/build.gradle` > `buildscript` > `ext` sect
 buildscript {
     ext {
 // highlight-start
-        RNMapboxMapsVersion = '11.0.0'
+        RNMapboxMapsVersion = '10.16.4'
 // highlight-end
     }
 }
@@ -204,7 +204,7 @@ Add `RNMapboxMapsVersion` to the @rnmapbox/maps [config plugin](https://docs.exp
         {
           ...
 // highlight-start
-          "RNMapboxMapsVersion": "11.0.0"
+          "RNMapboxMapsVersion": "10.16.4"
 // highlight-end
         }
       ]
@@ -219,9 +219,9 @@ Add `RNMapboxMapsVersion` to the @rnmapbox/maps [config plugin](https://docs.exp
 
 ## Advanced - using non default version
 
-It's possible to overwrite the native SDK version with `RNMapboxMapsVersion`. But you have to revise it when upgrading `@rnmapbox/maps` as future `@rnmapbox/maps` releases might not support he version you set today.
+It's possible to overwrite the native SDK version with `RNMapboxMapsVersion`. However, you should revise this when upgrading `@rnmapbox/maps` as future releases might not support the version you set.
 
-Follow the instructions above [on using v11](#using-v11), just use 10.* version you'd like.
+To use a specific v11 version, follow the instructions above [for customizing the Mapbox version](#customizing-mapbox-version), specifying your desired `11.*` version (e.g., `11.0.0`, `11.1.0`, etc.).
 
 ## Configure permissions for location access
 
