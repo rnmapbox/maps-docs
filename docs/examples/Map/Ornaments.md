@@ -142,7 +142,7 @@ const Ornaments = () => {
         scaleBarPosition={POSITIONS[position[OrnamentType.ScaleBar]]}
       >
         <Images images={images} />
-        <Camera />
+        <Camera zoomLevel={4} centerCoordinate={[-98, 38.88]} />
       </MapView>
 
       <Bubble style={styles.bubble}>
