@@ -117,6 +117,16 @@ The default value is 18.
 
 
   
+### minZoomLevel
+
+```tsx
+number
+```
+Specifies the minimum zoom level at which to create vector tiles.
+The default value is 0.
+
+
+  
 ### buffer
 
 ```tsx
