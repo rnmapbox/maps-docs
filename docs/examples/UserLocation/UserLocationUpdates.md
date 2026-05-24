@@ -12,10 +12,10 @@ Retrieves and shows location updates from UserLocation component via the `onUpda
 ```jsx
 import { useState } from 'react';
 import { Text } from 'react-native';
-import { MapView, Camera, UserLocation, Location } from '@rnmapbox/maps';
+import { MapView, Camera, UserLocation, type Location } from '@rnmapbox/maps';
 
 import Bubble from '../common/Bubble';
-import { ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-example-doc
+import { type ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-example-doc
 
 const UserLocationUpdates = () => {
   const [location, setLocation] = useState<Location>();

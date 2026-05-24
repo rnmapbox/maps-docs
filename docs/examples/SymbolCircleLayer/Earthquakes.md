@@ -15,14 +15,14 @@ Click a cluster to show list of contents in the cluster `getClusterLeaves`.
 import {
   Camera,
   CircleLayer,
-  CircleLayerStyle,
+  type CircleLayerStyle,
   MapView,
   ShapeSource,
   SymbolLayer,
-  SymbolLayerStyle,
+  type SymbolLayerStyle,
   StyleURL,
 } from '@rnmapbox/maps';
-import { FeatureCollection } from 'geojson';
+import { type FeatureCollection } from 'geojson';
 import React, { useRef, useState } from 'react';
 import { FAB, Icon, ListItem } from '@rneui/base';
 import moment from 'moment';
@@ -31,8 +31,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import earthQuakesJSON from '../../assets/earthquakes.json';
 import { SF_OFFICE_COORDINATE } from '../../utils';
-import { ExampleWithMetadata } from '../common/ExampleMetadata';
-import { BaseExampleProps } from '../common/BaseExamplePropTypes';
+import { type ExampleWithMetadata } from '../common/ExampleMetadata';
+import { type BaseExampleProps } from '../common/BaseExamplePropTypes';
 
 const layerStyles: {
   singlePoint: CircleLayerStyle;
