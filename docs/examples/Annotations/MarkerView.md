@@ -1,6 +1,6 @@
 ---
 title: Marker View
-tags: [PointAnnotation, MarkerView, Slider, Interactive]
+tags: [PointAnnotation, MarkerView, Slider, Interactive, pointerEvents]
 custom_props:
   example_rel_path: Annotations/MarkerView.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/MarkerView.tsx
@@ -8,7 +8,8 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Shows marker view and point annotations, including an interactive marker with
 sliders, switch, counter, text input, and pressable button to verify complex
-touch interactions inside a MarkerView.
+touch interactions inside a MarkerView. Toggle pointerEvents="none" to make
+the marker transparent to all touch events, passing them through to the map.
 
 
 ```jsx
@@ -288,11 +289,19 @@ const ShowMarkerView = () => {
     React.useState<GeoJSON.Position[]>(INITIAL_COORDINATES);
   const [allowOverlapWithPuck, setAllowOverlapWithPuck] =
     React.useState<boolean>(false);
+  const [pointerEventsNone, setPointerEventsNone] =
+    React.useState<boolean>(false);
+
+  const [mapMoveCount, setMapMoveCount] = React.useState(0);
 
   const onPressMap = (e: GeoJSON.Feature) => {
     const geometry = e.geometry as GeoJSON.Point;
     setPointList((pl) => [...pl, geometry.coordinates]);
   };
+
+  const onRegionDidChange = React.useCallback(() => {
+    setMapMoveCount((c) => c + 1);
+  }, []);
 
   return (
     <>
@@ -304,7 +313,15 @@ const ShowMarkerView = () => {
         }
         onPress={() => setAllowOverlapWithPuck((prev) => !prev)}
       />
-      <Mapbox.MapView onPress={onPressMap} style={styles.matchParent}>
+      <Button
+        title={
+          pointerEventsNone
+            ? 'pointerEvents="none" – tap/drag passes to map'
+            : 'pointerEvents="auto" – marker handles touches'
+        }
+        onPress={() => setPointerEventsNone((prev) => !prev)}
+      />
+      <Mapbox.MapView onPress={onPressMap} onRegionDidChange={onRegionDidChange} style={styles.matchParent}>
         <Mapbox.Camera
           defaultSettings={{
             zoomLevel: 16,
@@ -319,6 +336,7 @@ const ShowMarkerView = () => {
         <Mapbox.MarkerView
           coordinate={pointList[0]!}
           allowOverlapWithPuck={allowOverlapWithPuck}
+          pointerEvents={pointerEventsNone ? 'none' : 'auto'}
         >
           <AnnotationContent title={'this is a marker view'} />
         </Mapbox.MarkerView>
@@ -345,6 +363,7 @@ const ShowMarkerView = () => {
       </Mapbox.MapView>
 
       <Bubble>
+        <Text>Map moved: {mapMoveCount} times</Text>
         <Text>Tap on map to add a point annotation</Text>
       </Bubble>
     </>
