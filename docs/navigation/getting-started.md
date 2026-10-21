@@ -76,7 +76,40 @@ export function NavigationScreen() {
 
 `Navigation.previewRoute(route)` shows a route on navigation maps before guidance starts, and `Navigation.setCameraState('overview')` fits the rest of the route.
 
-The headless API has no arrival event in the current release; one is in progress in [rnmapbox/navigation#9](https://github.com/rnmapbox/navigation/pull/9). [`<NavigationView>`](navigation-view.md) reports arrivals with `onArrive`.
+## Guidance events
+
+Subscribe to the events you need while guidance runs. Each listener returns a subscription; `remove()` it on unmount.
+
+```tsx
+const [offRoute, setOffRoute] = useState(false);
+
+useEffect(() => {
+  const subscriptions = [
+    Navigation.addArriveListener(({ waypointIndex, isFinalDestination }) => {
+      if (isFinalDestination) {
+        Navigation.stopNavigation();
+      }
+    }),
+    Navigation.addOffRouteListener(setOffRoute),
+    Navigation.addRouteChangeListener(({ route, reason }) => {
+      // `reason` is 'reroute' or 'alternative'. Release `route` when you're done with it.
+    }),
+  ];
+  return () => subscriptions.forEach((subscription) => subscription.remove());
+}, []);
+```
+
+| Listener                      | Event                                                                                         |
+| ----------------------------- | --------------------------------------------------------------------------------------------- |
+| `addRouteProgressListener`    | Distances and durations remaining, and the next maneuver's banner and lanes.                  |
+| `addLocationListener`         | Location snapped to the road or route, with `speed`, `course`, `roadName` and `speedLimit`.   |
+| `addArriveListener`           | `{ waypointIndex, isFinalDestination }` when a waypoint is reached; the origin is index 0.    |
+| `addOffRouteListener`         | `true` when the user leaves the route, `false` once guidance follows a route again.           |
+| `addRouteChangeListener`      | `{ route, reason }` when guidance switches to a new `Route` after a reroute.                  |
+| `addVoiceInstructionListener` | `{ text, ssml, distanceAlongStep }`, for apps doing their own text to speech.                 |
+| `addCameraStateListener`      | Camera state changes, see [Camera](#camera).                                                  |
+
+The SDK speaks voice instructions during any guidance; `Navigation.setVoiceMuted(true)` mutes them. See the [API reference](api/index.md) for the event types.
 
 ## Routes
 

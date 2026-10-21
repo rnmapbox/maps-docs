@@ -8,6 +8,8 @@ import TabItem from '@theme/TabItem';
 
 Set up `@rnmapbox/maps` first, following its [install guide](../install.md). `@rnmapbox/navigation` needs `@rnmapbox/maps` 10.3.11 or newer.
 
+`@rnmapbox/navigation` is published under the `next` tag while it's in alpha.
+
 # Install
 
 <Tabs groupId="install-module" queryString defaultValue="npm" values={[
@@ -17,14 +19,14 @@ Set up `@rnmapbox/maps` first, following its [install guide](../install.md). `@r
 <TabItem value="npm">
 
 ```bash
-npm install @rnmapbox/navigation @rnmapbox/maps
+npm install @rnmapbox/navigation@next @rnmapbox/maps
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```bash
-yarn add @rnmapbox/navigation @rnmapbox/maps
+yarn add @rnmapbox/navigation@next @rnmapbox/maps
 ```
 
 </TabItem>
@@ -61,6 +63,8 @@ end
 ```
 
 `pod install` adds `MapboxCommon`, `MapboxCoreMaps`, `MapboxNavigationNative` and `Turf` to the frameworks CocoaPods embeds.
+
+With React Native 0.87+ and Xcode 26, also add the Navigation SDK's binary frameworks to `rnmapbox-maps`' framework search paths, see [Troubleshooting](troubleshooting.md#xcode-26-unable-to-resolve-module-dependency-turf).
 
 ### Info.plist
 
@@ -112,9 +116,62 @@ With `targetSdkVersion` 35 or higher both libraries use the `-ndk27` artifacts (
 </TabItem>
 <TabItem value="expo">
 
-There's no Expo config plugin in the current release. Use a [development build](https://docs.expo.dev/develop/development-builds/introduction/), as Expo Go doesn't include the native SDKs, and apply the iOS and Android setup yourself.
+Use a [development build](https://docs.expo.dev/develop/development-builds/introduction/); Expo Go doesn't include the native SDKs. Add both config plugins to `app.json`:
 
-A config plugin is in progress in [rnmapbox/navigation#7](https://github.com/rnmapbox/navigation/pull/7).
+```json
+{
+  "expo": {
+    "plugins": [
+      ["@rnmapbox/maps", { "RNMapboxMapsVersion": "11.23.1" }],
+      "@rnmapbox/navigation"
+    ]
+  }
+}
+```
+
+The `@rnmapbox/navigation` plugin only changes iOS:
+
+- sets `$RNMapboxMapsSwiftPackageManager = { link: false }` in the Podfile, see the iOS tab;
+- adds the Navigation SDK's binary frameworks to `rnmapbox-maps`' framework search paths, which Xcode 26 needs with React Native 0.87+;
+- sets `NSLocationWhenInUseUsageDescription`, unless `locationWhenInUsePermission` is `false`.
+
+On Android the `@rnmapbox/maps` plugin already adds the Mapbox Maven repository, and the Navigation SDK's manifest adds the location, foreground service and notification permissions.
+
+### Options
+
+```json
+["@rnmapbox/navigation", {
+  "RNMapboxNavigationVersion": "3.23.1",
+  "locationWhenInUsePermission": "Shows your location during navigation."
+}]
+```
+
+| Option                        | Description                                                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `RNMapboxNavigationVersion`   | Navigation SDK version on both platforms. Set the maps plugin's `RNMapboxMapsVersion` to the matching 11.N. |
+| `locationWhenInUsePermission` | iOS `NSLocationWhenInUseUsageDescription`, or `false` to leave it unset.                                     |
+
+For `<NavigationView>` on iOS, also add the `audio` background mode, which the plugin doesn't set:
+
+```json
+{
+  "expo": {
+    "ios": {
+      "infoPlist": { "UIBackgroundModes": ["audio"] }
+    }
+  }
+}
+```
+
+### Build
+
+```bash
+npx expo prebuild --clean
+npx expo run:ios
+npx expo run:android
+```
+
+Rerun `prebuild` after changing plugin options.
 
 </TabItem>
 </Tabs>

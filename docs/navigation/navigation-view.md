@@ -4,10 +4,6 @@ sidebar_position: 4
 title: NavigationView
 ---
 
-:::info Not released yet
-`<NavigationView>` is on the `main` branch of [rnmapbox/navigation](https://github.com/rnmapbox/navigation) and isn't part of `0.1.0-alpha.0`. It ships with the next release.
-:::
-
 `<NavigationView>` is a full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an equivalent built from the Navigation SDK UI components on Android (maneuver banner with lanes and shields, speed limit, trip progress, mute, overview, recenter and end buttons).
 
 On iOS, add `audio` to `UIBackgroundModes` in `Info.plist`, see [Install](install.md).
@@ -32,6 +28,8 @@ import { NavigationView } from '@rnmapbox/navigation';
 
 ## Props
 
+See [`NavigationViewProps`](api/Components/NavigationViewProps.md) in the API reference.
+
 | Prop              | Type                                         | Description                                                                         |
 | ----------------- | -------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `route`           | `Route`                                      | A route from `requestRoutes`. Keep it unreleased while it's passed to the view.     |
@@ -54,4 +52,4 @@ import { NavigationView } from '@rnmapbox/navigation';
 - `addRouteProgressListener` and `addCameraStateListener` also report its guidance.
 - Show one `NavigationView` at a time. On iOS it's embedded as a child of the nearest view controller.
 
-Android `<NavigationView>` has no end-of-route, feedback or alternative-route UI, no day/night styles, no road name label, and doesn't show reroutes as such.
+Android `<NavigationView>` has no end-of-route, feedback or alternative-route UI, no day/night styles, no road name label, and doesn't show reroutes as such. For the same UI on both platforms, see [`<RNNavigationView>`](rn-navigation-view.md).
