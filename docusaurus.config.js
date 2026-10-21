@@ -88,6 +88,12 @@ const config = {
             label: 'Components',
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'navigationSidebar',
+            position: 'left',
+            label: 'Navigation',
+          },
+          {
             href: 'https://github.com/rnmapbox/maps',
             label: 'GitHub',
             position: 'right',
@@ -103,6 +109,10 @@ const config = {
               {
                 label: 'Examples',
                 to: '/docs/examples/',
+              },
+              {
+                label: 'Navigation',
+                to: '/docs/navigation/overview',
               },
             ],
           },

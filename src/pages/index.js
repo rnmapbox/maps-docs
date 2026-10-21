@@ -17,6 +17,11 @@ function HomepageHeader() {
         <div style={{}}>
           <img src="/img/intro-examples.png" alt="rnmapbox screenshots" />
         </div>
+        <div style={{margin: "1rem 0"}}>
+          <Link className="button button--secondary" to="/docs/navigation/overview">
+            Turn-by-turn navigation: @rnmapbox/navigation (alpha)
+          </Link>
+        </div>
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
           <img src="/img/react-native-logo.svg" alt="React-Native logo" style={{height: "100px", marginRight: "40px"}} />
           <img src="/img/mapbox-logo.svg" alt="Mapbox logo" style={{height: "100px"}} />
