@@ -7,6 +7,10 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 > Note that those instructions applies to the 10.2.* versions of @rnmapbox/maps.
+
+:::tip
+Need turn-by-turn navigation? See [@rnmapbox/navigation](navigation/overview.md).
+:::
 # Configure credentials
 
 Before installing @rnmapbox/maps you'll need to get your Mapbox access token.
