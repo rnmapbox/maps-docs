@@ -5,7 +5,7 @@ name: Example screenshots PR
 on:
   push:
     branches:
-      - auto/example-screenshots
+      - test/auto-example-screenshots
 
 permissions:
   contents: read
