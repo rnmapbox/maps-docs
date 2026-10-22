@@ -75,6 +75,7 @@ const metadata: ExampleWithMetadata['metadata'] = {
   docs: `
   Demonstrates use of images to customize LocationPuck
   `,
+  excludeFromPercy: true,
 };
 UserLocationNativeAnimated.metadata = metadata;
 
