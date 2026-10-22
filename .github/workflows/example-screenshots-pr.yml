@@ -1,0 +1,39 @@
+name: Example screenshots PR
+
+# rnmapbox/maps force-pushes this branch from its nightly doc screenshot capture, with a
+# deploy key that can't open PRs.
+on:
+  push:
+    branches:
+      - auto/example-screenshots
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: example-screenshots-pr
+
+jobs:
+  pr:
+    name: Open or update the example screenshots PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open or update the PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+          MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          TITLE=$(printf '%s\n' "$MESSAGE" | head -n 1)
+          {
+            echo "Example screenshots from the nightly capture in rnmapbox/maps that differ from main. This branch is rebuilt on top of main every night; the example pages use merged screenshots after the next docs update from rnmapbox/maps."
+            printf '%s\n' "$MESSAGE" | tail -n +2
+          } > "$RUNNER_TEMP/body.md"
+          PR=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
+          if [ -n "$PR" ]; then
+            gh pr edit "$PR" --title "$TITLE" --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh pr create --head "$BRANCH" --base main --title "$TITLE" --body-file "$RUNNER_TEMP/body.md"
+          fi
