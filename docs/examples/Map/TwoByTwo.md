@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Display two map views side by side
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/TwoByTwo)
 
 ```jsx
 import React from 'react';
@@ -68,6 +69,7 @@ const metadata = {
   docs: `
 Display two map views side by side
 `,
+  webSupported: true,
 };
 TwoByTwo.metadata = metadata;
 

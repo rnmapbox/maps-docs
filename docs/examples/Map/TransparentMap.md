@@ -10,6 +10,7 @@ Renders the map over coloured stripes. With `transparent` on, the stripes show t
 
 On Android `transparent` is applied when the map is created, so toggling it here has no effect until the screen is reopened.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/TransparentMap)
 
 ```jsx
 import { useState } from 'react';

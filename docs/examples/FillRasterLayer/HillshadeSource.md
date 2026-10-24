@@ -6,6 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/HillshadeSource.tsx
 ---
 Renders terrain hillshading from a raster-dem source.
+[Try it on web](https://rnmapbox.github.io/example-app/FillRasterLayer/HillshadeSource)
 
 ```jsx
 import { useState } from 'react';

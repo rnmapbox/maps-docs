@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Shows a map with the user location annotation enabled, and on press of the user location annotation, an alert is shown.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/ShowMap)
 
 ```jsx
 import { useEffect, useState } from 'react';

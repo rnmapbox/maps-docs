@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Change shape source URL on press of the bubble.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/DynamicUrl)
 
 ```jsx
 import { useState } from 'react';

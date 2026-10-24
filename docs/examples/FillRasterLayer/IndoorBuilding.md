@@ -6,6 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/IndoorBuilding.js
 ---
 
+[Try it on web](https://rnmapbox.github.io/example-app/FillRasterLayer/IndoorBuilding)
 
 ```jsx
 import React from 'react';

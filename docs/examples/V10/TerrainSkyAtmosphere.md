@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Demonstrates use of Terrain, Atmosphere and SkyLayer. Use the Snow/Rain buttons to toggle experimental particle weather effects.
 
+[Try it on web](https://rnmapbox.github.io/example-app/V10/TerrainSkyAtmosphere)
 
 ```jsx
 import { useRef, useState } from 'react';

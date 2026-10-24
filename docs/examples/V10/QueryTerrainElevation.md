@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 This is a fairly complex example demonstrating the use of AnimatedShape, Camera animation, queryTerrainElevation and AnimatedMarkerView
 
+[Try it on web](https://rnmapbox.github.io/example-app/V10/QueryTerrainElevation)
 
 ```jsx
 import React, { useState, useEffect, useRef } from 'react';

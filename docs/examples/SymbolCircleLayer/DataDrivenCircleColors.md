@@ -10,6 +10,7 @@ Renders circles with radius and color based on data-driven expressions.
 
 Color is based on the `ethnicity` property of the feature, radius is based on zoom level.
 
+[Try it on web](https://rnmapbox.github.io/example-app/SymbolCircleLayer/DataDrivenCircleColors)
 
 ```jsx
 import React from 'react';

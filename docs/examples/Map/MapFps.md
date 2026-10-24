@@ -6,6 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/MapFps.tsx
 ---
 Toggles preferredFramesPerSecond between 10 fps and 60 fps, move the map around to feel the difference.
+[Try it on web](https://rnmapbox.github.io/example-app/Map/MapFps)
 
 ```jsx
 import { useEffect, useState } from 'react';

@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Demonstrates modifying the feature state.
 
+[Try it on web](https://rnmapbox.github.io/example-app/V10/FeatureState)
 
 ```jsx
 import { type ComponentProps, useCallback, useRef } from 'react';
@@ -154,6 +155,7 @@ const metadata: ExampleWithMetadata['metadata'] = {
   docs: `
 Demonstrates modifying the feature state.
 `,
+  webSupported: true,
 };
 
 FeatureState.metadata = metadata;

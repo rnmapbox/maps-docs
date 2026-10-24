@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Changes visibility of layers part of the map
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/ShowAndHideLayer)
 
 ```jsx
 import React from 'react';

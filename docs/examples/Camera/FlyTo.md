@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Change camera via change of camera properties
 
+[Try it on web](https://rnmapbox.github.io/example-app/Camera/FlyTo)
 
 ```jsx
 import React from 'react';

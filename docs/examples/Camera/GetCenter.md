@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Get center of map via Camera#getCenter
 
+[Try it on web](https://rnmapbox.github.io/example-app/Camera/GetCenter)
 
 ```jsx
 import React from 'react';

@@ -11,6 +11,7 @@ This example shows a simple polyline editor. It uses `onCameraChanged` to get th
   The crosshair is an overlay that is positioned using `onLayout` and `getCoordinateFromView`.
 
   The `ShapeSource` is updated with the new coordinates and the `LineLayer` is updated with the new coordinates.
+[Try it on web](https://rnmapbox.github.io/example-app/LineLayer/DrawPolyline)
 
 ```jsx
 import { Camera, LineLayer, MapView, ShapeSource } from '@rnmapbox/maps';

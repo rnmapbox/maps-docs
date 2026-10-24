@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Camera animation modes
 
+[Try it on web](https://rnmapbox.github.io/example-app/V10/CameraAnimation)
 
 ```jsx
 import { CheckBox, Divider, Slider, Button } from '@rneui/base';

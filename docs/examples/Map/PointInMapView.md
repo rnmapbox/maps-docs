@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Converts a coordinate to a point in the current view.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/PointInMapView)
 
 ```jsx
 import React from 'react';

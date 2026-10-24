@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 This example renders vector tiles using a third party vector tile source.
 
 In this case, Mapillary provides the vector tiles, which are added to the map using VectorSource.
+[Try it on web](https://rnmapbox.github.io/example-app/LineLayer/ThirdPartyVectorSource)
 
 ```jsx
 import React from 'react';

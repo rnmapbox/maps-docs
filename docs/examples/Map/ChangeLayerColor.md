@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Change style of a layer part of the map on the fly.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/ChangeLayerColor)
 
 ```jsx
 import React from 'react';

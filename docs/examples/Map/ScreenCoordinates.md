@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Tests conversion from screen to geographic coordinates and vice versa.        
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/ScreenCoordinates)
 
 ```jsx
 import { useCallback, useMemo, useRef, useState } from 'react';
@@ -590,6 +591,7 @@ const metadata: ExampleWithMetadata['metadata'] = {
   docs: `
 Tests conversion from screen to geographic coordinates and vice versa.        
 `,
+  webSupported: true,
 };
 
 ScreenCoordinates.metadata = metadata;

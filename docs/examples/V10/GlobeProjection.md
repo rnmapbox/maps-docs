@@ -20,6 +20,7 @@ import {
   RasterDemSource,
   Atmosphere,
   Camera,
+  StyleURL,
 } from '@rnmapbox/maps';
 
 import { type ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-doc
@@ -42,7 +43,7 @@ const GlobeProjection = () => {
       <MapView
         style={{ flex: 1 }}
         projection={projection}
-        styleURL={'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'}
+        styleURL={StyleURL.SatelliteStreet}
       >
         <Camera
           defaultSettings={{

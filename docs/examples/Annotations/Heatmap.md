@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Shows heatmap layer
 
+[Try it on web](https://rnmapbox.github.io/example-app/Annotations/Heatmap)
 
 ```jsx
 import React from 'react';

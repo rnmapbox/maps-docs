@@ -6,6 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QuerySourceFeatures.tsx
 ---
 
+[Try it on web](https://rnmapbox.github.io/example-app/FillRasterLayer/QuerySourceFeatures)
 
 ```jsx
 import { useCallback, useEffect, useRef, useState } from 'react';

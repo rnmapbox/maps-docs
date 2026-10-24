@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Get zoom level of map via Camera#getZoom
 
+[Try it on web](https://rnmapbox.github.io/example-app/Camera/GetZoom)
 
 ```jsx
 import React from 'react';

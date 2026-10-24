@@ -6,6 +6,7 @@ custom_props:
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/LineLayer/GradientLine.js
 ---
 This example demonstrates how to use interpolate expression in the `lineGradient` property of a `LineLayer` to create a gradient line.
+[Try it on web](https://rnmapbox.github.io/example-app/LineLayer/GradientLine)
 
 ```jsx
 import React from 'react';

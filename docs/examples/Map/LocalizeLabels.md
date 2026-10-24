@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Localize labels to a specific locale(es).
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/LocalizeLabels)
 
 ```jsx
 import { Camera, MapView } from '@rnmapbox/maps';

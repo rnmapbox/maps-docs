@@ -10,6 +10,7 @@ Renders earthquake with clustering.
 
 Click a cluster to show list of contents in the cluster `getClusterLeaves`.
 
+[Try it on web](https://rnmapbox.github.io/example-app/SymbolCircleLayer/Earthquakes)
 
 ```jsx
 import {

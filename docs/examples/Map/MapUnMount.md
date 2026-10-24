@@ -8,6 +8,7 @@ custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/exampl
 
 Showing and hiding the the map should not lead to increased memory consumption, use this example to check it on the profiler.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/MapUnMount)
 
 ```jsx
 import Mapbox from '@rnmapbox/maps';
