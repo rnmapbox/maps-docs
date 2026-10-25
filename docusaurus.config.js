@@ -24,6 +24,15 @@ const config = {
   deploymentBranch: 'main', // The branch of your docs repo that you are publishing to GitHub pages
   trailingSlash: false,
 
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'google-site-verification',
+        content: '4d5BqkXr-_mwLPx8aDAONR6uA0d8v6oSPaVFPEn8KK0',
+      },
+    },
+  ],
 
   onBrokenLinks: 'warn',
   markdown: {
