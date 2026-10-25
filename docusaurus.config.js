@@ -71,6 +71,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          // The blog and the markdown page are still the Docusaurus template content, and search is noindex.
+          ignorePatterns: ['/blog', '/blog/**', '/markdown-page', '/search'],
+        },
       }),
     ],
   ],
@@ -78,8 +82,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.jpg',
       navbar: {
         title: '@rnmapbox/maps',
         items: [

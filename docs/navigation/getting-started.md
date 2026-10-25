@@ -1,7 +1,9 @@
 ---
 id: getting-started
 sidebar_position: 3
-title: Getting started
+title: "Getting started with turn-by-turn navigation in React Native"
+sidebar_label: Getting started
+description: "Request a route, show it on an @rnmapbox/maps map and start simulated turn-by-turn guidance with @rnmapbox/navigation in React Native."
 ---
 
 Request a route, show it on a navigation map, and start simulated guidance:

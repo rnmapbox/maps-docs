@@ -1,7 +1,9 @@
 ---
 id: install
 sidebar_position: 2
-title: Install
+title: "Install @rnmapbox/navigation"
+sidebar_label: Install
+description: "Install @rnmapbox/navigation for turn-by-turn navigation in React Native: Mapbox Navigation SDK v3 setup for iOS, Android and the Expo config plugin."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

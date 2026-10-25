@@ -1,7 +1,9 @@
 ---
 id: troubleshooting
 sidebar_position: 6
-title: Troubleshooting
+title: "Troubleshooting @rnmapbox/navigation"
+sidebar_label: Troubleshooting
+description: "Fixes for common @rnmapbox/navigation build problems on iOS and Android, such as duplicate MapboxMaps symbols and Maps SDK version conflicts."
 ---
 
 ## iOS: duplicate MapboxMaps symbols
