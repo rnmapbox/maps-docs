@@ -1,7 +1,9 @@
 ---
 id: rn-navigation-view
 sidebar_position: 5
-title: RNNavigationView
+title: "RNNavigationView: turn-by-turn navigation UI in React Native"
+sidebar_label: RNNavigationView
+description: "A customizable turn-by-turn navigation UI written in React Native on top of the @rnmapbox/navigation headless API, the same on iOS and Android."
 ---
 
 `<RNNavigationView>` is a turn-by-turn navigation UI written in React Native on top of the [headless API](getting-started.md), on an `@rnmapbox/maps` navigation map. It looks the same on iOS and Android. Use it as is, or copy [its source](https://github.com/rnmapbox/navigation/blob/main/src/RNNavigationView.tsx) as a starting point for your own UI.

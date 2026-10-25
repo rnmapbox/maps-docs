@@ -1,10 +1,30 @@
 ---
 id: overview
 sidebar_position: 1
-title: Overview
+title: "Turn-by-turn navigation for React Native (@rnmapbox/navigation)"
+sidebar_label: Overview
+description: "Turn-by-turn navigation for React Native with the Mapbox Navigation SDK v3 on iOS and Android: routing, guidance and drop-in navigation UI. Works with Expo."
+image: /img/navigation/social-card.jpg
 ---
 
-[`@rnmapbox/navigation`](https://github.com/rnmapbox/navigation) is a community-supported React Native library for the [Mapbox Navigation SDK v3](https://docs.mapbox.com/navigation/) on iOS and Android, built on `@rnmapbox/maps`.
+<head>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareSourceCode',
+      name: '@rnmapbox/navigation',
+      description: 'Turn-by-turn navigation for React Native with the Mapbox Navigation SDK v3 on iOS and Android, built on @rnmapbox/maps.',
+      url: 'https://rnmapbox.github.io/docs/navigation/overview',
+      codeRepository: 'https://github.com/rnmapbox/navigation',
+      programmingLanguage: ['TypeScript', 'Swift', 'Kotlin'],
+      runtimePlatform: ['React Native', 'iOS', 'Android'],
+      license: 'https://opensource.org/licenses/MIT',
+      sameAs: ['https://www.npmjs.com/package/@rnmapbox/navigation'],
+    })}
+  </script>
+</head>
+
+[`@rnmapbox/navigation`](https://github.com/rnmapbox/navigation) is a community-supported React Native library for turn-by-turn navigation with the [Mapbox Navigation SDK v3](https://docs.mapbox.com/navigation/) on iOS and Android, built on [`@rnmapbox/maps`](../install.md). It works with Expo development builds.
 
 It requests routes, runs an active-guidance session and reports route progress. The Navigation SDK draws the route line, the puck and the navigation camera on a regular `@rnmapbox/maps` `MapView`, so your existing layers, sources and annotations keep working on the same map.
 

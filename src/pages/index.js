@@ -36,8 +36,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`React Native Mapbox`}
-      description="Description will go into a meta tag in <head />">
+      title="Mapbox maps and turn-by-turn navigation for React Native"
+      description="@rnmapbox/maps is a community-supported React Native library for Mapbox maps on iOS and Android. @rnmapbox/navigation adds turn-by-turn navigation.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -2,6 +2,7 @@
 id: install
 sidebar_position: 1
 title: Install
+description: "Install @rnmapbox/maps, Mapbox maps for React Native, on iOS, Android and Expo: access token, Podfile and Gradle setup, and the Expo config plugin."
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -9,7 +10,7 @@ import TabItem from '@theme/TabItem';
 > Note that those instructions applies to the 10.2.* versions of @rnmapbox/maps.
 
 :::tip
-Need turn-by-turn navigation? See [@rnmapbox/navigation](navigation/overview.md).
+Need turn-by-turn navigation? See [turn-by-turn navigation with @rnmapbox/navigation](navigation/overview.md), built on `@rnmapbox/maps`.
 :::
 # Configure credentials
 
@@ -118,6 +119,8 @@ Add the @rnmapbox/maps [config plugin](https://docs.expo.io/guides/config-plugin
   }
 }
 ```
+
+For turn-by-turn navigation in an Expo app, add the `@rnmapbox/navigation` config plugin too, see [Install @rnmapbox/navigation](navigation/install.md).
 
 </TabItem>
 </Tabs>

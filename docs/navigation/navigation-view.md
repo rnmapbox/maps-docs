@@ -1,7 +1,9 @@
 ---
 id: navigation-view
 sidebar_position: 4
-title: NavigationView
+title: "NavigationView: drop-in turn-by-turn navigation UI"
+sidebar_label: NavigationView
+description: "The Mapbox Navigation SDK's full-screen turn-by-turn UI for React Native on iOS and Android, with maneuver banner, lanes, speed limit and trip progress."
 ---
 
 `<NavigationView>` is a full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an equivalent built from the Navigation SDK UI components on Android (maneuver banner with lanes and shields, speed limit, trip progress, mute, overview, recenter and end buttons).
