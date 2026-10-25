@@ -1,12 +1,13 @@
 ---
 title: Feature State
-tags: [MapView, MapView#setFeatureState, MapView#getFeatureState, MapView#removeFeatureState]
+tags: [MapView, MapView#setFeatureState, MapView#getFeatureState, MapView#removeFeatureState, ShapeSource#promoteId]
 custom_props:
   example_rel_path: V10/FeatureState.tsx
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/FeatureState.tsx
 ---
 
-Demonstrates modifying the feature state.
+Demonstrates modifying the feature state. `promoteId` makes the `name` property the
+feature id, so the state is keyed by name. Tap a shape to toggle its selected state.
 
 [Try it on web](https://rnmapbox.github.io/example-app/V10/FeatureState)
 
@@ -17,6 +18,7 @@ import { Camera, FillLayer, MapView, ShapeSource } from '@rnmapbox/maps';
 import { type ExampleWithMetadata } from '../common/ExampleMetadata';
 
 type CustomProperties = {
+  name: string;
   normalColor: string;
   selectedColor: string;
 };
@@ -26,8 +28,11 @@ const SOURCE: GeoJSON.FeatureCollection<GeoJSON.Polygon, CustomProperties> = {
   features: [
     {
       type: 'Feature',
-      id: 1,
-      properties: { normalColor: '#0000cc', selectedColor: '#ff0000' },
+      properties: {
+        name: 'west',
+        normalColor: '#0000cc',
+        selectedColor: '#ff0000',
+      },
       geometry: {
         type: 'Polygon',
         coordinates: [
@@ -43,8 +48,11 @@ const SOURCE: GeoJSON.FeatureCollection<GeoJSON.Polygon, CustomProperties> = {
     },
     {
       type: 'Feature',
-      id: 2,
-      properties: { normalColor: '#00cc00', selectedColor: '#ff00ff' },
+      properties: {
+        name: 'east',
+        normalColor: '#00cc00',
+        selectedColor: '#ff00ff',
+      },
       geometry: {
         type: 'Polygon',
         coordinates: [
@@ -122,8 +130,9 @@ const FeatureState = () => {
     useCallback(
       (e) => {
         const [feature] = e.features;
-        if (!feature || feature.id === undefined) return;
-        toggleSelected(feature.id.toString());
+        const name = feature?.properties?.name;
+        if (typeof name !== 'string') return;
+        toggleSelected(name);
       },
       [toggleSelected],
     );
@@ -134,6 +143,7 @@ const FeatureState = () => {
       <ShapeSource
         id={SHAPES_SOURCE_ID}
         shape={SOURCE}
+        promoteId="name"
         onPress={handlePressShapes}
       >
         <FillLayer id="shapesFill" style={styles.shapesFill} />
@@ -151,9 +161,11 @@ const metadata: ExampleWithMetadata['metadata'] = {
     'MapView#setFeatureState',
     'MapView#getFeatureState',
     'MapView#removeFeatureState',
+    'ShapeSource#promoteId',
   ],
   docs: `
-Demonstrates modifying the feature state.
+Demonstrates modifying the feature state. \`promoteId\` makes the \`name\` property the
+feature id, so the state is keyed by name. Tap a shape to toggle its selected state.
 `,
   webSupported: true,
 };
