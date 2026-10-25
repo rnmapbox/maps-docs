@@ -191,12 +191,15 @@ Name: `fillExtrusionEdgeRadius`
 Mapbox spec: [fill-extrusion-edge-radius](https://docs.mapbox.com/style-spec/reference/layers/#layout-fill-extrusion-fill-extrusion-edge-radius)
 
 #### Description
-Radius of a fill extrusion edge in meters. If not zero, rounds extrusion edges for a smoother appearance.
+Radius of a fill extrusion edge. If not zero, rounds extrusion edges for a smoother appearance.
 
 #### Type
 `number`
 #### Default Value
 `0`
+
+#### Units
+`meters`
 
 #### Minimum
 `0`
@@ -217,7 +220,7 @@ Name: `fillExtrusionOpacity`
 Mapbox spec: [fill-extrusion-opacity](https://docs.mapbox.com/style-spec/reference/layers/#paint-fill-extrusion-fill-extrusion-opacity)
 
 #### Description
-The opacity of the entire fill extrusion layer. This is rendered on a perLayer, not perFeature, basis, and dataDriven styling is not available.
+The opacity of the entire fill extrusion layer. This is rendered on a perLayer, not perFeature, basis, and dataDriven styling is not available. When consecutive `fillExtrusion` and `building` layers are semiTransparent, they are rendered together: they occlude each other and are only transparent against other layers. If another layer type is placed between them, each layer is blended separately and later layers are visible through earlier ones.
 
 #### Type
 `number`
@@ -406,7 +409,7 @@ Controls the transition progress between the image variants of fillExtrusionPatt
 `1`
 
 #### Requires
-`linePattern`
+`fillExtrusionPattern`
 
 #### Expression
 
@@ -716,12 +719,15 @@ Name: `fillExtrusionAmbientOcclusionGroundRadius`
 Mapbox spec: [fill-extrusion-ambient-occlusion-ground-radius](https://docs.mapbox.com/style-spec/reference/layers/#paint-fill-extrusion-fill-extrusion-ambient-occlusion-ground-radius)
 
 #### Description
-The extent of the ambient occlusion effect on the ground beneath the extruded buildings in meters.
+The extent of the ambient occlusion effect on the ground beneath the extruded buildings.
 
 #### Type
 `number`
 #### Default Value
 `3`
+
+#### Units
+`meters`
 
 #### Minimum
 `0`
@@ -899,7 +905,7 @@ Name: `fillExtrusionFloodLightWallRadius`
 Mapbox spec: [fill-extrusion-flood-light-wall-radius](https://docs.mapbox.com/style-spec/reference/layers/#paint-fill-extrusion-fill-extrusion-flood-light-wall-radius)
 
 #### Description
-The extent of the flood light effect on the walls of the extruded buildings in meters.
+The extent of the flood light effect on the walls of the extruded buildings.
 
 #### Type
 `number`
@@ -947,7 +953,7 @@ Name: `fillExtrusionFloodLightGroundRadius`
 Mapbox spec: [fill-extrusion-flood-light-ground-radius](https://docs.mapbox.com/style-spec/reference/layers/#paint-fill-extrusion-fill-extrusion-flood-light-ground-radius)
 
 #### Description
-The extent of the flood light effect on the ground beneath the extruded buildings in meters. Note: this experimental property is evaluated once per tile, during tile initialization. Changing the property value could trigger tile reload. The `featureState` styling is deprecated and will get removed soon.
+The extent of the flood light effect on the ground beneath the extruded buildings. Note: this experimental property is evaluated once per tile, during tile initialization. Changing the property value could trigger tile reload. The `featureState` styling is deprecated and will get removed soon.
 
 #### Type
 `number`

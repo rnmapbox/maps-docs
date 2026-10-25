@@ -187,6 +187,9 @@ The direction of the light source used to generate the hillshading with 0 as the
 #### Default Value
 `335`
 
+#### Units
+`degrees`
+
 #### Minimum
 `0`
 
