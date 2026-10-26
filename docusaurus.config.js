@@ -152,10 +152,6 @@ const config = {
                 label: 'Discord',
                 href: 'https://discord.com/channels/1004826913229000704/1092426983696248893',
               },
-              {
-                label: 'Gitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
