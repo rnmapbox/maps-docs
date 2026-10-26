@@ -1,6 +1,7 @@
 ---
 sidebar_label: NavigationView
 sidebar_position: 1
+description: "Full-screen turn-by-turn navigation UI: NavigationViewController from MapboxNavigationUIKit on iOS, and an equivalent built from the Navigation SDK UI components on Android."
 custom_edit_url: null
 ---
 

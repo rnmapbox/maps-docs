@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteResponse
 sidebar_position: 6
+description: "Result of Navigation.requestRoutes. alternatives is empty unless requested."
 custom_edit_url: null
 ---
 

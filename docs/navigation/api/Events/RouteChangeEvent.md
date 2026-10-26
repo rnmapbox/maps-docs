@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteChangeEvent
 sidebar_position: 4
+description: "From Navigation.addRouteChangeListener. RouteChangeEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

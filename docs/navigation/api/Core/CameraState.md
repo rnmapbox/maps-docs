@@ -1,6 +1,7 @@
 ---
 sidebar_label: CameraState
 sidebar_position: 3
+description: "Camera of navigation maps. CameraState API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

@@ -1,6 +1,7 @@
 ---
 sidebar_label: Route
 sidebar_position: 1
+description: "A route from Navigation.requestRoutes, backed by the native SDK route. Route API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

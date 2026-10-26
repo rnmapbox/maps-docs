@@ -1,6 +1,7 @@
 ---
 sidebar_label: StartActiveGuidanceOptions
 sidebar_position: 4
+description: "Options of Navigation.startActiveGuidance. StartActiveGuidanceOptions API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

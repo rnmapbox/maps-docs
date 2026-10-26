@@ -1,6 +1,7 @@
 ---
 sidebar_label: NavigationViewError
 sidebar_position: 4
+description: "Passed to onError of NavigationView and RNNavigationView. NavigationViewError API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

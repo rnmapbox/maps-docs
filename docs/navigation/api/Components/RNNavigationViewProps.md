@@ -1,6 +1,7 @@
 ---
 sidebar_label: RNNavigationViewProps
 sidebar_position: 7
+description: "Props of RNNavigationView: NavigationViewProps, plus the props below."
 custom_edit_url: null
 ---
 

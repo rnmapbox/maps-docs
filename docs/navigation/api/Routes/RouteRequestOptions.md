@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteRequestOptions
 sidebar_position: 5
+description: "Options of Navigation.requestRoutes. RouteRequestOptions API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

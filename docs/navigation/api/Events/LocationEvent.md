@@ -1,6 +1,7 @@
 ---
 sidebar_label: LocationEvent
 sidebar_position: 3
+description: "The location snapped to the road or the route. LocationEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

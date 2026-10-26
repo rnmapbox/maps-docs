@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteStep
 sidebar_position: 8
+description: "A maneuver and the road up to the next one, in steps of RouteLeg. RouteStep API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

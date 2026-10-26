@@ -1,6 +1,7 @@
 ---
 sidebar_label: Navigation
 sidebar_position: 1
+description: "The headless navigation API: route requests, the app's single guidance session, and its events. It's also the default export."
 custom_edit_url: null
 ---
 

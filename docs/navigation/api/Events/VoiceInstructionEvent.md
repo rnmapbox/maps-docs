@@ -1,6 +1,7 @@
 ---
 sidebar_label: VoiceInstructionEvent
 sidebar_position: 7
+description: "From Navigation.addVoiceInstructionListener. VoiceInstructionEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

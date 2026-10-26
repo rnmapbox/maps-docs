@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteProgressEvent
 sidebar_position: 5
+description: "From Navigation.addRouteProgressListener and onRouteProgress."
 custom_edit_url: null
 ---
 
