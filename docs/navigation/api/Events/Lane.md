@@ -1,6 +1,7 @@
 ---
 sidebar_label: Lane
 sidebar_position: 2
+description: "A lane at the next maneuver, in lanes of RouteProgressEvent. Lane API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

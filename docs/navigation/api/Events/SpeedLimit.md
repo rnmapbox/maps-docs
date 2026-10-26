@@ -1,6 +1,7 @@
 ---
 sidebar_label: SpeedLimit
 sidebar_position: 6
+description: "Posted speed limit, in LocationEvent. SpeedLimit API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

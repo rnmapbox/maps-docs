@@ -1,6 +1,8 @@
 ---
 slug: /navigation/api
 sidebar_label: Overview
+title: "@rnmapbox/navigation API reference"
+description: "API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

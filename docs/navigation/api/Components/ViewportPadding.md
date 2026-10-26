@@ -1,6 +1,7 @@
 ---
 sidebar_label: ViewportPadding
 sidebar_position: 8
+description: "Points from the map's edges, ignoring the safe area. ViewportPadding API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

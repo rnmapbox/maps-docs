@@ -1,6 +1,7 @@
 ---
 sidebar_label: ArriveEvent
 sidebar_position: 1
+description: "From Navigation.addArriveListener and onArrive. ArriveEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

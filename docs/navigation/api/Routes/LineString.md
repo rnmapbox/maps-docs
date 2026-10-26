@@ -1,6 +1,7 @@
 ---
 sidebar_label: LineString
 sidebar_position: 2
+description: "GeoJSON LineString. LineString API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

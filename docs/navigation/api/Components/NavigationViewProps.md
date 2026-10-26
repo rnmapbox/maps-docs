@@ -1,6 +1,7 @@
 ---
 sidebar_label: NavigationViewProps
 sidebar_position: 6
+description: "Props of NavigationView. Pass either route or waypoints. NavigationViewProps API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

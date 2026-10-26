@@ -1,6 +1,7 @@
 ---
 sidebar_label: NavigationViewport
 sidebar_position: 2
+description: "Configures the navigation camera of the @rnmapbox/maps MapView it's a child of: <MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}><NavigationViewport padding={{ bottom: 120 }} /></MapView>."
 custom_edit_url: null
 ---
 

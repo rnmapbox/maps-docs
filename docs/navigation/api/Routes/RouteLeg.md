@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteLeg
 sidebar_position: 4
+description: "The part of a route between two consecutive waypoints. RouteLeg API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

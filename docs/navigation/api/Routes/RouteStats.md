@@ -1,6 +1,7 @@
 ---
 sidebar_label: RouteStats
 sidebar_position: 7
+description: "From Navigation.getRouteStats. RouteStats API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: null
 ---
 

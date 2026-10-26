@@ -1,6 +1,7 @@
 ---
 sidebar_label: RNNavigationView
 sidebar_position: 3
+description: "<NavigationView> built in React Native from the headless API, on an @rnmapbox/maps navigation map: a maneuver banner with road shields, exit numbers and lanes, speed limit, road name, trip progress, mute, overview/recenter and end buttons, and an arrival card."
 custom_edit_url: null
 ---
 
