@@ -32,6 +32,16 @@ const config = {
         content: '4d5BqkXr-_mwLPx8aDAONR6uA0d8v6oSPaVFPEn8KK0',
       },
     },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/figtree-latin-wght.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
   ],
 
   onBrokenLinks: 'warn',
