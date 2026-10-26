@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import CodeBlock from '@theme/CodeBlock';
 import LiveMapDemo from '@site/src/components/LiveMapDemo';
+import PhoneVideo from '@site/src/components/PhoneVideo';
 
 import styles from './index.module.css';
 
@@ -146,9 +147,42 @@ function CodeAndShowcase() {
   );
 }
 
-function Community() {
+function Navigation() {
   return (
     <section className={styles.section}>
+      <div className={clsx('container', styles.split)}>
+        <div className={styles.splitText}>
+          <h2 className={styles.sectionTitle}>Turn-by-turn navigation</h2>
+          <p>
+            @rnmapbox/navigation (alpha) wraps the Mapbox Navigation SDK v3: request routes, run guidance and get
+            route progress events, with the SDK drawing the route line, puck and navigation camera on your map. Or
+            drop in a complete navigation screen with maneuver banners, lanes and speed limits.
+          </p>
+          <div className={styles.ctas}>
+            <Link className={clsx('button button--primary', styles.primary)} to="/docs/navigation/overview">
+              Navigation overview
+            </Link>
+            <Link className="button button--secondary button--outline" to="/docs/navigation/install">
+              Install
+            </Link>
+          </div>
+        </div>
+        <PhoneVideo
+          src="/img/navigation/navigation-demo"
+          poster="/img/navigation/navigation-demo.webp"
+          width={324}
+          height={720}
+          label="Simulated drive to the Ferry Building in San Francisco with the Mapbox Navigation SDK UI: maneuver banner, route line and a camera following the puck"
+          caption="<NavigationView> with a simulated route, on Android."
+        />
+      </div>
+    </section>
+  );
+}
+
+function Community() {
+  return (
+    <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className={clsx('container', styles.community)}>
         <h2 className={styles.sectionTitle}>Built by the community</h2>
         <p>
@@ -184,6 +218,7 @@ export default function Home() {
       <main>
         <Features />
         <CodeAndShowcase />
+        <Navigation />
         <Community />
       </main>
     </Layout>

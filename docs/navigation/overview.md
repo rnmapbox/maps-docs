@@ -7,6 +7,8 @@ description: "Turn-by-turn navigation for React Native with the Mapbox Navigatio
 image: /img/navigation/social-card.jpg
 ---
 
+import PhoneVideo from '@site/src/components/PhoneVideo';
+
 <head>
   <script type="application/ld+json">
     {JSON.stringify({
@@ -27,6 +29,15 @@ image: /img/navigation/social-card.jpg
 [`@rnmapbox/navigation`](https://github.com/rnmapbox/navigation) is a community-supported React Native library for turn-by-turn navigation with the [Mapbox Navigation SDK v3](https://docs.mapbox.com/navigation/) on iOS and Android, built on [`@rnmapbox/maps`](../install.md). It works with Expo development builds.
 
 It requests routes, runs an active-guidance session and reports route progress. The Navigation SDK draws the route line, the puck and the navigation camera on a regular `@rnmapbox/maps` `MapView`, so your existing layers, sources and annotations keep working on the same map.
+
+<PhoneVideo
+  src="/img/navigation/navigation-demo"
+  poster="/img/navigation/navigation-demo.webp"
+  width={324}
+  height={720}
+  label="Simulated drive to the Ferry Building in San Francisco with the Mapbox Navigation SDK UI: maneuver banner, route line and a camera following the puck"
+  caption="<NavigationView> with a simulated route, on Android."
+/>
 
 :::caution Alpha
 `@rnmapbox/navigation` is in early alpha. The current release is `0.1.0-alpha.1`, published to npm under the `next` tag, and APIs may change between releases.
