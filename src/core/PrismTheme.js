@@ -15,7 +15,7 @@ const theme = {
     {
       types: ['property'],
       style: {
-        color: '#2aa198',
+        color: '#2fb3a9',
       },
     },
     {
@@ -39,13 +39,13 @@ const theme = {
     {
       types: ['selector', 'char', 'builtin', 'url'],
       style: {
-        color: '#2aa198',
+        color: '#2fb3a9',
       },
     },
     {
       types: ['entity'],
       style: {
-        color: '#2aa198',
+        color: '#2fb3a9',
       },
     },
     {
