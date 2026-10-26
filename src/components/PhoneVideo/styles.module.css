@@ -1,0 +1,43 @@
+.demo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone {
+  padding: 12px;
+  border-radius: 44px;
+  background: #1c1f26;
+  box-shadow:
+    0 0 0 2px #3a3f4b,
+    0 30px 60px -20px rgba(0, 30, 80, 0.45);
+}
+
+.screen {
+  display: block;
+  width: 270px;
+  height: auto;
+  border-radius: 32px;
+  background: #9fd9f7;
+}
+
+.caption {
+  margin-top: 1rem;
+  max-width: 294px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media screen and (max-width: 996px) {
+  .phone {
+    padding: 10px;
+    border-radius: 36px;
+  }
+
+  .screen {
+    width: 216px;
+    border-radius: 26px;
+  }
+}

@@ -1,23 +1,163 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.hero {
+  padding: 4rem 0 3.5rem;
+  background:
+    radial-gradient(1200px 500px at 85% 20%, rgba(0, 122, 252, 0.18), transparent 70%),
+    linear-gradient(180deg, var(--mbx-blue-faint), var(--ifm-background-color));
+}
 
-.heroBanner {
+[data-theme='dark'] .hero {
+  background:
+    radial-gradient(1200px 500px at 85% 20%, rgba(0, 122, 252, 0.25), transparent 70%),
+    linear-gradient(180deg, #101a2b, var(--ifm-background-color));
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: 600;
+  color: var(--mbx-blue);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  max-width: 34rem;
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.platforms li {
+  margin: 0;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary {
+  border-color: var(--mbx-deep-blue);
+  background-color: var(--mbx-deep-blue);
+}
+
+.install {
+  display: inline-block;
+  margin: 1.5rem 0 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+}
+
+.section {
   padding: 4rem 0;
+}
+
+.sectionAlt {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.feature {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  color: inherit;
+  background: var(--ifm-background-surface-color);
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.feature:hover {
+  color: inherit;
+  text-decoration: none;
+  border-color: var(--mbx-blue);
+  transform: translateY(-2px);
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.showcase {
+  width: 100%;
+  height: auto;
+}
+
+.community {
+  max-width: 44rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+}
+
+.community .ctas {
+  justify-content: center;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .hero {
+    padding: 2.5rem 0;
+  }
+
+  .heroInner,
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .features {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 600px) and (max-width: 996px) {
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
