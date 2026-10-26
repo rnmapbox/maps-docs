@@ -100,5 +100,5 @@ PointAnnotationManagerMultiple.metadata = metadata;
 
 ```
 
-}
+![PointAnnotationManagerMultiple.png](./PointAnnotationManagerMultiple.png)}
 

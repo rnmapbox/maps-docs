@@ -129,5 +129,5 @@ export default MarkerViewPlacement;
 
 ```
 
-}
+![MarkerViewPlacement.png](./MarkerViewPlacement.png)}
 

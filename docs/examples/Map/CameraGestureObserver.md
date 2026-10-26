@@ -125,5 +125,5 @@ export default CameraGestureObserverExample;
 
 ```
 
-}
+![CameraGestureObserver.png](./CameraGestureObserver.png)}
 

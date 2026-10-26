@@ -106,5 +106,5 @@ PointAnnotationManagerSlot.metadata = metadata;
 
 ```
 
-}
+![PointAnnotationManagerSlot.png](./PointAnnotationManagerSlot.png)}
 

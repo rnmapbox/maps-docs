@@ -149,5 +149,5 @@ export default ViewportGestures;
 
 ```
 
-}
+![ViewportGestures.png](./ViewportGestures.png)}
 

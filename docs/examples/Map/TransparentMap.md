@@ -135,5 +135,5 @@ export default TransparentMap;
 
 ```
 
-}
+![TransparentMap.png](./TransparentMap.png)}
 

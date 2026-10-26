@@ -64,5 +64,5 @@ LocationPuck3D.metadata = metadata;
 
 ```
 
-}
+![LocationPuck3D.png](./LocationPuck3D.png)}
 

@@ -63,5 +63,5 @@ export default HillshadeSource;
 
 ```
 
-}
+![HillshadeSource.png](./HillshadeSource.png)}
 

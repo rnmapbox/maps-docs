@@ -56,5 +56,5 @@ export default SymbolScaleBehavior;
 
 ```
 
-}
+![SymbolScaleBehavior.png](./SymbolScaleBehavior.png)}
 

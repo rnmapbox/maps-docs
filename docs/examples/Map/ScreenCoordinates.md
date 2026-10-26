@@ -600,5 +600,5 @@ export default ScreenCoordinates;
 
 ```
 
-}
+![ScreenCoordinates.png](./ScreenCoordinates.png)}
 
