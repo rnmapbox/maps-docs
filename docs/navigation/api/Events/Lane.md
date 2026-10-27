@@ -1,17 +1,19 @@
 ---
 sidebar_label: Lane
-sidebar_position: 2
+sidebar_position: 3
 description: "A lane at the next maneuver, in lanes of RouteProgressEvent. Lane API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/NativeRNMBXNavigationModule.ts
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/specs/NativeRNMBXNavigationModule.ts by `yarn docs`. Don't edit. */}
 
 # Lane
 
 ```ts
 type Lane = object;
 ```
+
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:12](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/specs/NativeRNMBXNavigationModule.ts#L12)
 
 A lane at the next maneuver, in `lanes` of [RouteProgressEvent](RouteProgressEvent.md).
 

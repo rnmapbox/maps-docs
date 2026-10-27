@@ -2,12 +2,14 @@
 sidebar_label: Route
 sidebar_position: 1
 description: "A route from Navigation.requestRoutes, backed by the native SDK route. Route API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/Route.ts by `yarn docs`. Don't edit. */}
 
 # Route
+
+Defined in: [src/Route.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Route.ts#L92)
 
 A route from [Navigation.requestRoutes](../Core/Navigation.md#requestroutes), backed by the native SDK route.
 The getters read a copy taken when the route was created, so they're synchronous.
@@ -24,6 +26,8 @@ Guidance and the route preview keep their own reference, so releasing a route th
 ```ts
 release(): void;
 ```
+
+Defined in: [src/Route.ts:104](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Route.ts#L104)
 
 Frees the native route. Calling it again does nothing.
 

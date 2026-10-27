@@ -2,16 +2,18 @@
 sidebar_label: NavigationViewport
 sidebar_position: 2
 description: "Configures the navigation camera of the @rnmapbox/maps MapView it's a child of: <MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}><NavigationViewport padding={{ bottom: 120 }} /></MapView>."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/NavigationViewport.tsx
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/NavigationViewport.tsx by `yarn docs`. Don't edit. */}
 
 # NavigationViewport()
 
 ```ts
 function NavigationViewport(props: NavigationViewportProps): Element;
 ```
+
+Defined in: [src/NavigationViewport.tsx:36](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/NavigationViewport.tsx#L36)
 
 Configures the navigation camera of the `@rnmapbox/maps` `MapView` it's a child of:
 `<MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}><NavigationViewport padding={{ bottom: 120 }} /></MapView>`.
