@@ -66,6 +66,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
           editUrl: (url) => {
             if (url.docPath.startsWith('examples/')) {
               return `https://github.com/rnmapbox/maps/tree/main/example/src/examples/${url.docPath.replace('examples/', '').replace('.md', '.tsx')}`
@@ -78,12 +79,14 @@ const config = {
             }
           }
         },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          // The blog and the markdown page are still the Docusaurus template content, and search is noindex.
-          ignorePatterns: ['/blog', '/blog/**', '/markdown-page', '/search'],
+          lastmod: 'date',
+          // Search and the tag pages are noindex.
+          ignorePatterns: ['/search', '/docs/tags', '/docs/tags/**'],
         },
       }),
     ],

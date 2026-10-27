@@ -12,7 +12,7 @@ Set up `@rnmapbox/maps` first, following its [install guide](../install.md). `@r
 
 `@rnmapbox/navigation` is published under the `next` tag while it's in alpha.
 
-# Install
+## Install
 
 <Tabs groupId="install-module" queryString defaultValue="npm" values={[
     {label:'NPM', value:'npm'},
@@ -34,7 +34,7 @@ yarn add @rnmapbox/navigation@next @rnmapbox/maps
 </TabItem>
 </Tabs>
 
-# Configure @rnmapbox/navigation
+## Configure @rnmapbox/navigation
 
 <Tabs groupId="configure-module" queryString defaultValue="ios" values={[
     {label:'iOS', value:'ios'},
@@ -178,7 +178,7 @@ Rerun `prebuild` after changing plugin options.
 </TabItem>
 </Tabs>
 
-# Access token
+## Access token
 
 Pass your public access token to both libraries before requesting routes. Navigation is billed to this token.
 
