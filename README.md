@@ -59,3 +59,9 @@ yarn detox test --configuration ios.debug --debug-synchronization 500 --loglevel
 
 1. See https://docusaurus.io/changelog/3.5.0
 2. Update the version
+
+### Open in Snack
+
+Example pages get "Run on web" and "Edit in Snack" buttons (`plugins/snack/remarkSnackLink.js`). "Edit in Snack" opens an unsaved Snack on the web platform with `@rnmapbox/maps` pinned to `RNMAPBOX_MAPS_VERSION` in `plugins/snack/snackUrl.js`; the example and its helpers are loaded from that release's tag, and the access token is fetched at runtime from rnmapbox/ci-config.
+
+Which examples get the Snack button is decided in rnmapbox/maps: the example's `snackSupported` metadata, defaulting to `webSupported`, is written to the `snack_supported` front matter of its page. Pages generated without that field fall back to showing it wherever there is a "Try it on web" link. Examples importing binary assets or files not in `SHARED_FILES` can't be linked; the build fails if one has `snack_supported: true`. When bumping `RNMAPBOX_MAPS_VERSION`, recheck the Snack-enabled examples.
