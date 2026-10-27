@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 :::tip
 Need turn-by-turn navigation? See [turn-by-turn navigation with @rnmapbox/navigation](navigation/overview.md), built on `@rnmapbox/maps`.
 :::
-# Configure credentials
+## Configure credentials
 
 Before installing @rnmapbox/maps you'll need to get your Mapbox access token.
 
@@ -22,7 +22,7 @@ On the top of your token list, copy your **Default Public Token**. The public to
 
 For more details, see [Configure Credentials](https://docs.mapbox.com/ios/maps/guides/install/#part-1-create-and-configure-your-credentials) on mapbox.com.
 
-# Install
+## Install
 
 <Tabs groupId="install-module" queryString defaultValue="npm" values={[
     {label:'NPM', value:'npm'},
@@ -52,7 +52,7 @@ expo install @rnmapbox/maps
 </TabItem>
 </Tabs>
 
-# Configure @rnmapbox/maps
+## Configure @rnmapbox/maps
 
 <Tabs groupId="configure-module" queryString defaultValue="ios" values={[
     {label:'iOS', value:'ios'},
