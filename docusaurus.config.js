@@ -67,6 +67,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
+          remarkPlugins: [require('./plugins/snack/remarkSnackLink')],
           editUrl: (url) => {
             if (url.docPath.startsWith('examples/')) {
               return `https://github.com/rnmapbox/maps/tree/main/example/src/examples/${url.docPath.replace('examples/', '').replace('.md', '.tsx')}`
