@@ -3,6 +3,7 @@ title: Show Point Annotations
 tags: [PointAnnotation, MapView#deselectAnnotationOnTap, PointAnnotation#refresh, getAnnotationsLayerID]
 custom_props:
   example_rel_path: Annotations/ShowPointAnnotation.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/ShowPointAnnotation.tsx
 ---
 

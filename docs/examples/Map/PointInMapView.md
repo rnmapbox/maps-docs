@@ -3,6 +3,7 @@ title: Point in Map View
 tags: [MapView#pointInMapView]
 custom_props:
   example_rel_path: Map/PointInMapView.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/PointInMapView.js
 ---
 

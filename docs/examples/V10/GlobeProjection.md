@@ -3,11 +3,13 @@ title: Globe Projection
 tags: [MapView#projection]
 custom_props:
   example_rel_path: V10/GlobeProjection.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/GlobeProjection.tsx
 ---
 
 Shows map with globe projection
 
+[Try it on web](https://rnmapbox.github.io/example-app/V10/GlobeProjection)
 
 ```jsx
 import { useState } from 'react';

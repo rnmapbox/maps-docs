@@ -3,6 +3,7 @@ title: Point Annotation Anchors
 tags: [PointAnnotation]
 custom_props:
   example_rel_path: Annotations/PointAnnotationAnchors.js
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/PointAnnotationAnchors.js
 ---
 

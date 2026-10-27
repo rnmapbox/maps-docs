@@ -3,6 +3,7 @@ title: Query Feature Point
 tags: []
 custom_props:
   example_rel_path: FillRasterLayer/QueryAtPoint.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QueryAtPoint.js
 ---
 

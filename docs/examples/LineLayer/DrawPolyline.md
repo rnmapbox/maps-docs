@@ -3,6 +3,7 @@ title: Draw Polyline
 tags: [LineLayer, ShapeSource, onCameraChanged, getCoordinateFromView, Overlay]
 custom_props:
   example_rel_path: LineLayer/DrawPolyline.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/LineLayer/DrawPolyline.tsx
 ---
 This example shows a simple polyline editor. It uses `onCameraChanged` to get the center of the map and `getCoordinateFromView`

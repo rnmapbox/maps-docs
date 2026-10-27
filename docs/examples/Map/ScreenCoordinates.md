@@ -3,6 +3,7 @@ title: Screen Coordinates
 tags: [MapView#onPress, MapView#onLongPress, MapView#getCoordinateFromView, MapView#getPointInView, MapView#queryRenderedFeaturesAtPoint, MapView#queryRenderedFeaturesInRect]
 custom_props:
   example_rel_path: Map/ScreenCoordinates.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/ScreenCoordinates.tsx
 ---
 

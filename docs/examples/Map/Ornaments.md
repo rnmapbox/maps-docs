@@ -3,6 +3,7 @@ title: Ornaments
 tags: [MapView#logoEnabled, MapView#logoPosition, MapView#attributionEnabled, MapView#attributionPosition, MapView#compassEnabled, MapView#compassPosition, MapView#compassImage, MapView#compassFadeWhenNorth, MapView#scaleBarEnabled, MapView#scaleBarPosition]
 custom_props:
   example_rel_path: Map/Ornaments.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/Ornaments.tsx
 ---
 

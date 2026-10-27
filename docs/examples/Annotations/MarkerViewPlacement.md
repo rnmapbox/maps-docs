@@ -3,12 +3,14 @@ title: Marker View Placement
 tags: [MarkerView, MarkerView#priority, MarkerView#minZoom, MarkerView#allowZElevate]
 custom_props:
   example_rel_path: Annotations/MarkerViewPlacement.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/MarkerViewPlacement.tsx
 ---
 
 Two overlapping markers where `priority` picks the one that is shown, a marker hidden
 below `minZoom`, and a marker on a 3D building that `allowZElevate` lifts to the roof.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Annotations/MarkerViewPlacement)
 
 ```jsx
 import React from 'react';

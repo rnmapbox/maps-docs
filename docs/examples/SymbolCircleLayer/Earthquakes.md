@@ -3,6 +3,7 @@ title: Earthquakes
 tags: [ShapeSource, SymbolLayer, ShapeSource#getClusterLeaves, ShapeSource#clusterMinPoints, CircleLayer, CircleLayer#clusterProperties, expressions]
 custom_props:
   example_rel_path: SymbolCircleLayer/Earthquakes.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/Earthquakes.tsx
 ---
 

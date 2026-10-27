@@ -3,6 +3,7 @@ title: Custom Native UserLocation
 tags: [LocationPuck, LocationPuck#topImage, LocationPuck#scale]
 custom_props:
   example_rel_path: UserLocation/CustomNativeUserLocation.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/CustomNativeUserLocation.tsx
 ---
 

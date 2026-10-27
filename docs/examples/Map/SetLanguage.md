@@ -3,11 +3,13 @@ title: Set Language
 tags: [Mapbox#setLanguage]
 custom_props:
   example_rel_path: Map/SetLanguage.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/SetLanguage.tsx
 ---
 
 Sets the label language for all maps in the app with `Mapbox.setLanguage`, which works with any language Mapbox supports and with the Standard style.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/SetLanguage)
 
 ```jsx
 import { useEffect, useState } from 'react';

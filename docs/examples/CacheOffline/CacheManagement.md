@@ -3,6 +3,7 @@ title: CacheManagement
 tags: [Cache, Cache Management, Offline Manager, Offline Packs, Validate Cache, Invalidate Cache, Get Cache Size, Set Max Cache Size]
 custom_props:
   example_rel_path: CacheOffline/CacheManagement.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/CacheOffline/CacheManagement.tsx
 ---
 

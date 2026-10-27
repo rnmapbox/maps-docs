@@ -3,6 +3,7 @@ title: Camera Animation
 tags: [Camera, Camera#animationMode]
 custom_props:
   example_rel_path: V10/CameraAnimation.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/CameraAnimation.tsx
 ---
 

@@ -1,17 +1,19 @@
 ---
 sidebar_label: LocationEvent
-sidebar_position: 3
+sidebar_position: 4
 description: "The location snapped to the road or the route. LocationEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/NativeRNMBXNavigationModule.ts
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/specs/NativeRNMBXNavigationModule.ts by `yarn docs`. Don't edit. */}
 
 # LocationEvent
 
 ```ts
 type LocationEvent = object;
 ```
+
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/specs/NativeRNMBXNavigationModule.ts#L92)
 
 The location snapped to the road or the route.
 

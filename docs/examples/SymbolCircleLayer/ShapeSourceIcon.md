@@ -3,6 +3,7 @@ title: Shape Source Icons
 tags: [ShapeSource, SymbolLayer, Images, Images#nativeAssetImages, Images#onImageMissing]
 custom_props:
   example_rel_path: SymbolCircleLayer/ShapeSourceIcon.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/ShapeSourceIcon.tsx
 ---
 

@@ -3,6 +3,7 @@ title: Marker View
 tags: [PointAnnotation, MarkerView, Slider, Interactive, pointerEvents]
 custom_props:
   example_rel_path: Annotations/MarkerView.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/MarkerView.tsx
 ---
 
@@ -11,6 +12,7 @@ sliders, switch, counter, text input, and pressable button to verify complex
 touch interactions inside a MarkerView. Toggle pointerEvents="none" to make
 the marker transparent to all touch events, passing them through to the map.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Annotations/MarkerView)
 
 ```jsx
 import React from 'react';

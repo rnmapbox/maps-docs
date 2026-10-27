@@ -3,6 +3,7 @@ title: Gradient Line
 tags: [LineLayer, LineLayer#lineGradient]
 custom_props:
   example_rel_path: LineLayer/GradientLine.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/LineLayer/GradientLine.js
 ---
 This example demonstrates how to use interpolate expression in the `lineGradient` property of a `LineLayer` to create a gradient line.

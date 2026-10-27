@@ -3,6 +3,7 @@ title: Scaleable images
 tags: [Images, Images#stretchX, Images#stretchY, Images#content]
 custom_props:
   example_rel_path: SymbolCircleLayer/ScalableImages.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/ScalableImages.tsx
 ---
 
@@ -10,6 +11,7 @@ Demonstrates Scalable images.
 
 You can use stretchX, stretchY and content to scale a bitmap image - keep parts of it fixed while only scale specific parts.
 
+[Try it on web](https://rnmapbox.github.io/example-app/SymbolCircleLayer/ScalableImages)
 
 ```jsx
 import React from 'react';

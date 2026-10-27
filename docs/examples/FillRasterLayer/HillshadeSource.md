@@ -3,6 +3,7 @@ title: Hillshade Layer
 tags: [RasterDemSource, HillshadeLayer]
 custom_props:
   example_rel_path: FillRasterLayer/HillshadeSource.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/HillshadeSource.tsx
 ---
 Renders terrain hillshading from a raster-dem source.

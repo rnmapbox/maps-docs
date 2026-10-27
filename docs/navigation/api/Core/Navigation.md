@@ -2,16 +2,18 @@
 sidebar_label: Navigation
 sidebar_position: 1
 description: "The headless navigation API: route requests, the app's single guidance session, and its events. It's also the default export."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation.ts
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/Navigation.ts by `yarn docs`. Don't edit. */}
 
 # Navigation
 
 ```ts
 const Navigation: object;
 ```
+
+Defined in: [src/Navigation.ts:50](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Navigation.ts#L50)
 
 The headless navigation API: route requests, the app's single guidance session, and its events.
 It's also the default export.
@@ -157,6 +159,18 @@ The camera state of navigation maps, see [setCameraState](#setcamerastate).
 #### Returns
 
 [`CameraState`](CameraState.md)
+
+### getDefaultDistanceUnit()
+
+```ts
+getDefaultDistanceUnit(): DistanceUnit;
+```
+
+The unit the device's region and measurement settings call for, which the native views use.
+
+#### Returns
+
+[`DistanceUnit`](DistanceUnit.md)
 
 ### getRouteStats()
 

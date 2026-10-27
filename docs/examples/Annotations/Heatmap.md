@@ -3,6 +3,7 @@ title: Heatmap
 tags: [HeatmapLayer, HeatmapLayer#heatmapColor]
 custom_props:
   example_rel_path: Annotations/Heatmap.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Annotations/Heatmap.js
 ---
 

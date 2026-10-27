@@ -3,6 +3,7 @@ title: User Location Padding
 tags: [Images, Images#stretchX, Images#stretchY, Images#content]
 custom_props:
   example_rel_path: UserLocation/UserLocationPadding.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/UserLocationPadding.tsx
 ---
 

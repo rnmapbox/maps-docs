@@ -2,16 +2,18 @@
 sidebar_label: NavigationViewProps
 sidebar_position: 6
 description: "Props of NavigationView. Pass either route or waypoints. NavigationViewProps API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/NavigationView.tsx
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/NavigationView.tsx by `yarn docs`. Don't edit. */}
 
 # NavigationViewProps
 
 ```ts
 type NavigationViewProps = object;
 ```
+
+Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/NavigationView.tsx#L34)
 
 Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`.
 
@@ -28,4 +30,4 @@ Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`
 | <a id="simulate"></a> `simulate?` | `boolean` | Drive the route with simulated locations. Read when guidance starts. |
 | <a id="style"></a> `style?` | `StyleProp`\<`ViewStyle`\> | - |
 | <a id="testid"></a> `testID?` | `string` | - |
-| <a id="waypoints"></a> `waypoints?` | [`Waypoint`](../Routes/Waypoint.md)[] | Used when `route` isn't set: the view requests a route through them, origin first, and releases it on unmount. |
+| <a id="waypoints"></a> `waypoints?` | [`Waypoint`](../Routes/Waypoint.md)[] | Used when `route` isn't set: the view requests a route through them, origin first, with alternatives, and releases it on unmount. |

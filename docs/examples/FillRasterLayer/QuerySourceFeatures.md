@@ -3,6 +3,7 @@ title: Query Source Features
 tags: [VectorSource, querySourceFeatures]
 custom_props:
   example_rel_path: FillRasterLayer/QuerySourceFeatures.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QuerySourceFeatures.tsx
 ---
 

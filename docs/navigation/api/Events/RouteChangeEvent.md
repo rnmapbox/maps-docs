@@ -1,17 +1,19 @@
 ---
 sidebar_label: RouteChangeEvent
-sidebar_position: 4
+sidebar_position: 5
 description: "From Navigation.addRouteChangeListener. RouteChangeEvent API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
-custom_edit_url: null
+custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 ---
 
-{/* Generated from rnmapbox/navigation/src by `yarn docs`. Don't edit. */}
+{/* Generated from rnmapbox/navigation/src/Route.ts by `yarn docs`. Don't edit. */}
 
 # RouteChangeEvent
 
 ```ts
 type RouteChangeEvent = object;
 ```
+
+Defined in: [src/Route.ts:122](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Route.ts#L122)
 
 From [Navigation.addRouteChangeListener](../Core/Navigation.md#addroutechangelistener).
 
