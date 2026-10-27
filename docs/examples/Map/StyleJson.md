@@ -3,11 +3,13 @@ title: Style JSON
 tags: [Style#json]
 custom_props:
   example_rel_path: Map/StyleJson.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/StyleJson.js
 ---
 
 Change style of a MapView on the fly.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/StyleJson)
 
 ```jsx
 import React from 'react';

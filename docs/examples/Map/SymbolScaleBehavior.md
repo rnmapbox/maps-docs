@@ -3,6 +3,7 @@ title: Symbol Scale Behavior
 tags: [MapView#symbolScaleBehavior]
 custom_props:
   example_rel_path: Map/SymbolScaleBehavior.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/SymbolScaleBehavior.tsx
 ---
 

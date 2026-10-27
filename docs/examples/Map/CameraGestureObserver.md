@@ -3,11 +3,13 @@ title: Camera Gesture Observer
 tags: [CameraGestureObserver#onMapSteady, CameraGestureObserver#quietPeriodMs, CameraGestureObserver#maxIntervalMs, CameraGestureObserver#onCameraChanged]
 custom_props:
   example_rel_path: Map/CameraGestureObserver.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/CameraGestureObserver.tsx
 ---
 
 Demonstrates how to detect when the map becomes steady after user gestures (pan, zoom, rotate). The CameraGestureObserver component fires the onMapSteady event after a configurable quiet period, providing information about the last gesture type and idle duration. onCameraChanged reports whether the camera is moving because of the user.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/CameraGestureObserver)
 
 ```jsx
 import { useCallback, useState } from 'react';

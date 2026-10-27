@@ -3,6 +3,7 @@ title: Custom Icon Native Asset
 tags: [ShapeSource, ShapeSource#onPress, SymbolLayer, Images, SymbolLayer#iconImage]
 custom_props:
   example_rel_path: SymbolCircleLayer/CustomIconNativeAsset.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/CustomIconNativeAsset.tsx
 ---
 

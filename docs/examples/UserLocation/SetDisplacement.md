@@ -3,6 +3,7 @@ title: Set Displacement
 tags: [UserLocation, UserLocation#minDisplacement]
 custom_props:
   example_rel_path: UserLocation/SetDisplacement.js
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/SetDisplacement.js
 ---
 

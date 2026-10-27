@@ -3,6 +3,7 @@ title: Set Tint Color
 tags: [MapView#tintColor]
 custom_props:
   example_rel_path: UserLocation/SetTintColor.js
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/SetTintColor.js
 ---
 

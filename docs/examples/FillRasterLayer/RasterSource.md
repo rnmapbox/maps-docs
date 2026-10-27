@@ -3,6 +3,7 @@ title: Raster Source
 tags: []
 custom_props:
   example_rel_path: FillRasterLayer/RasterSource.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/RasterSource.js
 ---
 

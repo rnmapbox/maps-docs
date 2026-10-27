@@ -3,6 +3,7 @@ title: Watercolor Raster Tiles
 tags: [RasterSource, RasterLayer]
 custom_props:
   example_rel_path: FillRasterLayer/WatercolorRasterTiles.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/WatercolorRasterTiles.js
 ---
 

@@ -3,6 +3,7 @@ title: Offline Example
 tags: [offlineManager#createPack, offlineManager#getPack, offlineManager#getPacks]
 custom_props:
   example_rel_path: CacheOffline/OfflineExample.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/CacheOffline/OfflineExample.tsx
 ---
 

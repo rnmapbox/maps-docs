@@ -3,6 +3,7 @@ title: Simple Model Layer
 tags: [Models, ModelLayer]
 custom_props:
   example_rel_path: V10/SimpleModelLayer.js
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/V10/SimpleModelLayer.js
 ---
 

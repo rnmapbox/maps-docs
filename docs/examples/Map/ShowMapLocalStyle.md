@@ -3,11 +3,13 @@ title: Show Map Local Style
 tags: []
 custom_props:
   example_rel_path: Map/ShowMapLocalStyle.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/ShowMapLocalStyle.tsx
 ---
 
 Customize ornaments of the map(logo, compass, scalebar, attribution)
 
+[Try it on web](https://rnmapbox.github.io/example-app/Map/ShowMapLocalStyle)
 
 ```jsx
 import { useEffect } from 'react';

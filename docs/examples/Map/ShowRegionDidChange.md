@@ -3,6 +3,7 @@ title: Show Region Did Change
 tags: [MapView#onRegionWillChange, MapView#onRegionIsChanging, MapView#onRegionDidChange]
 custom_props:
   example_rel_path: Map/ShowRegionDidChange.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/ShowRegionDidChange.js
 ---
 

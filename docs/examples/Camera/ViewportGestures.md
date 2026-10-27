@@ -3,6 +3,7 @@ title: Viewport Gestures
 tags: [Viewport, Viewport#transitionsToIdleUponUserInteraction]
 custom_props:
   example_rel_path: Camera/ViewportGestures.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Camera/ViewportGestures.tsx
 ---
 
@@ -10,6 +11,7 @@ Follows a simulated moving location, and chooses which gestures stop following w
 
 In the object form, pan stops following, while zooming, rotating and pitching keep following and keep the user's value.
 
+[Try it on web](https://rnmapbox.github.io/example-app/Camera/ViewportGestures)
 
 ```jsx
 import { useEffect, useRef, useState } from 'react';

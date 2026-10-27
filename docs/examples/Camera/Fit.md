@@ -3,6 +3,7 @@ title: Fit
 tags: [Camera, Camera#zoomTo]
 custom_props:
   example_rel_path: Camera/Fit.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Camera/Fit.tsx
 ---
 Change camera via imperative methods

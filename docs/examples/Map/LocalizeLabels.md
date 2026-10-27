@@ -3,6 +3,7 @@ title: Localize Labels
 tags: [MapView#localizeLabels]
 custom_props:
   example_rel_path: Map/LocalizeLabels.tsx
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Map/LocalizeLabels.tsx
 ---
 

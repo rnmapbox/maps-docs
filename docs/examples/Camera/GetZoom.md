@@ -3,6 +3,7 @@ title: GetZoom
 tags: [Camera, Camera#getZoom]
 custom_props:
   example_rel_path: Camera/GetZoom.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/Camera/GetZoom.js
 ---
 

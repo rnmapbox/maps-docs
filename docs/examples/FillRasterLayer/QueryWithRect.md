@@ -3,6 +3,7 @@ title: Query Features Bounding Box
 tags: [queryRenderedFeaturesInRect]
 custom_props:
   example_rel_path: FillRasterLayer/QueryWithRect.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/FillRasterLayer/QueryWithRect.js
 ---
 

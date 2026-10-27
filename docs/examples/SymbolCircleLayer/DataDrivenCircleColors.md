@@ -3,6 +3,7 @@ title: Data driven circle colors
 tags: [VectorSource, CircleLayer, CircleLayer#circleRadius, CircleLayer#circleColor, expressions]
 custom_props:
   example_rel_path: SymbolCircleLayer/DataDrivenCircleColors.js
+  snack_supported: true
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/SymbolCircleLayer/DataDrivenCircleColors.js
 ---
 

@@ -3,6 +3,7 @@ title: User Location Render Mode
 tags: [UserLocation, UserLocation#renderMode, UserLocation#visible, UserLocation#onUserTrackingModeChange]
 custom_props:
   example_rel_path: UserLocation/UserLocationRenderMode.tsx
+  snack_supported: false
 custom_edit_url: https://github.com/rnmapbox/maps/tree/master/example/src/examples/UserLocation/UserLocationRenderMode.tsx
 ---
 
