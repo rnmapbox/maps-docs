@@ -62,6 +62,6 @@ yarn detox test --configuration ios.debug --debug-synchronization 500 --loglevel
 
 ### Open in Snack
 
-Example pages listed in `plugins/snack/allowlist.js` get an "Open in Snack" button (`plugins/snack/remarkSnackLink.js`). It opens an unsaved Snack on the web platform with `@rnmapbox/maps` pinned to `RNMAPBOX_MAPS_VERSION` in `plugins/snack/snackUrl.js`; the example and its helpers are loaded from that release's tag, and the access token is fetched at runtime from rnmapbox/ci-config.
+Example pages get "Run on web" and "Edit in Snack" buttons (`plugins/snack/remarkSnackLink.js`). "Edit in Snack" opens an unsaved Snack on the web platform with `@rnmapbox/maps` pinned to `RNMAPBOX_MAPS_VERSION` in `plugins/snack/snackUrl.js`; the example and its helpers are loaded from that release's tag, and the access token is fetched at runtime from rnmapbox/ci-config.
 
-To add an example, build the site, open its link from the built page and check that the map renders without errors in the Snack web preview, then add its `example_rel_path` to the allowlist. Examples importing binary assets or files not in `SHARED_FILES` can't be linked; the build fails if one is allowlisted. When bumping `RNMAPBOX_MAPS_VERSION`, recheck the allowlisted examples.
+Which examples get the Snack button is decided in rnmapbox/maps: the example's `snackSupported` metadata, defaulting to `webSupported`, is written to the `snack_supported` front matter of its page. Pages generated without that field fall back to showing it wherever there is a "Try it on web" link. Examples importing binary assets or files not in `SHARED_FILES` can't be linked; the build fails if one has `snack_supported: true`. When bumping `RNMAPBOX_MAPS_VERSION`, recheck the Snack-enabled examples.

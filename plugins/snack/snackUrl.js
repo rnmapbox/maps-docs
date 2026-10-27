@@ -15,12 +15,17 @@ const DEPENDENCY_VERSIONS = {
   '@rneui/base': '4.0.0-rc.8',
   '@turf/bbox': '6.5.0',
   '@turf/helpers': '6.5.0',
-  '@turf/length': '6.5.0',
+  // 6.5.0 needs @babel/runtime, which Snackager can't bundle.
+  '@turf/length': '6.3.0',
+  '@turf/meta': '6.5.0',
   '@mapbox/geo-viewport': '0.5.0',
 };
 
+// Dependencies Snackager leaves out of the bundles of these packages.
 const PEER_DEPENDENCIES = {
   '@rneui/base': ['@expo/vector-icons'],
+  '@turf/bbox': ['@turf/helpers', '@turf/meta'],
+  '@turf/length': ['@turf/meta'],
 };
 
 const BUILTIN_MODULES = new Set(['react', 'react-native']);
