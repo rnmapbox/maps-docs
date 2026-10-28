@@ -1,6 +1,6 @@
 ---
 sidebar_label: RNNavigationViewAppearance
-sidebar_position: 7
+sidebar_position: 10
 description: "auto switches between day and night at sunrise and sunset at the user's location."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigationView.tsx
 ---
@@ -13,6 +13,6 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigati
 type RNNavigationViewAppearance = "auto" | "day" | "night";
 ```
 
-Defined in: [src/RNNavigationView.tsx:44](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/RNNavigationView.tsx#L44)
+Defined in: [src/RNNavigationView.tsx:44](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/RNNavigationView.tsx#L44)
 
 `auto` switches between `day` and `night` at sunrise and sunset at the user's location.

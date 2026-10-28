@@ -1,6 +1,6 @@
 ---
 sidebar_label: NavigationViewportProps
-sidebar_position: 5
+sidebar_position: 8
 description: "Props of NavigationViewport. NavigationViewportProps API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/NavigationViewport.tsx
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewportProps = object;
 ```
 
-Defined in: [src/NavigationViewport.tsx:20](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/NavigationViewport.tsx#L20)
+Defined in: [src/NavigationViewport.tsx:20](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationViewport.tsx#L20)
 
 Props of [NavigationViewport](NavigationViewport.md).
 

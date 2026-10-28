@@ -1,6 +1,6 @@
 ---
 sidebar_label: RNNavigationViewProps
-sidebar_position: 8
+sidebar_position: 11
 description: "Props of RNNavigationView: NavigationViewProps, plus the props below."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigationView.tsx
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigati
 type RNNavigationViewProps = NavigationViewProps & object;
 ```
 
-Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/RNNavigationView.tsx#L51)
+Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/RNNavigationView.tsx#L51)
 
 Props of [RNNavigationView](RNNavigationView.md): [NavigationViewProps](NavigationViewProps.md), plus the props below.
 

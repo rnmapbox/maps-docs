@@ -24,9 +24,12 @@ custom_edit_url: null
 
 | Name | Description |
 | ------ | ------ |
+| [CarMap](Components/CarMap.md) | Adds its `@rnmapbox/maps` children to the map on the car screen (CarPlay, Android Auto) instead of the phone's. Render it in the component passed to [Navigation.registerCarPlayRoot](Core/Navigation.md#registercarplayroot), and in the app for Android Auto and for iOS apps without a CarPlay root; while a CarPlay root is mounted, only its `<CarMap>` renders. It takes no space on the phone and renders nothing while no car screen shows a map. Views such as `MarkerView` and taps on the map aren't supported on car screens. |
 | [NavigationView](Components/NavigationView.md) | Full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an equivalent built from the Navigation SDK UI components on Android. |
 | [NavigationViewport](Components/NavigationViewport.md) | Configures the navigation camera of the `@rnmapbox/maps` `MapView` it's a child of: `<MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}><NavigationViewport padding={{ bottom: 120 }} /></MapView>`. Without it the SDK defaults apply: the safe area plus a small margin on iOS, no padding on Android. |
 | [RNNavigationView](Components/RNNavigationView.md) | `<NavigationView>` built in React Native from the headless API, on an `@rnmapbox/maps` navigation map: a maneuver banner with road shields, exit numbers and lanes, speed limit, road name, trip progress, mute, overview/recenter and end buttons, and an arrival card. Navigation maps draw the alternative routes of its guidance; tapping one switches to it. |
+| [CarMapActivity](Components/CarMapActivity.md) | What the car screen shows, passed to a [CarMap](Components/CarMap.md) render function. |
+| [CarMapProps](Components/CarMapProps.md) | Props of [CarMap](Components/CarMap.md). |
 | [NavigationViewError](Components/NavigationViewError.md) | Passed to `onError` of [NavigationView](Components/NavigationView.md) and [RNNavigationView](Components/RNNavigationView.md). |
 | [NavigationViewportProps](Components/NavigationViewportProps.md) | Props of [NavigationViewport](Components/NavigationViewport.md). |
 | [NavigationViewProps](Components/NavigationViewProps.md) | Props of [NavigationView](Components/NavigationView.md). Pass either `route` or `waypoints`. |

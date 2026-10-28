@@ -1,6 +1,6 @@
 ---
 sidebar_label: NavigationViewProps
-sidebar_position: 6
+sidebar_position: 9
 description: "Props of NavigationView. Pass either route or waypoints. NavigationViewProps API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/NavigationView.tsx
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewProps = object;
 ```
 
-Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/NavigationView.tsx#L34)
+Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationView.tsx#L34)
 
 Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`.
 

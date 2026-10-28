@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type CameraState = "following" | "overview" | "idle";
 ```
 
-Defined in: [src/Navigation.ts:36](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Navigation.ts#L36)
+Defined in: [src/Navigation.ts:39](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Navigation.ts#L39)
 
 Camera of navigation maps. `following` follows the puck, tilted and rotated with the route; `overview` fits the rest
 of the route; `idle` leaves the map to the user's gestures and `@rnmapbox/maps` `Camera`.

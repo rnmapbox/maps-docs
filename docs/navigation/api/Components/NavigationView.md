@@ -1,6 +1,6 @@
 ---
 sidebar_label: NavigationView
-sidebar_position: 1
+sidebar_position: 2
 description: "Full-screen turn-by-turn navigation UI: NavigationViewController from MapboxNavigationUIKit on iOS, and an equivalent built from the Navigation SDK UI components on Android."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/NavigationView.tsx
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 function NavigationView(props: NavigationViewProps): Element;
 ```
 
-Defined in: [src/NavigationView.tsx:68](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/NavigationView.tsx#L68)
+Defined in: [src/NavigationView.tsx:68](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationView.tsx#L68)
 
 Full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an
 equivalent built from the Navigation SDK UI components on Android.

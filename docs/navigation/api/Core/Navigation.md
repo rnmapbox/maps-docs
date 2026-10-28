@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 const Navigation: object;
 ```
 
-Defined in: [src/Navigation.ts:50](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Navigation.ts#L50)
+Defined in: [src/Navigation.ts:53](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Navigation.ts#L53)
 
 The headless navigation API: route requests, the app's single guidance session, and its events.
 It's also the default export.
@@ -51,6 +51,24 @@ Called whenever the camera state changes, whether from JS, guidance or a map ges
 | Parameter | Type |
 | ------ | ------ |
 | `listener` | (`state`: [`CameraState`](CameraState.md)) => `void` |
+
+#### Returns
+
+`EventSubscription`
+
+### addCarPlayConnectionListener()
+
+```ts
+addCarPlayConnectionListener(listener: (connected: boolean) => void): EventSubscription;
+```
+
+Called when a CarPlay screen connects or disconnects.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `listener` | (`connected`: `boolean`) => `void` |
 
 #### Returns
 
@@ -196,6 +214,19 @@ Version of the native Mapbox Navigation SDK linked into the app.
 
 `string`
 
+### isCarPlayConnected()
+
+```ts
+isCarPlayConnected(): boolean;
+```
+
+Whether a CarPlay screen shows the navigation session; see the `carPlay` option of the Expo config plugin.
+Always `false` on Android.
+
+#### Returns
+
+`boolean`
+
 ### isVoiceMuted()
 
 ```ts
@@ -222,6 +253,28 @@ Throws if `route` was released.
 | Parameter | Type |
 | ------ | ------ |
 | `route` | [`Route`](../Routes/Route.md) \| `null` |
+
+#### Returns
+
+`void`
+
+### registerCarPlayRoot()
+
+```ts
+registerCarPlayRoot(component: ComponentType): void;
+```
+
+Sets the component iOS keeps mounted while CarPlay is connected, in a React root of its own that draws nothing;
+render [CarMap](../Components/CarMap.md) in it. When CarPlay launches the app without its phone UI, this root starts React Native.
+Needs the Expo plugin's `carPlayRoot` option (or `RNMBXNavigationCarPlayRoot.reactNativeFactory` set in the app
+delegate) and React Native 0.79+. Call it in the app's entry file, next to `registerRootComponent`, as CarPlay
+looks the root up before anything else loads. Android ignores it.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `component` | `ComponentType` |
 
 #### Returns
 

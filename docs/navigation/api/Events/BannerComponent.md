@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/Nati
 type BannerComponent = object;
 ```
 
-Defined in: [src/specs/NativeRNMBXNavigationModule.ts:26](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/specs/NativeRNMBXNavigationModule.ts#L26)
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:26](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/specs/NativeRNMBXNavigationModule.ts#L26)
 
 A piece of a banner instruction, see the Mapbox Directions `banner_instructions` components.
 

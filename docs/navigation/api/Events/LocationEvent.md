@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/Nati
 type LocationEvent = object;
 ```
 
-Defined in: [src/specs/NativeRNMBXNavigationModule.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/specs/NativeRNMBXNavigationModule.ts#L92)
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/specs/NativeRNMBXNavigationModule.ts#L92)
 
 The location snapped to the road or the route.
 

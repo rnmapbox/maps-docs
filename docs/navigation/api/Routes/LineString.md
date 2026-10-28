@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type LineString = object;
 ```
 
-Defined in: [src/Route.ts:15](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Route.ts#L15)
+Defined in: [src/Route.ts:15](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L15)
 
 GeoJSON LineString.
 

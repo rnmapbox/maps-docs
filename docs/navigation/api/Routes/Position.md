@@ -13,6 +13,6 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type Position = [longitude: number, latitude: number];
 ```
 
-Defined in: [src/Route.ts:8](https://github.com/rnmapbox/navigation/blob/v0.1.0-alpha.3/src/Route.ts#L8)
+Defined in: [src/Route.ts:8](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L8)
 
 GeoJSON order, same as `@rnmapbox/maps`.
