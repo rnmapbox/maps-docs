@@ -39,16 +39,16 @@ It requests routes, runs an active-guidance session and reports route progress. 
   caption="<NavigationView> with a simulated route, on Android."
 />
 
-:::caution Alpha
-`@rnmapbox/navigation` is in early alpha. The current release is `0.1.0-alpha.1`, published to npm under the `next` tag, and APIs may change between releases.
+:::note Pre-1.0
+The current release is `0.1.0`, on npm's `latest` tag. APIs may change between minor releases until 1.0.
 :::
 
 ## Requirements
 
 - React Native 0.79+ with the New Architecture.
-- `@rnmapbox/maps` 10.3.11 or newer (peer dependency). Navigation maps plug into its map view factory hooks, which have their current form since 10.3.11.
-- iOS: React Native's minimum deployment target. The Navigation SDK for iOS 3.23.1 is added as a Swift package.
-- Android: `minSdkVersion` 24, `compileSdkVersion` 36.
+- `@rnmapbox/maps` `>=10.3.16 <10.4.0` (peer dependency). Navigation maps plug into its map view factory hooks, and `<CarMap>` into its support for maps that live elsewhere, which 10.3.16 completed.
+- iOS: React Native's minimum deployment target (the Navigation SDK itself needs iOS 14). The Navigation SDK for iOS 3.33.0 is added as a Swift package.
+- Android: `minSdkVersion` 24, `compileSdkVersion` 36. Navigation SDK for Android 3.33.0.
 - A Mapbox account and a public access token (`pk.…`). No secret downloads token is needed.
 
 Navigation is billed per trip or MAU to the access token you pass, on top of Maps usage. See [Navigation SDK pricing](https://www.mapbox.com/pricing#navigation).
@@ -57,9 +57,11 @@ Navigation is billed per trip or MAU to the access token you pass, on top of Map
 
 The Navigation SDK pins the Maps SDK it's built against, and `@rnmapbox/maps` must use that same Maps SDK.
 
-| @rnmapbox/navigation | Navigation SDK | Maps SDK (pinned by Nav) |
-| -------------------- | -------------- | ------------------------ |
-| 0.1.x                | 3.23.1         | 11.23.1                  |
+| @rnmapbox/navigation    | Navigation SDK | Maps SDK (pinned by Nav) | @rnmapbox/maps      |
+| ----------------------- | -------------- | ------------------------ | ------------------- |
+| 0.1.0                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
+| 0.1.0-alpha.3           | 3.33.0         | 11.33.0                  | `>=10.3.12 <10.4.0` |
+| 0.1.0-alpha.0 – alpha.2 | 3.23.1         | 11.23.1                  | `10.3.11`           |
 
 ## What's included
 
@@ -69,6 +71,9 @@ The Navigation SDK pins the Maps SDK it's built against, and `@rnmapbox/maps` mu
 - Events for route progress, camera state, location, arrival, off-route, reroutes and voice instructions.
 - [`<NavigationView>`](navigation-view.md), the SDK's full-screen turn-by-turn UI.
 - [`<RNNavigationView>`](rn-navigation-view.md), a turn-by-turn UI written in React Native on top of the headless API.
+- [`<CarMap>`](api/Components/CarMap.md), which adds `@rnmapbox/maps` sources and layers to the car screen's map.
+- CarPlay, a prototype: the Navigation SDK's CarPlay UI for the same navigation session as the phone. See [CarPlay](https://github.com/rnmapbox/navigation#carplay) in the README.
+- Android Auto, experimental and not tested on a head unit yet: a navigation map for the same session. See [Android Auto](https://github.com/rnmapbox/navigation#android-auto) in the README.
 - An Expo config plugin, see [Install](install.md).
 
 ## Choose an approach
@@ -87,8 +92,8 @@ Start with `<RNNavigationView>` if you want a ready UI that matches the rest of 
 ## Known limitations
 
 - No explicit offline routing API. Requests use the SDK's default hybrid router, which only falls back to onboard routing with routing tiles already on the device.
-- Navigation maps show no alternative routes during guidance.
-- Android `<NavigationView>` has no end-of-route, feedback or alternative-route UI, no day/night styles, no road name label, and doesn't show reroutes as such.
+- Android `<NavigationView>` has no end-of-route or feedback UI, no day/night styles, no road name label, and doesn't show reroutes as such.
+- `<RNNavigationView>` draws road shields from the Directions API's shield images, not the Mapbox designed shields the native banners use.
 - The Expo config plugin is only tested with Expo SDK 58.
 - `@rnmapbox/maps` `LocationPuck` and `UserLocation` don't work on navigation maps: the navigation puck replaces the map's location provider.
 - One navigation session for all navigation maps. Per-map routes or cameras aren't supported.

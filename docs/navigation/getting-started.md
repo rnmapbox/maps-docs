@@ -78,6 +78,8 @@ export function NavigationScreen() {
 
 `Navigation.previewRoute(route)` shows a route on navigation maps before guidance starts, and `Navigation.setCameraState('overview')` fits the rest of the route.
 
+To guide on the device's location, pass `simulate: false` and request location permission first, see [Location permission](install.md#location-permission).
+
 ## Guidance events
 
 Subscribe to the events you need while guidance runs. Each listener returns a subscription; `remove()` it on unmount.
@@ -107,7 +109,7 @@ useEffect(() => {
 | `addLocationListener`         | Location snapped to the road or route, with `speed`, `course`, `roadName` and `speedLimit`.   |
 | `addArriveListener`           | `{ waypointIndex, isFinalDestination }` when a waypoint is reached; the origin is index 0.    |
 | `addOffRouteListener`         | `true` when the user leaves the route, `false` once guidance follows a route again.           |
-| `addRouteChangeListener`      | `{ route, reason }` when guidance switches to a new `Route` after a reroute.                  |
+| `addRouteChangeListener`      | `{ route, reason }` when guidance switches to a new `Route`, after a reroute or to an alternative. |
 | `addVoiceInstructionListener` | `{ text, ssml, distanceAlongStep }`, for apps doing their own text to speech.                 |
 | `addCameraStateListener`      | Camera state changes, see [Camera](#camera).                                                  |
 
@@ -121,6 +123,7 @@ The SDK speaks voice instructions during any guidance; `Navigation.setVoiceMuted
 - `release()` frees the native route. Release the routes you don't keep, such as unused alternatives. The garbage collector releases the rest eventually, but it doesn't see the native memory, so that can take long.
 - After `release()`, reading anything but `isReleased` throws an `Error` with `code: 'route_released'`, and `startActiveGuidance` and `previewRoute` reject or throw it.
 - Guidance and the preview keep their own reference to the native route until `stopNavigation`, so releasing a route they use is safe.
+- `Navigation.getRouteStats()` returns `{ live, released, collected }` counts, for leak checks.
 - Routes don't survive a JS reload.
 
 ## Navigation maps
