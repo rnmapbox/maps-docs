@@ -8,7 +8,7 @@ description: "The Mapbox Navigation SDK's full-screen turn-by-turn UI for React 
 
 `<NavigationView>` is a full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an equivalent built from the Navigation SDK UI components on Android (maneuver banner with lanes and shields, speed limit, trip progress, mute, overview, recenter and end buttons).
 
-On iOS, add `audio` to `UIBackgroundModes` in `Info.plist`, see [Install](install.md).
+On iOS it needs `audio` in `UIBackgroundModes`, which the Expo config plugin adds; in a bare app add it to `Info.plist`, see [Install](install.md).
 
 ```tsx
 import { NavigationView } from '@rnmapbox/navigation';
@@ -54,4 +54,4 @@ See [`NavigationViewProps`](api/Components/NavigationViewProps.md) in the API re
 - `addRouteProgressListener` and `addCameraStateListener` also report its guidance.
 - Show one `NavigationView` at a time. On iOS it's embedded as a child of the nearest view controller.
 
-Android `<NavigationView>` has no end-of-route, feedback or alternative-route UI, no day/night styles, no road name label, and doesn't show reroutes as such. For the same UI on both platforms, see [`<RNNavigationView>`](rn-navigation-view.md).
+Android `<NavigationView>` has no end-of-route or feedback UI, no day/night styles, no road name label, and doesn't show reroutes as such. For the same UI on both platforms, see [`<RNNavigationView>`](rn-navigation-view.md).

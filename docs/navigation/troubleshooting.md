@@ -40,11 +40,11 @@ post_install do |installer|
 end
 ```
 
-The `@rnmapbox/navigation` Expo config plugin already adds this. [rnmapbox/maps#4376](https://github.com/rnmapbox/maps/pull/4376) fixes it in `@rnmapbox/maps` itself; once you're on a release with it, the snippet is redundant but harmless.
+[rnmapbox/maps#4376](https://github.com/rnmapbox/maps/pull/4376) fixes it in `@rnmapbox/maps` 10.3.16, the minimum version `@rnmapbox/navigation` 0.1.0 supports, so you only see this error with an older `@rnmapbox/maps`; upgrading it fixes the error too. The `@rnmapbox/navigation` Expo config plugin also adds the path; with both, it appears once.
 
 ## iOS: Swift package resolution error for MapboxMaps
 
-Navigation SDK 3.N pins Maps SDK 11.N exactly, and `@rnmapbox/maps`' package requirement (`$RNMapboxMapsVersion`, default `~> 11.23.1`) must allow it. With a different Navigation SDK version, set `$RNMapboxMapsVersion = '= 11.N.x'` to match.
+Navigation SDK 3.N pins Maps SDK 11.N exactly, and `@rnmapbox/maps`' package requirement (`$RNMapboxMapsVersion`, default `~> 11.33.0`) must allow it. With a different Navigation SDK version, set `$RNMapboxMapsVersion = '= 11.N.x'` to match.
 
 ## Android: Maps version resolution conflict
 
@@ -59,7 +59,7 @@ Cannot find a version of 'com.mapbox.maps:android' that satisfies the version co
 ```groovy
 buildscript {
     ext {
-        RNMapboxMapsVersion = '11.23.1' // matches Navigation SDK 3.23.1
+        RNMapboxMapsVersion = '11.33.0' // matches Navigation SDK 3.33.0
     }
 }
 ```
@@ -70,7 +70,7 @@ Both libraries pick the `-ndk27` artifacts with `targetSdkVersion` 35 or higher.
 
 ## iOS: assertion about UIBackgroundModes audio
 
-`<NavigationView>` crashes in a debug build with an assertion from the Navigation SDK's voice controller about the `audio` background mode. Add it to `Info.plist`:
+Guidance crashes in a debug build, as soon as it starts, with an assertion from the Navigation SDK's voice controller about the `audio` background mode. The Expo config plugin adds it unless `backgroundAudio` is `false`. In a bare app, add it to `Info.plist`:
 
 ```xml
 <key>UIBackgroundModes</key>
@@ -79,4 +79,4 @@ Both libraries pick the `-ndk27` artifacts with `targetSdkVersion` 35 or higher.
 </array>
 ```
 
-With Expo, add `"UIBackgroundModes": ["audio"]` to `ios.infoPlist` in `app.json` and run `npx expo prebuild` again.
+With Expo, remove `"backgroundAudio": false` from the `@rnmapbox/navigation` plugin options, or add `"UIBackgroundModes": ["audio"]` to `ios.infoPlist` in `app.json`, and run `npx expo prebuild` again.
