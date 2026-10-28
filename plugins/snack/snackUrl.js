@@ -2,7 +2,7 @@ const path = require('path');
 
 // Snackager caches npm metadata for ~1h, so pin the release the docs were generated from.
 // Example sources are loaded from the same tag, so the Snack runs code written for that release.
-const RNMAPBOX_MAPS_VERSION = '10.3.14';
+const RNMAPBOX_MAPS_VERSION = '10.3.16';
 
 const EXAMPLE_SRC_URL = `https://raw.githubusercontent.com/rnmapbox/maps/v${RNMAPBOX_MAPS_VERSION}/example/src`;
 
