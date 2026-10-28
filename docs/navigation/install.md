@@ -76,7 +76,7 @@ end
 
 ### Info.plist
 
-Add `NSLocationWhenInUseUsageDescription`, and `audio` to `UIBackgroundModes` so voice instructions keep playing in the background. The Navigation SDK's voice controller asserts on the `audio` mode in debug builds when guidance starts. Declare it only if your app speaks guidance; App Review rejects unused background modes.
+Add `NSLocationWhenInUseUsageDescription`, and `audio` to `UIBackgroundModes`: the Navigation SDK's voice controller asserts on it in debug builds on any guidance start, even with voice muted.
 
 ### Versions
 
@@ -144,7 +144,7 @@ On iOS the `@rnmapbox/navigation` plugin:
 - sets `$RNMapboxMapsSwiftPackageManager = { link: false }` in the Podfile, see the iOS tab;
 - adds the Navigation SDK's binary frameworks to `rnmapbox-maps`' framework search paths, which Xcode 26 needs with React Native 0.87+;
 - sets `NSLocationWhenInUseUsageDescription`, unless `locationWhenInUsePermission` is `false`;
-- adds `audio` to `UIBackgroundModes`, so voice instructions keep playing in the background, unless `backgroundAudio` is `false`. Without it the Navigation SDK asserts in debug builds when guidance starts. Turn it off if your app doesn't speak guidance; App Review rejects unused background modes;
+- always adds `audio` to `UIBackgroundModes`: without it the Navigation SDK asserts in debug builds on any guidance start, even with voice muted;
 - with `carPlay: true`, adds the CarPlay scene and the `com.apple.developer.carplay-maps` entitlement, and with `carPlayRoot: true` also hands the `AppDelegate.swift` React Native factory to CarPlay.
 
 On Android the `@rnmapbox/maps` plugin already adds the Mapbox Maven repository, and the Navigation SDK's manifest adds the location, foreground service and notification permissions. With `androidAuto: true` the `@rnmapbox/navigation` plugin adds the Android Auto service, its metadata and the `androidx.car.app` navigation and surface permissions. With `RNMapboxNavigationVersion` it sets the Navigation SDK version in `gradle.properties`.
@@ -162,7 +162,6 @@ On Android the `@rnmapbox/maps` plugin already adds the Mapbox Maven repository,
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | `RNMapboxNavigationVersion`   | Navigation SDK version on both platforms. Set the maps plugin's `RNMapboxMapsVersion` to the matching 11.N. |
 | `locationWhenInUsePermission` | iOS `NSLocationWhenInUseUsageDescription`, or `false` to leave it unset. Defaults to a generic navigation string, unless the app already sets one. |
-| `backgroundAudio`             | `false` leaves iOS `UIBackgroundModes` unchanged. Defaults to `true`, which adds `audio`.                   |
 | `carPlay`                     | iOS CarPlay scene and entitlement. CarPlay is a prototype.                                                   |
 | `carPlayRoot`                 | With `carPlay`, lets CarPlay start React Native for `Navigation.registerCarPlayRoot` when it launches the app without its phone UI. Needs a Swift `AppDelegate`. |
 | `androidAuto`                 | Android Auto service and permissions. Experimental, not tested on a head unit yet.                          |
