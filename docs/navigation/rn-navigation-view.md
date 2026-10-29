@@ -1,6 +1,6 @@
 ---
 id: rn-navigation-view
-sidebar_position: 5
+sidebar_position: 10
 title: "RNNavigationView: turn-by-turn navigation UI in React Native"
 sidebar_label: RNNavigationView
 description: "A customizable turn-by-turn navigation UI written in React Native on top of the @rnmapbox/navigation headless API, the same on iOS and Android."
@@ -44,8 +44,10 @@ It takes the same props as [`<NavigationView>`](navigation-view.md#props) (`rout
 | Prop           | Type                            | Description                                                              |
 | -------------- | ------------------------------- | ------------------------------------------------------------------------ |
 | `distanceUnit` | `'metric' \| 'imperial'`        | Unit of the distances it shows, and of the voice instructions of a route it requests through `waypoints`. Defaults to `Navigation.getDefaultDistanceUnit()`, from the device's region and measurement settings. |
-| `appearance`   | `'auto' \| 'day' \| 'night'`    | Colors of the UI and the Standard style's light preset. `'auto'` (default) switches at sunrise and sunset at the user's location. |
+| `appearance`   | `'auto' \| 'day' \| 'night'`    | Colors of the UI and the Standard style's light preset. `'auto'` (default) is night while the system is in dark mode. |
 | `styleURL`     | `string`                        | Map style. Defaults to Mapbox Standard. With another style, `appearance` only changes the UI. |
+| `nightStyleURL` | `string`                       | Map style while `appearance` is night. Defaults to `styleURL`.           |
+| `routeLineStyle` | `RouteLineStyle`             | Route line colors, see [Styling](styling.md#route-line-colors).          |
 | `children`     | `ReactNode`                     | Rendered inside its `MapView`, e.g. extra sources and layers.            |
 
 See [`RNNavigationViewProps`](api/Components/RNNavigationViewProps.md) in the API reference.
