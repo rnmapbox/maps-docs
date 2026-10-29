@@ -23,8 +23,6 @@ import {
 import { ButtonGroup } from '@rneui/base';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { type ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-example-doc
-
 enum Alignment {
   Top = 'TOP',
   Center = 'CENTER',

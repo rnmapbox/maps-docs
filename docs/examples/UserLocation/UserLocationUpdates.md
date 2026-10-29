@@ -16,7 +16,6 @@ import { Text } from 'react-native';
 import { MapView, Camera, UserLocation, type Location } from '@rnmapbox/maps';
 
 import Bubble from '../common/Bubble';
-import { type ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-example-doc
 
 const UserLocationUpdates = () => {
   const [location, setLocation] = useState<Location>();

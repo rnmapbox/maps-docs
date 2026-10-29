@@ -24,8 +24,6 @@ import {
   type MapState,
 } from '@rnmapbox/maps';
 
-import { type ExampleWithMetadata } from '../common/ExampleMetadata'; // exclude-from-example-doc
-
 type Gesture = 'pan' | 'pinch' | 'doubleTap' | 'rotate' | 'pitch';
 const GESTURES: Gesture[] = ['pan', 'pinch', 'doubleTap', 'rotate', 'pitch'];
 
