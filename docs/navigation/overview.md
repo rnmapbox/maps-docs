@@ -84,7 +84,7 @@ There are three ways to build a navigation screen. They all share the app's sing
 | --- | --- | --- | --- |
 | What you get | A navigation map with the route line, puck and camera. All UI is yours. | A complete UI in React Native: maneuver banner, lanes, speed limit, trip progress, buttons. | The Navigation SDK's own UI: `NavigationViewController` on iOS, the SDK UI components on Android. |
 | Customizability | Full. Any `@rnmapbox/maps` layers, sources and annotations, any React Native UI. | High. Change the map style, add map children, or copy its source as a starting point. | Low. Props for the route, simulation and mute; the look is the SDK's. |
-| Platform parity | Same on both platforms, since the UI is yours. | Same on both platforms. | Differs: Android has no end-of-route or feedback UI, no day/night styles and no road name label. |
+| Platform parity | Same on both platforms, since the UI is yours. | Same on both platforms. | Differs: Android has no end-of-route or feedback UI, no night colors for its UI and no road name label. |
 | Effort | Most: you build banners, buttons and arrival handling from the [events](api/index.md). | Little: drop it in, pass `waypoints` or a `route`. | Least, for the full SDK experience. |
 
 Start with `<RNNavigationView>` if you want a ready UI that matches the rest of your React Native app, `<NavigationView>` if you want the SDK's UI as is, and the headless API when navigation is one part of a custom map screen.
@@ -92,7 +92,7 @@ Start with `<RNNavigationView>` if you want a ready UI that matches the rest of 
 ## Known limitations
 
 - No explicit offline routing API. Requests use the SDK's default hybrid router, which only falls back to onboard routing with routing tiles already on the device.
-- Android `<NavigationView>` has no end-of-route or feedback UI, no day/night styles, no road name label, and doesn't show reroutes as such.
+- Android `<NavigationView>` has no end-of-route or feedback UI, no night colors for its UI (only the map switches), no road name label, and doesn't show reroutes as such.
 - `<RNNavigationView>` draws road shields from the Directions API's shield images, not the Mapbox designed shields the native banners use.
 - The Expo config plugin is only tested with Expo SDK 58.
 - `@rnmapbox/maps` `LocationPuck` and `UserLocation` don't work on navigation maps: the navigation puck replaces the map's location provider.

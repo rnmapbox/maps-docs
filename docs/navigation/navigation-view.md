@@ -1,6 +1,6 @@
 ---
 id: navigation-view
-sidebar_position: 4
+sidebar_position: 9
 title: "NavigationView: drop-in turn-by-turn navigation UI"
 sidebar_label: NavigationView
 description: "The Mapbox Navigation SDK's full-screen turn-by-turn UI for React Native on iOS and Android, with maneuver banner, lanes, speed limit and trip progress."
@@ -38,6 +38,8 @@ See [`NavigationViewProps`](api/Components/NavigationViewProps.md) in the API re
 | `waypoints`       | `Waypoint[]`                                 | Used without `route`: the view requests a route through them, origin first, and releases it on unmount. |
 | `simulate`        | `boolean`                                    | Drives the route with simulated locations. Read when guidance starts. Defaults to `false`. |
 | `mute`            | `boolean`                                    | Mutes voice instructions. The view's own mute button also toggles them. Defaults to `false`. |
+| `styleURL`        | `string`                                     | Map style by day. Defaults to Mapbox Standard. See [Styling](styling.md#map-styles). |
+| `nightStyleURL`   | `string`                                     | Map style while the system is in dark mode. Defaults to `styleURL`, or without it to Standard's night preset. |
 | `style`           | `StyleProp<ViewStyle>`                       |                                                                                     |
 | `testID`          | `string`                                     |                                                                                     |
 | `onRouteProgress` | `(event: RouteProgressEvent) => void`        | Same event as `addRouteProgressListener`.                                           |
@@ -54,4 +56,4 @@ See [`NavigationViewProps`](api/Components/NavigationViewProps.md) in the API re
 - `addRouteProgressListener` and `addCameraStateListener` also report its guidance.
 - Show one `NavigationView` at a time. On iOS it's embedded as a child of the nearest view controller.
 
-Android `<NavigationView>` has no end-of-route or feedback UI, no day/night styles, no road name label, and doesn't show reroutes as such. For the same UI on both platforms, see [`<RNNavigationView>`](rn-navigation-view.md).
+Android `<NavigationView>` has no end-of-route or feedback UI, no night colors for its UI (only the map switches), no road name label, and doesn't show reroutes as such. For the same UI on both platforms, see [`<RNNavigationView>`](rn-navigation-view.md).
