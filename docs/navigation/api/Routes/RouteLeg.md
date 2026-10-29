@@ -1,6 +1,6 @@
 ---
 sidebar_label: RouteLeg
-sidebar_position: 4
+sidebar_position: 5
 description: "The part of a route between two consecutive waypoints. RouteLeg API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteLeg = object;
 ```
 
-Defined in: [src/Route.ts:69](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L69)
+Defined in: [src/Route.ts:112](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L112)
 
 The part of a route between two consecutive waypoints.
 

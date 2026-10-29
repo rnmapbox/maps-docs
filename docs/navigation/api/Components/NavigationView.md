@@ -13,13 +13,14 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 function NavigationView(props: NavigationViewProps): Element;
 ```
 
-Defined in: [src/NavigationView.tsx:68](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationView.tsx#L68)
+Defined in: [src/NavigationView.tsx:76](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationView.tsx#L76)
 
 Full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an
 equivalent built from the Navigation SDK UI components on Android.
 
 It uses the app's single navigation session: mounting it, or giving it a new route, starts guidance along that route,
-replacing any active guidance, and unmounting it or the user ending the trip stops guidance. Show one at a time.
+replacing any active guidance, and unmounting it or the user ending the trip stops guidance. If guidance started from
+free drive, the session returns to free drive instead. Show one at a time.
 
 ## Parameters
 

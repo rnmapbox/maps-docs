@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/Nati
 type Lane = object;
 ```
 
-Defined in: [src/specs/NativeRNMBXNavigationModule.ts:12](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/specs/NativeRNMBXNavigationModule.ts#L12)
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:12](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/specs/NativeRNMBXNavigationModule.ts#L12)
 
 A lane at the next maneuver, in `lanes` of [RouteProgressEvent](RouteProgressEvent.md).
 

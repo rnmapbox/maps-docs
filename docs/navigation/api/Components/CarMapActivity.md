@@ -13,6 +13,6 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/CarMap.tsx
 type CarMapActivity = "browsing" | "navigating";
 ```
 
-Defined in: [src/CarMap.tsx:26](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/CarMap.tsx#L26)
+Defined in: [src/CarMap.tsx:26](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/CarMap.tsx#L26)
 
 What the car screen shows, passed to a [CarMap](CarMap.md) render function.

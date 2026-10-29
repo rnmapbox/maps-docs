@@ -18,7 +18,9 @@ custom_edit_url: null
 | [NAVIGATION\_MAP\_VIEW\_IMPL](Core/NAVIGATION_MAP_VIEW_IMPL.md) | Pass as `mapViewImpl` to an `@rnmapbox/maps` `MapView` to render the route line, the puck and the navigation camera on it: `<MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}>`. |
 | [CameraState](Core/CameraState.md) | Camera of navigation maps. `following` follows the puck, tilted and rotated with the route; `overview` fits the rest of the route; `idle` leaves the map to the user's gestures and `@rnmapbox/maps` `Camera`. |
 | [DistanceUnit](Core/DistanceUnit.md) | Unit of the distances navigation UIs show and voice instructions use. |
+| [SessionState](Core/SessionState.md) | The app's navigation session: `idle` tracks nothing; `freeDrive` matches the location to the road without a route, see [Navigation.startFreeDrive](Core/Navigation.md#startfreedrive); `activeGuidance` follows a route. |
 | [StartActiveGuidanceOptions](Core/StartActiveGuidanceOptions.md) | Options of [Navigation.startActiveGuidance](Core/Navigation.md#startactiveguidance). |
+| [StartFreeDriveOptions](Core/StartFreeDriveOptions.md) | Options of [Navigation.startFreeDrive](Core/Navigation.md#startfreedrive). |
 
 ## Components
 
@@ -33,8 +35,9 @@ custom_edit_url: null
 | [NavigationViewError](Components/NavigationViewError.md) | Passed to `onError` of [NavigationView](Components/NavigationView.md) and [RNNavigationView](Components/RNNavigationView.md). |
 | [NavigationViewportProps](Components/NavigationViewportProps.md) | Props of [NavigationViewport](Components/NavigationViewport.md). |
 | [NavigationViewProps](Components/NavigationViewProps.md) | Props of [NavigationView](Components/NavigationView.md). Pass either `route` or `waypoints`. |
-| [RNNavigationViewAppearance](Components/RNNavigationViewAppearance.md) | `auto` switches between `day` and `night` at sunrise and sunset at the user's location. |
+| [RNNavigationViewAppearance](Components/RNNavigationViewAppearance.md) | `auto` follows the system's dark mode, like `<NavigationView>`. |
 | [RNNavigationViewProps](Components/RNNavigationViewProps.md) | Props of [RNNavigationView](Components/RNNavigationView.md): [NavigationViewProps](Components/NavigationViewProps.md), plus the props below. |
+| [RouteLineStyle](Components/RouteLineStyle.md) | Colors of the route lines the Navigation SDK draws on a navigation map. Unset colors keep the SDK defaults. |
 | [ViewportPadding](Components/ViewportPadding.md) | Points from the map's edges, ignoring the safe area. |
 
 ## Routes
@@ -43,13 +46,14 @@ custom_edit_url: null
 | ------ | ------ |
 | [Route](Routes/Route.md) | A route from [Navigation.requestRoutes](Core/Navigation.md#requestroutes), backed by the native SDK route. The getters read a copy taken when the route was created, so they're synchronous. Routes don't survive a JS reload. |
 | [LineString](Routes/LineString.md) | GeoJSON LineString. |
+| [MatchedRouteRequestOptions](Routes/MatchedRouteRequestOptions.md) | Options of [Navigation.requestMatchedRoutes](Core/Navigation.md#requestmatchedroutes). |
 | [Position](Routes/Position.md) | GeoJSON order, same as `@rnmapbox/maps`. |
 | [RouteLeg](Routes/RouteLeg.md) | The part of a route between two consecutive waypoints. |
 | [RouteRequestOptions](Routes/RouteRequestOptions.md) | Options of [Navigation.requestRoutes](Core/Navigation.md#requestroutes). |
 | [RouteResponse](Routes/RouteResponse.md) | Result of [Navigation.requestRoutes](Core/Navigation.md#requestroutes). `alternatives` is empty unless requested. |
 | [RouteStats](Routes/RouteStats.md) | From [Navigation.getRouteStats](Core/Navigation.md#getroutestats). |
 | [RouteStep](Routes/RouteStep.md) | A maneuver and the road up to the next one, in `steps` of [RouteLeg](Routes/RouteLeg.md). |
-| [Waypoint](Routes/Waypoint.md) | A coordinate, or a coordinate with the name the navigation UI shows for it, e.g. on arrival. |
+| [Waypoint](Routes/Waypoint.md) | A coordinate, or a coordinate with options. |
 
 ## Events
 

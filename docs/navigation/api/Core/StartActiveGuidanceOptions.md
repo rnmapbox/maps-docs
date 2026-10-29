@@ -1,6 +1,6 @@
 ---
 sidebar_label: StartActiveGuidanceOptions
-sidebar_position: 5
+sidebar_position: 6
 description: "Options of Navigation.startActiveGuidance. StartActiveGuidanceOptions API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation.ts
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type StartActiveGuidanceOptions = object;
 ```
 
-Defined in: [src/Navigation.ts:28](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Navigation.ts#L28)
+Defined in: [src/Navigation.ts:32](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Navigation.ts#L32)
 
 Options of [Navigation.startActiveGuidance](Navigation.md#startactiveguidance).
 
@@ -21,4 +21,4 @@ Options of [Navigation.startActiveGuidance](Navigation.md#startactiveguidance).
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="simulate"></a> `simulate?` | `boolean` | Drive the route with simulated locations instead of the device's location. |
+| <a id="simulate"></a> `simulate?` | `boolean` | Drive the route with simulated locations instead of the device's location; see [Navigation.setSimulationSpeed](Navigation.md#setsimulationspeed). |

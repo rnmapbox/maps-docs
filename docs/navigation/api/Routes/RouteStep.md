@@ -1,6 +1,6 @@
 ---
 sidebar_label: RouteStep
-sidebar_position: 8
+sidebar_position: 9
 description: "A maneuver and the road up to the next one, in steps of RouteLeg. RouteStep API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteStep = object;
 ```
 
-Defined in: [src/Route.ts:49](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L49)
+Defined in: [src/Route.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L92)
 
 A maneuver and the road up to the next one, in `steps` of [RouteLeg](RouteLeg.md).
 

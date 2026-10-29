@@ -1,6 +1,6 @@
 ---
 sidebar_label: RouteStats
-sidebar_position: 7
+sidebar_position: 8
 description: "From Navigation.getRouteStats. RouteStats API reference for @rnmapbox/navigation, turn-by-turn navigation for React Native."
 custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 ---
@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteStats = object;
 ```
 
-Defined in: [src/Route.ts:134](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L134)
+Defined in: [src/Route.ts:206](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L206)
 
 From [Navigation.getRouteStats](../Core/Navigation.md#getroutestats).
 

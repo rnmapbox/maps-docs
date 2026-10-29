@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewProps = object;
 ```
 
-Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationView.tsx#L34)
+Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationView.tsx#L34)
 
 Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`.
 
@@ -22,6 +22,7 @@ Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | <a id="mute"></a> `mute?` | `boolean` | Mutes voice instructions. The view's own mute button also toggles them. |
+| <a id="nightstyleurl"></a> `nightStyleURL?` | `string` | Map style at night, i.e. while the system is in dark mode. Defaults to `styleURL` if that's set, else to Mapbox Standard with its night light preset. |
 | <a id="onarrive"></a> `onArrive?` | (`event`: [`ArriveEvent`](../Events/ArriveEvent.md)) => `void` | Same event as [Navigation.addArriveListener](../Core/Navigation.md#addarrivelistener). |
 | <a id="oncancel"></a> `onCancel?` | () => `void` | The user ended the trip; guidance has stopped. Unmount the view. |
 | <a id="onerror"></a> `onError?` | (`error`: [`NavigationViewError`](NavigationViewError.md)) => `void` | The route request or the start of guidance failed. |
@@ -29,5 +30,6 @@ Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`
 | <a id="route"></a> `route?` | [`Route`](../Routes/Route.md) | Route from `requestRoutes`. Keep it unreleased while it's passed to the view. |
 | <a id="simulate"></a> `simulate?` | `boolean` | Drive the route with simulated locations. Read when guidance starts. |
 | <a id="style"></a> `style?` | `StyleProp`\<`ViewStyle`\> | - |
+| <a id="styleurl"></a> `styleURL?` | `string` | Map style by day. Defaults to Mapbox Standard. |
 | <a id="testid"></a> `testID?` | `string` | - |
 | <a id="waypoints"></a> `waypoints?` | [`Waypoint`](../Routes/Waypoint.md)[] | Used when `route` isn't set: the view requests a route through them, origin first, with alternatives, and releases it on unmount. |

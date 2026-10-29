@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteChangeEvent = object;
 ```
 
-Defined in: [src/Route.ts:122](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L122)
+Defined in: [src/Route.ts:194](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L194)
 
 From [Navigation.addRouteChangeListener](../Core/Navigation.md#addroutechangelistener).
 

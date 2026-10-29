@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/CarMap.tsx
 function CarMap(props: CarMapProps): Element | null;
 ```
 
-Defined in: [src/CarMap.tsx:90](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/CarMap.tsx#L90)
+Defined in: [src/CarMap.tsx:90](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/CarMap.tsx#L90)
 
 Adds its `@rnmapbox/maps` children to the map on the car screen (CarPlay, Android Auto) instead of the phone's.
 Render it in the component passed to [Navigation.registerCarPlayRoot](../Core/Navigation.md#registercarplayroot), and in the app for Android Auto and

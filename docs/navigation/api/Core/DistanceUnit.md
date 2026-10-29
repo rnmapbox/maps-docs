@@ -13,6 +13,6 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/guidance.t
 type DistanceUnit = "metric" | "imperial";
 ```
 
-Defined in: [src/guidance.ts:35](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/guidance.ts#L35)
+Defined in: [src/guidance.ts:35](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/guidance.ts#L35)
 
 Unit of the distances navigation UIs show and voice instructions use.

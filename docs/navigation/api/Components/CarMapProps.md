@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/CarMap.tsx
 type CarMapProps = object;
 ```
 
-Defined in: [src/CarMap.tsx:33](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/CarMap.tsx#L33)
+Defined in: [src/CarMap.tsx:33](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/CarMap.tsx#L33)
 
 Props of [CarMap](CarMap.md).
 

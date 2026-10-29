@@ -10,10 +10,10 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigati
 # RNNavigationViewProps
 
 ```ts
-type RNNavigationViewProps = NavigationViewProps & object;
+type RNNavigationViewProps = Omit<NavigationViewProps, "styleURL" | "nightStyleURL"> & object;
 ```
 
-Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/RNNavigationView.tsx#L51)
+Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/RNNavigationView.tsx#L51)
 
 Props of [RNNavigationView](RNNavigationView.md): [NavigationViewProps](NavigationViewProps.md), plus the props below.
 
@@ -43,6 +43,22 @@ distanceUnit?: DistanceUnit;
 
 Unit of the distances the view shows, and of voice instructions for a route the view requests through
 `waypoints`. Defaults to [Navigation.getDefaultDistanceUnit](../Core/Navigation.md#getdefaultdistanceunit).
+
+### nightStyleURL?
+
+```ts
+nightStyleURL?: string;
+```
+
+Map style while `appearance` is night. Defaults to `styleURL`.
+
+### routeLineStyle?
+
+```ts
+routeLineStyle?: RouteLineStyle;
+```
+
+Colors of the route line and the alternative routes.
 
 ### styleURL?
 

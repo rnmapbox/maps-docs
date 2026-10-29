@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/Nati
 type SpeedLimit = object;
 ```
 
-Defined in: [src/specs/NativeRNMBXNavigationModule.ts:78](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/specs/NativeRNMBXNavigationModule.ts#L78)
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:78](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/specs/NativeRNMBXNavigationModule.ts#L78)
 
 Posted speed limit, in [LocationEvent](LocationEvent.md).
 

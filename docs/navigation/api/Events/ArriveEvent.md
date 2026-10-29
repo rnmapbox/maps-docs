@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/specs/Nati
 type ArriveEvent = object;
 ```
 
-Defined in: [src/specs/NativeRNMBXNavigationModule.ts:110](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/specs/NativeRNMBXNavigationModule.ts#L110)
+Defined in: [src/specs/NativeRNMBXNavigationModule.ts:110](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/specs/NativeRNMBXNavigationModule.ts#L110)
 
 From [Navigation.addArriveListener](../Core/Navigation.md#addarrivelistener) and `onArrive`.
 

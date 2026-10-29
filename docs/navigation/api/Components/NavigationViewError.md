@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewError = object;
 ```
 
-Defined in: [src/NavigationView.tsx:22](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationView.tsx#L22)
+Defined in: [src/NavigationView.tsx:22](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationView.tsx#L22)
 
 Passed to `onError` of [NavigationView](NavigationView.md) and [RNNavigationView](RNNavigationView.md).
 

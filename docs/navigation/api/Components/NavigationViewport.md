@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 function NavigationViewport(props: NavigationViewportProps): Element;
 ```
 
-Defined in: [src/NavigationViewport.tsx:36](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationViewport.tsx#L36)
+Defined in: [src/NavigationViewport.tsx:56](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationViewport.tsx#L56)
 
 Configures the navigation camera of the `@rnmapbox/maps` `MapView` it's a child of:
 `<MapView mapViewImpl={NAVIGATION_MAP_VIEW_IMPL}><NavigationViewport padding={{ bottom: 120 }} /></MapView>`.

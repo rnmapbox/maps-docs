@@ -9,7 +9,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 
 # Route
 
-Defined in: [src/Route.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L92)
+Defined in: [src/Route.ts:135](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L135)
 
 A route from [Navigation.requestRoutes](../Core/Navigation.md#requestroutes), backed by the native SDK route.
 The getters read a copy taken when the route was created, so they're synchronous.
@@ -27,7 +27,7 @@ Guidance and the route preview keep their own reference, so releasing a route th
 release(): void;
 ```
 
-Defined in: [src/Route.ts:104](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/Route.ts#L104)
+Defined in: [src/Route.ts:147](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L147)
 
 Frees the native route. Calling it again does nothing.
 

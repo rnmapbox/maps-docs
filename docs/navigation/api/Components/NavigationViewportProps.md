@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewportProps = object;
 ```
 
-Defined in: [src/NavigationViewport.tsx:20](https://github.com/rnmapbox/navigation/blob/v0.1.0/src/NavigationViewport.tsx#L20)
+Defined in: [src/NavigationViewport.tsx:38](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationViewport.tsx#L38)
 
 Props of [NavigationViewport](NavigationViewport.md).
 
@@ -22,3 +22,4 @@ Props of [NavigationViewport](NavigationViewport.md).
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | <a id="padding"></a> `padding?` | [`ViewportPadding`](ViewportPadding.md) | Area the navigation camera keeps the puck and the route in, e.g. to keep them clear of UI drawn over the map. Applies to `following`, `overview` and the route preview. |
+| <a id="routelinestyle"></a> `routeLineStyle?` | [`RouteLineStyle`](RouteLineStyle.md) | Colors of the route line and the alternative routes on this map. |
