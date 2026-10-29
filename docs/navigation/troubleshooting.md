@@ -70,7 +70,7 @@ Both libraries pick the `-ndk27` artifacts with `targetSdkVersion` 35 or higher.
 
 ## iOS: assertion about UIBackgroundModes audio
 
-Guidance crashes in a debug build, as soon as it starts, with an assertion from the Navigation SDK's voice controller about the `audio` background mode. The Expo config plugin adds it unless `backgroundAudio` is `false`. In a bare app, add it to `Info.plist`:
+Guidance crashes in a debug build, as soon as it starts or when the voice is muted, with an assertion from the Navigation SDK's voice controller about the `audio` background mode. The Expo config plugin always adds it. In a bare app, add it to `Info.plist`:
 
 ```xml
 <key>UIBackgroundModes</key>
@@ -79,4 +79,4 @@ Guidance crashes in a debug build, as soon as it starts, with an assertion from 
 </array>
 ```
 
-With Expo, remove `"backgroundAudio": false` from the `@rnmapbox/navigation` plugin options, or add `"UIBackgroundModes": ["audio"]` to `ios.infoPlist` in `app.json`, and run `npx expo prebuild` again.
+With Expo, check that the `@rnmapbox/navigation` plugin is in `app.json` and run `npx expo prebuild` again.
