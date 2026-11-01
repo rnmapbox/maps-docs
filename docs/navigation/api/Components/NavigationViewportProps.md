@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewportProps = object;
 ```
 
-Defined in: [src/NavigationViewport.tsx:38](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationViewport.tsx#L38)
+Defined in: [src/NavigationViewport.tsx:38](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/NavigationViewport.tsx#L38)
 
 Props of [NavigationViewport](NavigationViewport.md).
 

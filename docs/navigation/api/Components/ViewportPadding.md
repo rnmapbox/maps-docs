@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type ViewportPadding = object;
 ```
 
-Defined in: [src/NavigationViewport.tsx:10](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationViewport.tsx#L10)
+Defined in: [src/NavigationViewport.tsx:10](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/NavigationViewport.tsx#L10)
 
 Points from the map's edges, ignoring the safe area.
 

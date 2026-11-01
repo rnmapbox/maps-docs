@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteStep = object;
 ```
 
-Defined in: [src/Route.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L92)
+Defined in: [src/Route.ts:92](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Route.ts#L92)
 
 A maneuver and the road up to the next one, in `steps` of [RouteLeg](RouteLeg.md).
 

@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type StartActiveGuidanceOptions = object;
 ```
 
-Defined in: [src/Navigation.ts:32](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Navigation.ts#L32)
+Defined in: [src/Navigation.ts:32](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Navigation.ts#L32)
 
 Options of [Navigation.startActiveGuidance](Navigation.md#startactiveguidance).
 

@@ -13,6 +13,6 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigati
 type RNNavigationViewAppearance = "auto" | "day" | "night";
 ```
 
-Defined in: [src/RNNavigationView.tsx:44](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/RNNavigationView.tsx#L44)
+Defined in: [src/RNNavigationView.tsx:44](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/RNNavigationView.tsx#L44)
 
 `auto` follows the system's dark mode, like `<NavigationView>`.

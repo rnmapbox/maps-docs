@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type StartFreeDriveOptions = object;
 ```
 
-Defined in: [src/Navigation.ts:50](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Navigation.ts#L50)
+Defined in: [src/Navigation.ts:50](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Navigation.ts#L50)
 
 Options of [Navigation.startFreeDrive](Navigation.md#startfreedrive).
 

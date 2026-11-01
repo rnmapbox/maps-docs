@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/RNNavigati
 type RNNavigationViewProps = Omit<NavigationViewProps, "styleURL" | "nightStyleURL"> & object;
 ```
 
-Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/RNNavigationView.tsx#L51)
+Defined in: [src/RNNavigationView.tsx:51](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/RNNavigationView.tsx#L51)
 
 Props of [RNNavigationView](RNNavigationView.md): [NavigationViewProps](NavigationViewProps.md), plus the props below.
 

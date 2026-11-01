@@ -20,7 +20,7 @@ type Waypoint =
 };
 ```
 
-Defined in: [src/Route.ts:22](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L22)
+Defined in: [src/Route.ts:22](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Route.ts#L22)
 
 A coordinate, or a coordinate with options.
 

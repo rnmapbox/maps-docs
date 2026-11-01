@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 function NavigationView(props: NavigationViewProps): Element;
 ```
 
-Defined in: [src/NavigationView.tsx:76](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationView.tsx#L76)
+Defined in: [src/NavigationView.tsx:76](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/NavigationView.tsx#L76)
 
 Full-screen turn-by-turn navigation UI: `NavigationViewController` from `MapboxNavigationUIKit` on iOS, and an
 equivalent built from the Navigation SDK UI components on Android.

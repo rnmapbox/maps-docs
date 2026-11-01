@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type NavigationViewProps = object;
 ```
 
-Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationView.tsx#L34)
+Defined in: [src/NavigationView.tsx:34](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/NavigationView.tsx#L34)
 
 Props of [NavigationView](NavigationView.md). Pass either `route` or `waypoints`.
 

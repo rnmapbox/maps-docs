@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 type RouteLineStyle = object;
 ```
 
-Defined in: [src/NavigationViewport.tsx:22](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/NavigationViewport.tsx#L22)
+Defined in: [src/NavigationViewport.tsx:22](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/NavigationViewport.tsx#L22)
 
 Colors of the route lines the Navigation SDK draws on a navigation map. Unset colors keep the SDK defaults.
 

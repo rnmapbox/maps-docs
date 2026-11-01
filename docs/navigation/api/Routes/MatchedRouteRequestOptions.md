@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type MatchedRouteRequestOptions = object;
 ```
 
-Defined in: [src/Route.ts:165](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L165)
+Defined in: [src/Route.ts:165](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Route.ts#L165)
 
 Options of [Navigation.requestMatchedRoutes](../Core/Navigation.md#requestmatchedroutes).
 

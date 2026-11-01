@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Route.ts
 type RouteLeg = object;
 ```
 
-Defined in: [src/Route.ts:112](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Route.ts#L112)
+Defined in: [src/Route.ts:112](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Route.ts#L112)
 
 The part of a route between two consecutive waypoints.
 

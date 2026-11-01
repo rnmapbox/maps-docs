@@ -13,7 +13,7 @@ custom_edit_url: https://github.com/rnmapbox/navigation/blob/main/src/Navigation
 const Navigation: object;
 ```
 
-Defined in: [src/Navigation.ts:80](https://github.com/rnmapbox/navigation/blob/v0.1.1/src/Navigation.ts#L80)
+Defined in: [src/Navigation.ts:80](https://github.com/rnmapbox/navigation/blob/v0.1.2/src/Navigation.ts#L80)
 
 The headless navigation API: route requests, the app's single guidance session, and its events.
 It's also the default export.
