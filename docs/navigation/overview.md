@@ -40,7 +40,7 @@ It requests routes, runs an active-guidance session and reports route progress. 
 />
 
 :::note Pre-1.0
-The current release is `0.1.0`, on npm's `latest` tag. APIs may change between minor releases until 1.0.
+APIs may change between minor releases until 1.0. See [npm](https://www.npmjs.com/package/@rnmapbox/navigation) for the latest version and the [releases](https://github.com/rnmapbox/navigation/releases) for what changed.
 :::
 
 ## Requirements
@@ -59,18 +59,23 @@ The Navigation SDK pins the Maps SDK it's built against, and `@rnmapbox/maps` mu
 
 | @rnmapbox/navigation    | Navigation SDK | Maps SDK (pinned by Nav) | @rnmapbox/maps      |
 | ----------------------- | -------------- | ------------------------ | ------------------- |
+| 0.1.2                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
+| 0.1.1                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
 | 0.1.0                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
 | 0.1.0-alpha.3           | 3.33.0         | 11.33.0                  | `>=10.3.12 <10.4.0` |
 | 0.1.0-alpha.0 – alpha.2 | 3.23.1         | 11.23.1                  | `10.3.11`           |
 
 ## What's included
 
-- Route requests, with `Route` objects backed by the native SDK route.
-- Route preview and active guidance, simulated or on the device's location.
+- Route requests, with `Route` objects backed by the native SDK route, and [route options](route-options.md) such as vehicle limits, points to avoid and departure time.
+- Routes along your own path with [Map Matching](map-matching.md).
+- Route preview and active guidance, simulated or on the device's location, with [guidance controls](guidance-controls.md) for multi-stop routes, simulation speed, voice and keeping the screen on.
+- [Free drive](free-drive.md): road name and speed limit without a route.
 - Navigation maps: an `@rnmapbox/maps` `MapView` with the SDK's route line, puck and navigation camera.
 - Events for route progress, camera state, location, arrival, off-route, reroutes and voice instructions.
 - [`<NavigationView>`](navigation-view.md), the SDK's full-screen turn-by-turn UI.
 - [`<RNNavigationView>`](rn-navigation-view.md), a turn-by-turn UI written in React Native on top of the headless API.
+- [Styling](styling.md): route line colors and day and night map styles.
 - [`<CarMap>`](api/Components/CarMap.md), which adds `@rnmapbox/maps` sources and layers to the car screen's map.
 - CarPlay, a prototype: the Navigation SDK's CarPlay UI for the same navigation session as the phone. See [CarPlay](https://github.com/rnmapbox/navigation#carplay) in the README.
 - Android Auto, experimental and not tested on a head unit yet: a navigation map for the same session. See [Android Auto](https://github.com/rnmapbox/navigation#android-auto) in the README.
@@ -84,7 +89,7 @@ There are three ways to build a navigation screen. They all share the app's sing
 | --- | --- | --- | --- |
 | What you get | A navigation map with the route line, puck and camera. All UI is yours. | A complete UI in React Native: maneuver banner, lanes, speed limit, trip progress, buttons. | The Navigation SDK's own UI: `NavigationViewController` on iOS, the SDK UI components on Android. |
 | Customizability | Full. Any `@rnmapbox/maps` layers, sources and annotations, any React Native UI. | High. Change the map style, add map children, or copy its source as a starting point. | Low. Props for the route, simulation and mute; the look is the SDK's. |
-| Platform parity | Same on both platforms, since the UI is yours. | Same on both platforms. | Differs: Android has no end-of-route or feedback UI, no day/night styles and no road name label. |
+| Platform parity | Same on both platforms, since the UI is yours. | Same on both platforms. | Differs: Android has no end-of-route or feedback UI, no night colors for its UI and no road name label. |
 | Effort | Most: you build banners, buttons and arrival handling from the [events](api/index.md). | Little: drop it in, pass `waypoints` or a `route`. | Least, for the full SDK experience. |
 
 Start with `<RNNavigationView>` if you want a ready UI that matches the rest of your React Native app, `<NavigationView>` if you want the SDK's UI as is, and the headless API when navigation is one part of a custom map screen.
@@ -92,7 +97,7 @@ Start with `<RNNavigationView>` if you want a ready UI that matches the rest of 
 ## Known limitations
 
 - No explicit offline routing API. Requests use the SDK's default hybrid router, which only falls back to onboard routing with routing tiles already on the device.
-- Android `<NavigationView>` has no end-of-route or feedback UI, no day/night styles, no road name label, and doesn't show reroutes as such.
+- Android `<NavigationView>` has no end-of-route or feedback UI, no night colors for its UI (only the map switches), no road name label, and doesn't show reroutes as such.
 - `<RNNavigationView>` draws road shields from the Directions API's shield images, not the Mapbox designed shields the native banners use.
 - The Expo config plugin is only tested with Expo SDK 58.
 - `@rnmapbox/maps` `LocationPuck` and `UserLocation` don't work on navigation maps: the navigation puck replaces the map's location provider.

@@ -113,11 +113,11 @@ useEffect(() => {
 | `addVoiceInstructionListener` | `{ text, ssml, distanceAlongStep }`, for apps doing their own text to speech.                 |
 | `addCameraStateListener`      | Camera state changes, see [Camera](#camera).                                                  |
 
-The SDK speaks voice instructions during any guidance; `Navigation.setVoiceMuted(true)` mutes them. See the [API reference](api/index.md) for the event types.
+The SDK speaks voice instructions during any guidance; `Navigation.setVoiceMuted(true)` mutes them, see [Guidance controls](guidance-controls.md#voice). See the [API reference](api/index.md) for the event types.
 
 ## Routes
 
-`requestRoutes` resolves to `{ main, alternatives }`. A `Route` is backed by the native SDK route and holds native memory:
+`requestRoutes` resolves to `{ main, alternatives }`; see [Route options](route-options.md) for what it takes, and [Map Matching](map-matching.md) for routes along your own path. A `Route` is backed by the native SDK route and holds native memory:
 
 - Its getters (`distance`, `expectedTravelTime`, `geometry`, `legs`) read a copy taken when the route was created. They're synchronous.
 - `release()` frees the native route. Release the routes you don't keep, such as unused alternatives. The garbage collector releases the rest eventually, but it doesn't see the native memory, so that can take long.
@@ -150,3 +150,11 @@ The state switches to `idle` when a pan, pinch, rotate, pitch or double-tap gest
 - `Camera` `followUserLocation` and the navigation camera both drive the map. Don't combine them.
 
 After `stopNavigation`, the route and the puck are removed and the camera eases back to north-up, without tilt or padding.
+
+## Next steps
+
+- [Route options](route-options.md): waypoints, roads and points to avoid, vehicle limits, departure time.
+- [Map Matching](map-matching.md): guide along a path you define.
+- [Free drive](free-drive.md): road name and speed limit without a route, and the session state.
+- [Guidance controls](guidance-controls.md): multi-stop routes, simulation speed, voice and keeping the screen on.
+- [Styling](styling.md): route line colors and day and night map styles.
