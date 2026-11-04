@@ -40,7 +40,7 @@ It requests routes, runs an active-guidance session and reports route progress. 
 />
 
 :::note Pre-1.0
-The current release is `0.1.0`, on npm's `latest` tag. APIs may change between minor releases until 1.0.
+APIs may change between minor releases until 1.0. See [npm](https://www.npmjs.com/package/@rnmapbox/navigation) for the latest version and the [releases](https://github.com/rnmapbox/navigation/releases) for what changed.
 :::
 
 ## Requirements
@@ -59,18 +59,23 @@ The Navigation SDK pins the Maps SDK it's built against, and `@rnmapbox/maps` mu
 
 | @rnmapbox/navigation    | Navigation SDK | Maps SDK (pinned by Nav) | @rnmapbox/maps      |
 | ----------------------- | -------------- | ------------------------ | ------------------- |
+| 0.1.2                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
+| 0.1.1                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
 | 0.1.0                   | 3.33.0         | 11.33.0                  | `>=10.3.16 <10.4.0` |
 | 0.1.0-alpha.3           | 3.33.0         | 11.33.0                  | `>=10.3.12 <10.4.0` |
 | 0.1.0-alpha.0 – alpha.2 | 3.23.1         | 11.23.1                  | `10.3.11`           |
 
 ## What's included
 
-- Route requests, with `Route` objects backed by the native SDK route.
-- Route preview and active guidance, simulated or on the device's location.
+- Route requests, with `Route` objects backed by the native SDK route, and [route options](route-options.md) such as vehicle limits, points to avoid and departure time.
+- Routes along your own path with [Map Matching](map-matching.md).
+- Route preview and active guidance, simulated or on the device's location, with [guidance controls](guidance-controls.md) for multi-stop routes, simulation speed, voice and keeping the screen on.
+- [Free drive](free-drive.md): road name and speed limit without a route.
 - Navigation maps: an `@rnmapbox/maps` `MapView` with the SDK's route line, puck and navigation camera.
 - Events for route progress, camera state, location, arrival, off-route, reroutes and voice instructions.
 - [`<NavigationView>`](navigation-view.md), the SDK's full-screen turn-by-turn UI.
 - [`<RNNavigationView>`](rn-navigation-view.md), a turn-by-turn UI written in React Native on top of the headless API.
+- [Styling](styling.md): route line colors and day and night map styles.
 - [`<CarMap>`](api/Components/CarMap.md), which adds `@rnmapbox/maps` sources and layers to the car screen's map.
 - CarPlay, a prototype: the Navigation SDK's CarPlay UI for the same navigation session as the phone. See [CarPlay](https://github.com/rnmapbox/navigation#carplay) in the README.
 - Android Auto, experimental and not tested on a head unit yet: a navigation map for the same session. See [Android Auto](https://github.com/rnmapbox/navigation#android-auto) in the README.

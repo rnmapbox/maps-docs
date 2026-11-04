@@ -8,7 +8,7 @@ description: "Install @rnmapbox/navigation for turn-by-turn navigation in React 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Set up `@rnmapbox/maps` first, following its [install guide](../install.md). `@rnmapbox/navigation` 0.1.0 needs `@rnmapbox/maps` `>=10.3.16 <10.4.0` and React Native 0.79+ with the New Architecture.
+Set up `@rnmapbox/maps` first, following its [install guide](../install.md). `@rnmapbox/navigation` needs `@rnmapbox/maps` `>=10.3.16 <10.4.0` and React Native 0.79+ with the New Architecture. See [Versions](overview.md#versions) for older releases.
 
 ## Install
 
