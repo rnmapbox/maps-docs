@@ -40,7 +40,7 @@ post_install do |installer|
 end
 ```
 
-[rnmapbox/maps#4376](https://github.com/rnmapbox/maps/pull/4376) fixes it in `@rnmapbox/maps` 10.3.16, the minimum version `@rnmapbox/navigation` 0.1.0 supports, so you only see this error with an older `@rnmapbox/maps`; upgrading it fixes the error too. The `@rnmapbox/navigation` Expo config plugin also adds the path; with both, it appears once.
+[rnmapbox/maps#4376](https://github.com/rnmapbox/maps/pull/4376) fixes it in `@rnmapbox/maps` 10.3.16, the minimum version `@rnmapbox/navigation` supports, so you only see this error with an older `@rnmapbox/maps`; upgrading it fixes the error too. The `@rnmapbox/navigation` Expo config plugin also adds the path; with both, it appears once.
 
 ## iOS: Swift package resolution error for MapboxMaps
 

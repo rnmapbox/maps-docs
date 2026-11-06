@@ -40,7 +40,7 @@ const FEATURES = [
   {
     title: 'Turn-by-turn navigation',
     to: '/docs/navigation/overview',
-    body: '@rnmapbox/navigation (alpha) adds routing and guidance on top of the same map, powered by the Mapbox Navigation SDK.',
+    body: '@rnmapbox/navigation adds routing and guidance on top of the same map, powered by the Mapbox Navigation SDK.',
   },
 ];
 
@@ -154,7 +154,7 @@ function Navigation() {
         <div className={styles.splitText}>
           <h2 className={styles.sectionTitle}>Turn-by-turn navigation</h2>
           <p>
-            @rnmapbox/navigation (alpha) wraps the Mapbox Navigation SDK v3: request routes, run guidance and get
+            @rnmapbox/navigation wraps the Mapbox Navigation SDK v3: request routes, run guidance and get
             route progress events, with the SDK drawing the route line, puck and navigation camera on your map. Or
             drop in a complete navigation screen with maneuver banners, lanes and speed limits.
           </p>
