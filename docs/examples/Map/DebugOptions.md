@@ -103,5 +103,5 @@ export default DebugOptions;
 
 ```
 
-}
+![DebugOptions.png](./DebugOptions.png)}
 
