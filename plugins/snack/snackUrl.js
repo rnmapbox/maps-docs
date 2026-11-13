@@ -2,7 +2,7 @@ const path = require('path');
 
 // Snackager caches npm metadata for ~1h, so pin the release the docs were generated from.
 // Example sources are loaded from the same tag, so the Snack runs code written for that release.
-const RNMAPBOX_MAPS_VERSION = '10.3.16';
+const RNMAPBOX_MAPS_VERSION = '10.3.18';
 
 const EXAMPLE_SRC_URL = `https://raw.githubusercontent.com/rnmapbox/maps/v${RNMAPBOX_MAPS_VERSION}/example/src`;
 
@@ -12,6 +12,8 @@ const TOKEN_URL =
 // Versions from the example app's package.json; unlisted packages get Snack's default.
 const DEPENDENCY_VERSIONS = {
   '@rnmapbox/maps': RNMAPBOX_MAPS_VERSION,
+  // Later releases have an npm: alias devDependency, which Snackager rejects (expo/snack#713).
+  'mapbox-gl': '3.26.0',
   '@rneui/base': '4.0.0-rc.8',
   '@turf/bbox': '6.5.0',
   '@turf/helpers': '6.5.0',
@@ -19,6 +21,8 @@ const DEPENDENCY_VERSIONS = {
   '@turf/length': '6.3.0',
   '@turf/meta': '6.5.0',
   '@mapbox/geo-viewport': '0.5.0',
+  // Later releases have npm: alias devDependencies, which Snackager rejects (expo/snack#713).
+  moment: '2.24.0',
 };
 
 // Dependencies Snackager leaves out of the bundles of these packages.
