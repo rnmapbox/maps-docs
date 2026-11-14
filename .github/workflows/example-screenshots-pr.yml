@@ -1,18 +1,19 @@
 name: Example screenshots PR
 
-# rnmapbox/maps force-pushes this branch from its nightly doc screenshot capture, with a
-# deploy key that can't open PRs.
+# rnmapbox/maps force-pushes these branches from its nightly doc screenshot capture, with a
+# deploy key that can't open PRs. The flaky branch holds screenshots that stayed unstable for 5 nights.
 on:
   push:
     branches:
       - auto/example-screenshots
+      - auto/example-screenshots-flaky
 
 permissions:
   contents: read
   pull-requests: write
 
 concurrency:
-  group: example-screenshots-pr
+  group: example-screenshots-pr-${{ github.ref_name }}
 
 jobs:
   pr:
@@ -27,8 +28,13 @@ jobs:
           MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           TITLE=$(printf '%s\n' "$MESSAGE" | head -n 1)
+          INTRO="Example screenshots from the nightly capture in rnmapbox/maps that differ from main. This branch is rebuilt on top of main every night; the example pages use merged screenshots after the next docs update from rnmapbox/maps."
+          if [ "$BRANCH" = auto/example-screenshots-flaky ]; then
+            TITLE="Unstable for 5 nights: $TITLE"
+            INTRO="Example screenshots from the nightly capture in rnmapbox/maps that stayed unstable for 5 nights in a row. The example pages use merged screenshots after the next docs update from rnmapbox/maps."
+          fi
           {
-            echo "Example screenshots from the nightly capture in rnmapbox/maps that differ from main. This branch is rebuilt on top of main every night; the example pages use merged screenshots after the next docs update from rnmapbox/maps."
+            echo "$INTRO"
             printf '%s\n' "$MESSAGE" | tail -n +2
           } > "$RUNNER_TEMP/body.md"
           PR=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
